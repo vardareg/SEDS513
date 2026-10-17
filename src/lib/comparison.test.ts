@@ -7,9 +7,9 @@ import { chartDays, endpointLabelValues, filterDays, formatTemperature, isCityPa
 import { DATA_RANGE, DAY_MS, dateTimestamp, formatDate, isValidDate, rangesEqual, validateDateRange } from './dates'
 
 const fixture: TemperatureDay[] = [
-  { date: '2025-01-31', temperaturesC: { izmir: 8.5, ankara: -2, istanbul: 5 } },
-  { date: '2025-02-01', temperaturesC: { izmir: null, ankara: 0, istanbul: 6 } },
-  { date: '2025-02-02', temperaturesC: { izmir: 9.2, ankara: 1, istanbul: 7 } },
+  { date: '2025-01-31', temperaturesC: { izmir: 8.5, ankara: -2, istanbul: 5, antalya: 9.4, erzurum: -4.2, van: 2.1 } },
+  { date: '2025-02-01', temperaturesC: { izmir: null, ankara: 0, istanbul: 6, antalya: 10, erzurum: -3.9, van: 1.8 } },
+  { date: '2025-02-02', temperaturesC: { izmir: 9.2, ankara: 1, istanbul: 7, antalya: 10.8, erzurum: -4.6, van: 2.6 } },
 ]
 
 describe('bundled synthetic data', () => {
@@ -18,7 +18,7 @@ describe('bundled synthetic data', () => {
     expect(generateDataset(123)).not.toEqual(bundled)
   })
 
-  it('has exactly 365 unique, ordered, consecutive dates and 1,095 valid temperatures', () => {
+  it('has 365 unique, consecutive dates and one value per city on every date', () => {
     expect(bundled.days).toHaveLength(365)
     expect(new Set(bundled.days.map((day) => day.date)).size).toBe(365)
     expect(bundled.days[0].date).toBe('2025-01-01')
@@ -26,17 +26,38 @@ describe('bundled synthetic data', () => {
     bundled.days.forEach((day, index) => {
       expect(Object.keys(day.temperaturesC)).toEqual(CITY_IDS)
       expect(isValidDate(day.date)).toBe(true)
-      for (const city of CITY_IDS) expect(Number.isFinite(day.temperaturesC[city])).toBe(true)
       if (index > 0) expect(dateTimestamp(day.date) - dateTimestamp(bundled.days[index - 1].date)).toBe(DAY_MS)
     })
+    expect(bundled.days.length * CITY_IDS.length).toBe(2190)
+  })
+
+  it('keeps missing values exactly on the documented gap days', () => {
+    const gapKeys = new Set<string>()
+    for (const city of CITY_IDS) {
+      for (const date of bundled.metadata.knownGaps[city]) gapKeys.add(`${date}:${city}`)
+    }
+    const actualNulls: string[] = []
+    let missingTotal = 0
+    for (const day of bundled.days) {
+      for (const city of CITY_IDS) {
+        if (day.temperaturesC[city] === null) {
+          actualNulls.push(`${day.date}:${city}`)
+          missingTotal += 1
+        }
+      }
+    }
+    expect(actualNulls.sort()).toEqual([...gapKeys].sort())
+    expect(missingTotal).toBe(8)
   })
 
   it('keeps each value within its documented seasonal and noise bounds', () => {
     for (const city of CITY_IDS) {
       const { baseline, amplitude } = bundled.metadata.parameters[city]
       for (const day of bundled.days) {
-        expect(day.temperaturesC[city]).toBeGreaterThanOrEqual(baseline - amplitude - 2)
-        expect(day.temperaturesC[city]).toBeLessThanOrEqual(baseline + amplitude + 2)
+        const value = day.temperaturesC[city]
+        if (value === null) continue
+        expect(value).toBeGreaterThanOrEqual(baseline - amplitude - 2)
+        expect(value).toBeLessThanOrEqual(baseline + amplitude + 2)
       }
     }
   })
@@ -75,7 +96,7 @@ describe('calendar dates and filtering', () => {
 
 describe('comparison contracts', () => {
   it.each([
-    ['izmir', 'ankara'], ['izmir', 'istanbul'], ['ankara', 'istanbul'],
+    ['izmir', 'ankara'], ['izmir', 'istanbul'], ['ankara', 'istanbul'], ['antalya', 'erzurum'], ['van', 'antalya'],
   ] as const)('accepts the distinct pair %s / %s', (first, second) => {
     expect(isCityPair([first, second])).toBe(true)
   })
@@ -88,7 +109,7 @@ describe('comparison contracts', () => {
   })
 
   it('preserves gaps and zero values when preparing chart rows', () => {
-    expect(chartDays(fixture)[1].temperaturesC).toEqual({ izmir: null, ankara: 0, istanbul: 6 })
+    expect(chartDays(fixture)[1].temperaturesC).toEqual({ izmir: null, ankara: 0, istanbul: 6, antalya: 10, erzurum: -3.9, van: 1.8 })
     expect(formatTemperature(null)).toBe('Unavailable')
     expect(formatTemperature(NaN)).toBe('Unavailable')
     expect(formatTemperature(0)).toBe('0.0 °C')
@@ -96,14 +117,17 @@ describe('comparison contracts', () => {
   })
 
   it('rounds the full-data scale outward and handles absent values', () => {
-    expect(temperatureDomain(fixture)).toEqual([-5, 10])
+    expect(temperatureDomain(fixture)).toEqual([-5, 15])
     const domain = temperatureDomain(bundled.days)
+    expect(domain).toEqual([-10, 35])
     for (const day of bundled.days) for (const city of CITY_IDS) {
-      expect(day.temperaturesC[city]).toBeGreaterThanOrEqual(domain[0])
-      expect(day.temperaturesC[city]).toBeLessThanOrEqual(domain[1])
+      const value = day.temperaturesC[city]
+      if (value === null) continue
+      expect(value).toBeGreaterThanOrEqual(domain[0])
+      expect(value).toBeLessThanOrEqual(domain[1])
     }
     expect(temperatureDomain([])).toEqual([0, 5])
-    expect(temperatureDomain([{ ...fixture[0], temperaturesC: { izmir: null, ankara: null, istanbul: null } }])).toEqual([0, 5])
+    expect(temperatureDomain([{ ...fixture[0], temperaturesC: { izmir: null, ankara: null, istanbul: null, antalya: null, erzurum: null, van: null } }])).toEqual([0, 5])
   })
 
   it('separates colliding endpoint labels while preserving their order', () => {

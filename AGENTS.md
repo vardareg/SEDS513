@@ -2,14 +2,15 @@
 
 ## Project Structure & Module Organization
 
-This frontend-only SEDS 513 prototype uses React, TypeScript, Vite, Tailwind CSS v4, shadcn/ui, and Recharts.
+This frontend-only SEDS 513 prototype uses React, TypeScript, Vite, Tailwind CSS v4, shadcn/ui, Recharts, and React Router.
 
-- `src/components/`: comparison controls, chart, and table; `ui/` holds locally owned shadcn primitives.
-- `src/lib/`: pure date/comparison helpers and colocated unit tests.
+- `src/pages/`: the four routed pages (Compare, Analytics, Cities, About) plus NotFound.
+- `src/components/`: comparison controls, charts, and table; `analytics/` and `cities/` hold page-specific components; `ui/` holds locally owned shadcn primitives.
+- `src/lib/`: pure date/comparison/statistics/rolling/monthly/correlation/difference/CSV/heatmap helpers and colocated unit tests; `compare-state.tsx` and `theme.tsx` hold the two small React contexts.
 - `src/data/`: city metadata, types, deterministic generator, and bundled `temperatures-2025.json`.
-- `src/index.css`: shared styles and design tokens.
+- `src/index.css`: shared styles and design tokens (light and dark themes).
 - `scripts/`: dataset generation and verification; `tests/`: browser workflows.
-- `docs/`: design rationale, validation evidence, and usability-study materials. `dist/` is generated build output.
+- `docs/`: design rationale, validation evidence, a beginner walkthrough, and usability-study materials. `dist/` is generated build output.
 
 ## Build, Test, and Development Commands
 

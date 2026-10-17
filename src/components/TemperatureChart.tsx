@@ -2,13 +2,17 @@ import { useMemo, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ReferenceDot, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { CITIES } from '../data/cities'
 import { TEMPERATURE_DOMAIN } from '../data/dataset'
-import type { ChartDay, CityPair, TemperatureDay } from '../data/types'
+import type { ChartDay, CityId, CityPair, TemperatureDay } from '../data/types'
 import { chartDays, endpointLabelValues, formatTemperature } from '../lib/comparison'
 import { DAY_MS, formatDate, formatTick } from '../lib/dates'
+import { rollingMean } from '../lib/rolling'
 
 const CHART_HEIGHT = 340
 const MARGIN = { top: 20, right: 76, bottom: 12, left: 0 }
 const PLOT_HEIGHT = CHART_HEIGHT - MARGIN.top - MARGIN.bottom - 36
+const ROLLING_OPTIONS = [0, 7, 14, 30] as const
+
+type RollingRow = ChartDay & { rolling: Record<CityId, number | null> }
 
 function EndpointLabel({ viewBox, offsetY, name, color }: { viewBox?: unknown; offsetY: number; name: string; color: string }) {
   if (!viewBox || typeof viewBox !== 'object') return null
@@ -40,8 +44,19 @@ export function SharedComparisonTooltip({ active, row, pair }: { active?: boolea
 }
 
 export function TemperatureChart({ days, pair }: { days: readonly TemperatureDay[]; pair: CityPair }) {
-  const rows = useMemo(() => chartDays(days), [days])
   const [narrow, setNarrow] = useState(true)
+  const [rollingWindow, setRollingWindow] = useState<number>(0)
+  const rows = useMemo<RollingRow[]>(() => {
+    const base = chartDays(days)
+    const series = pair.map((city) => new Map(rollingMean(days, city, rollingWindow).map((entry) => [entry.date, entry.value])))
+    return base.map((row) => ({
+      ...row,
+      rolling: {
+        [pair[0]]: series[0].get(row.date) ?? null,
+        [pair[1]]: series[1].get(row.date) ?? null,
+      } as Record<CityId, number | null>,
+    }))
+  }, [days, pair, rollingWindow])
   const first = rows[0]
   const last = rows.at(-1)
   const hasValues = rows.some((row) => pair.some((city) => row.temperaturesC[city] !== null))
@@ -59,6 +74,7 @@ export function TemperatureChart({ days, pair }: { days: readonly TemperatureDay
     ? endpointLabelValues([values[0], values[1]], TEMPERATURE_DOMAIN)
     : values
   const scale = PLOT_HEIGHT / (TEMPERATURE_DOMAIN[1] - TEMPERATURE_DOMAIN[0])
+  const showRolling = rollingWindow >= 2
 
   return (
     <figure aria-labelledby="chart-title" aria-describedby="chart-description">
@@ -69,15 +85,35 @@ export function TemperatureChart({ days, pair }: { days: readonly TemperatureDay
             <span key={city} className="series-item" style={{ color: CITIES[city].color }}>
               <svg width="26" height="10" aria-hidden="true"><line x1="0" y1="5" x2="26" y2="5" stroke="currentColor" strokeWidth="2.5" strokeDasharray={CITIES[city].dash} /></svg>
               {CITIES[city].name}<span className="sr-only">, {CITIES[city].pattern} line</span>
+              {showRolling ? <>
+                <svg width="26" height="10" aria-hidden="true" className="rolling-swatch"><line x1="0" y1="5" x2="26" y2="5" stroke="currentColor" strokeWidth="1.5" /></svg>
+                <span className="series-qualifier">{rollingWindow}-day mean</span>
+              </> : null}
             </span>
           ))}
         </div>
+        <fieldset className="rolling-control">
+          <legend className="sr-only">Rolling average overlay</legend>
+          {ROLLING_OPTIONS.map((option) => (
+            <label key={option} className="rolling-option">
+              <input
+                type="radio"
+                name="rolling-window"
+                value={option}
+                checked={rollingWindow === option}
+                onChange={() => setRollingWindow(option)}
+              />
+              {option === 0 ? 'Off' : `${option}-day`}
+            </label>
+          ))}
+        </fieldset>
       </div>
       <div className="chart-container" data-testid="temperature-chart" data-temperature-domain={TEMPERATURE_DOMAIN.join(',')}>
         <ResponsiveContainer width="100%" height={CHART_HEIGHT} initialDimension={{ width: 300, height: CHART_HEIGHT }} onResize={(width) => setNarrow(width < 520)}>
           <LineChart
             data={rows}
             margin={MARGIN}
+            syncId="comparison"
             accessibilityLayer
             aria-label={`Daily simulated temperatures for ${CITIES[pair[0]].name} and ${CITIES[pair[1]].name}. Use left and right arrow keys to inspect dates.`}
           >
@@ -94,6 +130,9 @@ export function TemperatureChart({ days, pair }: { days: readonly TemperatureDay
             {pair.map((city) => (
               <Line key={city} name={CITIES[city].name} type="linear" dataKey={`temperaturesC.${city}`} stroke={CITIES[city].color} strokeDasharray={CITIES[city].dash} strokeWidth={2} dot={singleDay ? { r: 4, strokeWidth: 2, fill: 'var(--background)' } : false} activeDot={{ r: 4, strokeWidth: 2 }} connectNulls={false} isAnimationActive={false} />
             ))}
+            {showRolling ? pair.map((city) => (
+              <Line key={`${city}-rolling`} name={`${CITIES[city].name} ${rollingWindow}-day mean`} type="linear" dataKey={`rolling.${city}`} stroke={CITIES[city].color} strokeWidth={1.5} strokeOpacity={0.8} dot={false} activeDot={false} connectNulls={false} isAnimationActive={false} />
+            )) : null}
             {pair.map((city, index) => {
               const endpoint = endpoints[index]
               const value = values[index]
@@ -106,7 +145,7 @@ export function TemperatureChart({ days, pair }: { days: readonly TemperatureDay
       </div>
       <figcaption id="chart-description" className="chart-caption">
         <p>{narrow ? 'Tap or click a date' : 'Hover over a date'}, or focus the chart and use ← / → to compare daily values. You can also view every value in the table below.</p>
-        <p>The temperature scale stays fixed at {TEMPERATURE_DOMAIN[0]} to {TEMPERATURE_DOMAIN[1]} °C across selections.{singleDay ? ' One day is shown; two points do not describe a trend.' : ' Each line joins daily samples without smoothing.'}</p>
+        <p>The temperature scale stays fixed at {TEMPERATURE_DOMAIN[0]} to {TEMPERATURE_DOMAIN[1]} °C across selections.{singleDay ? ' One day is shown; two points do not describe a trend.' : ' Each line joins daily samples without smoothing.'}{showRolling ? ` The thinner lines show trailing ${rollingWindow}-day means; they pause wherever a day in the window is missing.` : ''}</p>
       </figcaption>
     </figure>
   )

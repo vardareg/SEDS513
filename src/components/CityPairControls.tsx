@@ -1,15 +1,19 @@
+import { ArrowLeftRight } from 'lucide-react'
+import type { Ref } from 'react'
 import { CITIES, CITY_IDS, isCityId } from '../data/cities'
 import type { CityId, CitySelection } from '../data/types'
+import { Button } from './ui/button'
 import { Field, FieldDescription, FieldGroup, FieldLabel, FieldLegend, FieldSet } from './ui/field'
 import { NativeSelect, NativeSelectOption } from './ui/native-select'
 
 interface Props {
   selection: CitySelection
   onChange: (slot: 0 | 1, value: CityId | null) => void
+  onSwap: () => void
   firstSelectRef: Ref<HTMLSelectElement>
 }
 
-export function CityPairControls({ selection, onChange, firstSelectRef }: Props) {
+export function CityPairControls({ selection, onChange, onSwap, firstSelectRef }: Props) {
   return (
     <FieldSet className="control-section">
       <FieldLegend className="step-heading"><span className="step-number">1</span> Choose two cities</FieldLegend>
@@ -36,7 +40,16 @@ export function CityPairControls({ selection, onChange, firstSelectRef }: Props)
           </Field>
         ))}
       </FieldGroup>
+      <Button
+        variant="ghost"
+        size="xs"
+        type="button"
+        className="swap-button"
+        onClick={onSwap}
+        disabled={selection[0] === null && selection[1] === null}
+      >
+        <ArrowLeftRight aria-hidden="true" data-icon="inline-start" />Swap cities
+      </Button>
     </FieldSet>
   )
 }
-import type { Ref } from 'react'

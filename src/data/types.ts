@@ -1,4 +1,4 @@
-export type CityId = 'izmir' | 'ankara' | 'istanbul'
+export type CityId = 'izmir' | 'ankara' | 'istanbul' | 'antalya' | 'erzurum' | 'van'
 export type DateOnly = string // Validated YYYY-MM-DD, independent of local timezone.
 export type CitySelection = readonly [CityId | null, CityId | null]
 export type CityPair = readonly [CityId, CityId]

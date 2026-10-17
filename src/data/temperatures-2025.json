@@ -2,10 +2,10 @@
   "metadata": {
     "year": 2025,
     "seed": 5132025,
-    "generatorVersion": "1.0.0",
+    "generatorVersion": "2.0.0",
     "measurement": "Simulated daily mean temperature",
     "unit": "°C",
-    "method": "Annual cosine cycle peaking around day 200, plus seeded independent daily variation bounded by ±2 °C; rounded to 0.1 °C.",
+    "method": "Annual cosine cycle peaking around day 200, plus seeded independent daily variation bounded by ±2 °C; rounded to 0.1 °C. Eight documented gap days are set to null.",
     "parameters": {
       "izmir": {
         "baseline": 18,
@@ -18,7 +18,38 @@
       "istanbul": {
         "baseline": 15,
         "amplitude": 9
+      },
+      "antalya": {
+        "baseline": 19,
+        "amplitude": 10
+      },
+      "erzurum": {
+        "baseline": 6,
+        "amplitude": 14
+      },
+      "van": {
+        "baseline": 9,
+        "amplitude": 13
       }
+    },
+    "knownGaps": {
+      "izmir": [],
+      "ankara": [],
+      "istanbul": [
+        "2025-11-03",
+        "2025-11-04"
+      ],
+      "antalya": [],
+      "erzurum": [
+        "2025-01-10",
+        "2025-01-11",
+        "2025-01-12"
+      ],
+      "van": [
+        "2025-07-20",
+        "2025-07-21",
+        "2025-07-22"
+      ]
     }
   },
   "days": [
@@ -27,7 +58,10 @@
       "temperaturesC": {
         "izmir": 9.5,
         "ankara": -2.4,
-        "istanbul": 6.6
+        "istanbul": 6.6,
+        "antalya": 10.1,
+        "erzurum": -6.8,
+        "van": -4.6
       }
     },
     {
@@ -35,7 +69,10 @@
       "temperaturesC": {
         "izmir": 9.3,
         "ankara": -1.8,
-        "istanbul": 8.3
+        "istanbul": 8.3,
+        "antalya": 8,
+        "erzurum": -8.9,
+        "van": -4.1
       }
     },
     {
@@ -43,7 +80,10 @@
       "temperaturesC": {
         "izmir": 8.3,
         "ankara": -2.2,
-        "istanbul": 7.6
+        "istanbul": 7.6,
+        "antalya": 8.4,
+        "erzurum": -6,
+        "van": -4
       }
     },
     {
@@ -51,7 +91,10 @@
       "temperaturesC": {
         "izmir": 6.6,
         "ankara": -2.8,
-        "istanbul": 6.4
+        "istanbul": 6.4,
+        "antalya": 10.6,
+        "erzurum": -9.4,
+        "van": -4.2
       }
     },
     {
@@ -59,7 +102,10 @@
       "temperaturesC": {
         "izmir": 9.4,
         "ankara": -2.6,
-        "istanbul": 7.9
+        "istanbul": 7.9,
+        "antalya": 10.8,
+        "erzurum": -8.9,
+        "van": -4.9
       }
     },
     {
@@ -67,7 +113,10 @@
       "temperaturesC": {
         "izmir": 8.1,
         "ankara": -3.6,
-        "istanbul": 5.6
+        "istanbul": 5.6,
+        "antalya": 10.2,
+        "erzurum": -9.1,
+        "van": -3.4
       }
     },
     {
@@ -75,7 +124,10 @@
       "temperaturesC": {
         "izmir": 6.9,
         "ankara": -2,
-        "istanbul": 5.2
+        "istanbul": 5.2,
+        "antalya": 10,
+        "erzurum": -6.3,
+        "van": -4.8
       }
     },
     {
@@ -83,7 +135,10 @@
       "temperaturesC": {
         "izmir": 8.6,
         "ankara": -1.9,
-        "istanbul": 4.2
+        "istanbul": 4.2,
+        "antalya": 9.9,
+        "erzurum": -7.1,
+        "van": -5.5
       }
     },
     {
@@ -91,7 +146,10 @@
       "temperaturesC": {
         "izmir": 6.7,
         "ankara": -2.5,
-        "istanbul": 5.9
+        "istanbul": 5.9,
+        "antalya": 8.8,
+        "erzurum": -6.8,
+        "van": -4.4
       }
     },
     {
@@ -99,7 +157,10 @@
       "temperaturesC": {
         "izmir": 6.7,
         "ankara": -2.4,
-        "istanbul": 5.2
+        "istanbul": 5.2,
+        "antalya": 9.1,
+        "erzurum": null,
+        "van": -5.2
       }
     },
     {
@@ -107,7 +168,10 @@
       "temperaturesC": {
         "izmir": 6.5,
         "ankara": -3,
-        "istanbul": 7.6
+        "istanbul": 7.6,
+        "antalya": 10.9,
+        "erzurum": null,
+        "van": -3.6
       }
     },
     {
@@ -115,7 +179,10 @@
       "temperaturesC": {
         "izmir": 6.1,
         "ankara": 0,
-        "istanbul": 5.4
+        "istanbul": 5.4,
+        "antalya": 10.6,
+        "erzurum": null,
+        "van": -4.4
       }
     },
     {
@@ -123,7 +190,10 @@
       "temperaturesC": {
         "izmir": 8.5,
         "ankara": -3.9,
-        "istanbul": 5.2
+        "istanbul": 5.2,
+        "antalya": 7.8,
+        "erzurum": -9.5,
+        "van": -2.4
       }
     },
     {
@@ -131,7 +201,10 @@
       "temperaturesC": {
         "izmir": 8.2,
         "ankara": -3.6,
-        "istanbul": 6
+        "istanbul": 6,
+        "antalya": 10.5,
+        "erzurum": -6.6,
+        "van": -3.3
       }
     },
     {
@@ -139,7 +212,10 @@
       "temperaturesC": {
         "izmir": 7.6,
         "ankara": -3.6,
-        "istanbul": 6.2
+        "istanbul": 6.2,
+        "antalya": 8.7,
+        "erzurum": -8.5,
+        "van": -5.9
       }
     },
     {
@@ -147,7 +223,10 @@
       "temperaturesC": {
         "izmir": 6.4,
         "ankara": -0.8,
-        "istanbul": 4.2
+        "istanbul": 4.2,
+        "antalya": 7.1,
+        "erzurum": -8.6,
+        "van": -4.2
       }
     },
     {
@@ -155,7 +234,10 @@
       "temperaturesC": {
         "izmir": 6.8,
         "ankara": -1.4,
-        "istanbul": 4.7
+        "istanbul": 4.7,
+        "antalya": 7.9,
+        "erzurum": -7.1,
+        "van": -4.5
       }
     },
     {
@@ -163,7 +245,10 @@
       "temperaturesC": {
         "izmir": 6.7,
         "ankara": -0.7,
-        "istanbul": 6.6
+        "istanbul": 6.6,
+        "antalya": 10.8,
+        "erzurum": -10,
+        "van": -2.6
       }
     },
     {
@@ -171,7 +256,10 @@
       "temperaturesC": {
         "izmir": 9.4,
         "ankara": -1.1,
-        "istanbul": 7.4
+        "istanbul": 7.4,
+        "antalya": 10.3,
+        "erzurum": -6.2,
+        "van": -2.9
       }
     },
     {
@@ -179,7 +267,10 @@
       "temperaturesC": {
         "izmir": 9.3,
         "ankara": -1.1,
-        "istanbul": 5.4
+        "istanbul": 5.4,
+        "antalya": 9.5,
+        "erzurum": -6.6,
+        "van": -4.1
       }
     },
     {
@@ -187,7 +278,10 @@
       "temperaturesC": {
         "izmir": 8.5,
         "ankara": -3.8,
-        "istanbul": 7.3
+        "istanbul": 7.3,
+        "antalya": 7.8,
+        "erzurum": -8.5,
+        "van": -3.7
       }
     },
     {
@@ -195,7 +289,10 @@
       "temperaturesC": {
         "izmir": 6.8,
         "ankara": -3.2,
-        "istanbul": 4.1
+        "istanbul": 4.1,
+        "antalya": 10.6,
+        "erzurum": -8.5,
+        "van": -4.2
       }
     },
     {
@@ -203,7 +300,10 @@
       "temperaturesC": {
         "izmir": 8.2,
         "ankara": -3.1,
-        "istanbul": 7.4
+        "istanbul": 7.4,
+        "antalya": 7.1,
+        "erzurum": -6.2,
+        "van": -4.3
       }
     },
     {
@@ -211,7 +311,10 @@
       "temperaturesC": {
         "izmir": 8,
         "ankara": -2.5,
-        "istanbul": 4.4
+        "istanbul": 4.4,
+        "antalya": 8.9,
+        "erzurum": -8.5,
+        "van": -4.7
       }
     },
     {
@@ -219,7 +322,10 @@
       "temperaturesC": {
         "izmir": 6.9,
         "ankara": -3.5,
-        "istanbul": 7.7
+        "istanbul": 7.7,
+        "antalya": 10.4,
+        "erzurum": -7.3,
+        "van": -4.7
       }
     },
     {
@@ -227,7 +333,10 @@
       "temperaturesC": {
         "izmir": 10,
         "ankara": -1.5,
-        "istanbul": 4.1
+        "istanbul": 4.1,
+        "antalya": 10.9,
+        "erzurum": -7.2,
+        "van": -3.1
       }
     },
     {
@@ -235,7 +344,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 0,
-        "istanbul": 4.4
+        "istanbul": 4.4,
+        "antalya": 8.1,
+        "erzurum": -8.6,
+        "van": -4.3
       }
     },
     {
@@ -243,7 +355,10 @@
       "temperaturesC": {
         "izmir": 6.3,
         "ankara": -2.7,
-        "istanbul": 6.4
+        "istanbul": 6.4,
+        "antalya": 10.1,
+        "erzurum": -7.6,
+        "van": -4.7
       }
     },
     {
@@ -251,7 +366,10 @@
       "temperaturesC": {
         "izmir": 6.2,
         "ankara": -0.6,
-        "istanbul": 6.3
+        "istanbul": 6.3,
+        "antalya": 9.6,
+        "erzurum": -9.3,
+        "van": -4.7
       }
     },
     {
@@ -259,7 +377,10 @@
       "temperaturesC": {
         "izmir": 6.2,
         "ankara": -3.2,
-        "istanbul": 5.4
+        "istanbul": 5.4,
+        "antalya": 11.1,
+        "erzurum": -6,
+        "van": -4.4
       }
     },
     {
@@ -267,7 +388,10 @@
       "temperaturesC": {
         "izmir": 7.6,
         "ankara": -0.1,
-        "istanbul": 8
+        "istanbul": 8,
+        "antalya": 9.6,
+        "erzurum": -7.2,
+        "van": -2.7
       }
     },
     {
@@ -275,7 +399,10 @@
       "temperaturesC": {
         "izmir": 9.2,
         "ankara": 0.3,
-        "istanbul": 6.7
+        "istanbul": 6.7,
+        "antalya": 10.8,
+        "erzurum": -5.7,
+        "van": -2.6
       }
     },
     {
@@ -283,7 +410,10 @@
       "temperaturesC": {
         "izmir": 7.8,
         "ankara": -1.7,
-        "istanbul": 7.4
+        "istanbul": 7.4,
+        "antalya": 10,
+        "erzurum": -8.7,
+        "van": -1.7
       }
     },
     {
@@ -291,7 +421,10 @@
       "temperaturesC": {
         "izmir": 8.3,
         "ankara": -1.6,
-        "istanbul": 4.5
+        "istanbul": 4.5,
+        "antalya": 10.4,
+        "erzurum": -7.3,
+        "van": -2.3
       }
     },
     {
@@ -299,7 +432,10 @@
       "temperaturesC": {
         "izmir": 7.5,
         "ankara": -2.2,
-        "istanbul": 4.5
+        "istanbul": 4.5,
+        "antalya": 9.4,
+        "erzurum": -6.6,
+        "van": -2.4
       }
     },
     {
@@ -307,7 +443,10 @@
       "temperaturesC": {
         "izmir": 9.1,
         "ankara": -0.6,
-        "istanbul": 7.4
+        "istanbul": 7.4,
+        "antalya": 8.6,
+        "erzurum": -5.9,
+        "van": -2.5
       }
     },
     {
@@ -315,7 +454,10 @@
       "temperaturesC": {
         "izmir": 7.5,
         "ankara": -1,
-        "istanbul": 7
+        "istanbul": 7,
+        "antalya": 11.4,
+        "erzurum": -6.4,
+        "van": -3.5
       }
     },
     {
@@ -323,7 +465,10 @@
       "temperaturesC": {
         "izmir": 7.5,
         "ankara": 0.3,
-        "istanbul": 6.9
+        "istanbul": 6.9,
+        "antalya": 11.5,
+        "erzurum": -5.4,
+        "van": -5.1
       }
     },
     {
@@ -331,7 +476,10 @@
       "temperaturesC": {
         "izmir": 8,
         "ankara": -1.5,
-        "istanbul": 6.8
+        "istanbul": 6.8,
+        "antalya": 9.5,
+        "erzurum": -8.2,
+        "van": -1.5
       }
     },
     {
@@ -339,7 +487,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 0.1,
-        "istanbul": 4.8
+        "istanbul": 4.8,
+        "antalya": 8.4,
+        "erzurum": -5.1,
+        "van": -4.4
       }
     },
     {
@@ -347,7 +498,10 @@
       "temperaturesC": {
         "izmir": 10,
         "ankara": -2.2,
-        "istanbul": 7.2
+        "istanbul": 7.2,
+        "antalya": 10.4,
+        "erzurum": -8.8,
+        "van": -1.3
       }
     },
     {
@@ -355,7 +509,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 0,
-        "istanbul": 4.9
+        "istanbul": 4.9,
+        "antalya": 10.8,
+        "erzurum": -5,
+        "van": -1.5
       }
     },
     {
@@ -363,7 +520,10 @@
       "temperaturesC": {
         "izmir": 8.1,
         "ankara": 0.7,
-        "istanbul": 6.5
+        "istanbul": 6.5,
+        "antalya": 10.6,
+        "erzurum": -6.9,
+        "van": -2.8
       }
     },
     {
@@ -371,7 +531,10 @@
       "temperaturesC": {
         "izmir": 10,
         "ankara": -1.2,
-        "istanbul": 6.8
+        "istanbul": 6.8,
+        "antalya": 11.1,
+        "erzurum": -6.6,
+        "van": -1.3
       }
     },
     {
@@ -379,7 +542,10 @@
       "temperaturesC": {
         "izmir": 9,
         "ankara": -1.8,
-        "istanbul": 6.1
+        "istanbul": 6.1,
+        "antalya": 8.2,
+        "erzurum": -6.9,
+        "van": -1.5
       }
     },
     {
@@ -387,7 +553,10 @@
       "temperaturesC": {
         "izmir": 8.6,
         "ankara": -0.8,
-        "istanbul": 8.4
+        "istanbul": 8.4,
+        "antalya": 8.6,
+        "erzurum": -4.6,
+        "van": -3.7
       }
     },
     {
@@ -395,7 +564,10 @@
       "temperaturesC": {
         "izmir": 7.7,
         "ankara": -1.7,
-        "istanbul": 8.6
+        "istanbul": 8.6,
+        "antalya": 10.6,
+        "erzurum": -5.5,
+        "van": -1.3
       }
     },
     {
@@ -403,7 +575,10 @@
       "temperaturesC": {
         "izmir": 7.5,
         "ankara": 0,
-        "istanbul": 7
+        "istanbul": 7,
+        "antalya": 10.8,
+        "erzurum": -7.5,
+        "van": -3.1
       }
     },
     {
@@ -411,7 +586,10 @@
       "temperaturesC": {
         "izmir": 9.6,
         "ankara": -2.2,
-        "istanbul": 7.5
+        "istanbul": 7.5,
+        "antalya": 9.4,
+        "erzurum": -5.9,
+        "van": -1.5
       }
     },
     {
@@ -419,7 +597,10 @@
       "temperaturesC": {
         "izmir": 8.3,
         "ankara": -0.6,
-        "istanbul": 7
+        "istanbul": 7,
+        "antalya": 9.3,
+        "erzurum": -7.6,
+        "van": -2.7
       }
     },
     {
@@ -427,7 +608,10 @@
       "temperaturesC": {
         "izmir": 10.9,
         "ankara": 1,
-        "istanbul": 8.9
+        "istanbul": 8.9,
+        "antalya": 12,
+        "erzurum": -4.8,
+        "van": -0.1
       }
     },
     {
@@ -435,7 +619,10 @@
       "temperaturesC": {
         "izmir": 9.3,
         "ankara": -1.7,
-        "istanbul": 7.2
+        "istanbul": 7.2,
+        "antalya": 9.8,
+        "erzurum": -5.4,
+        "van": -3.5
       }
     },
     {
@@ -443,7 +630,10 @@
       "temperaturesC": {
         "izmir": 11.7,
         "ankara": -1.7,
-        "istanbul": 9
+        "istanbul": 9,
+        "antalya": 11.9,
+        "erzurum": -5.5,
+        "van": -3.4
       }
     },
     {
@@ -451,7 +641,10 @@
       "temperaturesC": {
         "izmir": 8.6,
         "ankara": 0.4,
-        "istanbul": 7.6
+        "istanbul": 7.6,
+        "antalya": 12.3,
+        "erzurum": -3.9,
+        "van": -0.5
       }
     },
     {
@@ -459,7 +652,10 @@
       "temperaturesC": {
         "izmir": 10.1,
         "ankara": 1.4,
-        "istanbul": 8.9
+        "istanbul": 8.9,
+        "antalya": 9,
+        "erzurum": -6.7,
+        "van": -0.9
       }
     },
     {
@@ -467,7 +663,10 @@
       "temperaturesC": {
         "izmir": 11.4,
         "ankara": 2.5,
-        "istanbul": 8.8
+        "istanbul": 8.8,
+        "antalya": 9.4,
+        "erzurum": -5.5,
+        "van": -1.6
       }
     },
     {
@@ -475,7 +674,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 2.1,
-        "istanbul": 8.1
+        "istanbul": 8.1,
+        "antalya": 10,
+        "erzurum": -4.5,
+        "van": 0.3
       }
     },
     {
@@ -483,7 +685,10 @@
       "temperaturesC": {
         "izmir": 11,
         "ankara": 0.5,
-        "istanbul": 6.5
+        "istanbul": 6.5,
+        "antalya": 11,
+        "erzurum": -4.3,
+        "van": -1.1
       }
     },
     {
@@ -491,7 +696,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 0,
-        "istanbul": 9.7
+        "istanbul": 9.7,
+        "antalya": 10.3,
+        "erzurum": -6.7,
+        "van": 0.5
       }
     },
     {
@@ -499,7 +707,10 @@
       "temperaturesC": {
         "izmir": 10.3,
         "ankara": 0.2,
-        "istanbul": 6.6
+        "istanbul": 6.6,
+        "antalya": 11.6,
+        "erzurum": -3.8,
+        "van": 0.8
       }
     },
     {
@@ -507,7 +718,10 @@
       "temperaturesC": {
         "izmir": 8.6,
         "ankara": 3.2,
-        "istanbul": 7.4
+        "istanbul": 7.4,
+        "antalya": 12.9,
+        "erzurum": -3.8,
+        "van": 0.2
       }
     },
     {
@@ -515,7 +729,10 @@
       "temperaturesC": {
         "izmir": 12.5,
         "ankara": 2.3,
-        "istanbul": 7.1
+        "istanbul": 7.1,
+        "antalya": 11.2,
+        "erzurum": -3.7,
+        "van": 0.8
       }
     },
     {
@@ -523,7 +740,10 @@
       "temperaturesC": {
         "izmir": 11.3,
         "ankara": 1.8,
-        "istanbul": 6.6
+        "istanbul": 6.6,
+        "antalya": 10.2,
+        "erzurum": -6,
+        "van": 1.4
       }
     },
     {
@@ -531,7 +751,10 @@
       "temperaturesC": {
         "izmir": 9.9,
         "ankara": 3.2,
-        "istanbul": 10.5
+        "istanbul": 10.5,
+        "antalya": 12.3,
+        "erzurum": -3.3,
+        "van": 1.5
       }
     },
     {
@@ -539,7 +762,10 @@
       "temperaturesC": {
         "izmir": 11.3,
         "ankara": 0.8,
-        "istanbul": 8
+        "istanbul": 8,
+        "antalya": 12.2,
+        "erzurum": -3.8,
+        "van": 0.2
       }
     },
     {
@@ -547,7 +773,10 @@
       "temperaturesC": {
         "izmir": 9.5,
         "ankara": 0.6,
-        "istanbul": 10.5
+        "istanbul": 10.5,
+        "antalya": 13.7,
+        "erzurum": -2.7,
+        "van": 1.2
       }
     },
     {
@@ -555,7 +784,10 @@
       "temperaturesC": {
         "izmir": 12.7,
         "ankara": 3.8,
-        "istanbul": 9.3
+        "istanbul": 9.3,
+        "antalya": 12.4,
+        "erzurum": -1.8,
+        "van": 1.1
       }
     },
     {
@@ -563,7 +795,10 @@
       "temperaturesC": {
         "izmir": 9.7,
         "ankara": 1.3,
-        "istanbul": 9.8
+        "istanbul": 9.8,
+        "antalya": 13.8,
+        "erzurum": -1.8,
+        "van": 1.5
       }
     },
     {
@@ -571,7 +806,10 @@
       "temperaturesC": {
         "izmir": 10.4,
         "ankara": 4.1,
-        "istanbul": 8.1
+        "istanbul": 8.1,
+        "antalya": 10.8,
+        "erzurum": -3.9,
+        "van": -0.3
       }
     },
     {
@@ -579,7 +817,10 @@
       "temperaturesC": {
         "izmir": 12.7,
         "ankara": 1.8,
-        "istanbul": 9.9
+        "istanbul": 9.9,
+        "antalya": 13.5,
+        "erzurum": -2.4,
+        "van": 0.8
       }
     },
     {
@@ -587,7 +828,10 @@
       "temperaturesC": {
         "izmir": 13.3,
         "ankara": 3.3,
-        "istanbul": 7.8
+        "istanbul": 7.8,
+        "antalya": 13.3,
+        "erzurum": -3.8,
+        "van": 1.6
       }
     },
     {
@@ -595,7 +839,10 @@
       "temperaturesC": {
         "izmir": 13.4,
         "ankara": 2.7,
-        "istanbul": 7.7
+        "istanbul": 7.7,
+        "antalya": 13.7,
+        "erzurum": -3.5,
+        "van": -0.5
       }
     },
     {
@@ -603,7 +850,10 @@
       "temperaturesC": {
         "izmir": 12.2,
         "ankara": 2.2,
-        "istanbul": 9.8
+        "istanbul": 9.8,
+        "antalya": 13.6,
+        "erzurum": -1.9,
+        "van": 2.1
       }
     },
     {
@@ -611,7 +861,10 @@
       "temperaturesC": {
         "izmir": 12.3,
         "ankara": 5.3,
-        "istanbul": 7.8
+        "istanbul": 7.8,
+        "antalya": 14.8,
+        "erzurum": -2.8,
+        "van": 2.6
       }
     },
     {
@@ -619,7 +872,10 @@
       "temperaturesC": {
         "izmir": 11.6,
         "ankara": 2.2,
-        "istanbul": 9
+        "istanbul": 9,
+        "antalya": 12.9,
+        "erzurum": -1.9,
+        "van": 2
       }
     },
     {
@@ -627,7 +883,10 @@
       "temperaturesC": {
         "izmir": 11.1,
         "ankara": 3.1,
-        "istanbul": 11.7
+        "istanbul": 11.7,
+        "antalya": 15.2,
+        "erzurum": -0.6,
+        "van": 0.9
       }
     },
     {
@@ -635,7 +894,10 @@
       "temperaturesC": {
         "izmir": 11,
         "ankara": 2.7,
-        "istanbul": 10.4
+        "istanbul": 10.4,
+        "antalya": 11.7,
+        "erzurum": -0.6,
+        "van": 3.6
       }
     },
     {
@@ -643,7 +905,10 @@
       "temperaturesC": {
         "izmir": 11.7,
         "ankara": 5.5,
-        "istanbul": 8.3
+        "istanbul": 8.3,
+        "antalya": 12.5,
+        "erzurum": -3.2,
+        "van": 4
       }
     },
     {
@@ -651,7 +916,10 @@
       "temperaturesC": {
         "izmir": 12.1,
         "ankara": 4.8,
-        "istanbul": 8.8
+        "istanbul": 8.8,
+        "antalya": 13.8,
+        "erzurum": -1.9,
+        "van": 1.7
       }
     },
     {
@@ -659,7 +927,10 @@
       "temperaturesC": {
         "izmir": 12.7,
         "ankara": 5.4,
-        "istanbul": 11.3
+        "istanbul": 11.3,
+        "antalya": 14.2,
+        "erzurum": -2.3,
+        "van": 2.6
       }
     },
     {
@@ -667,7 +938,10 @@
       "temperaturesC": {
         "izmir": 13.2,
         "ankara": 6.7,
-        "istanbul": 9.6
+        "istanbul": 9.6,
+        "antalya": 15.2,
+        "erzurum": -2.3,
+        "van": 1
       }
     },
     {
@@ -675,7 +949,10 @@
       "temperaturesC": {
         "izmir": 12.6,
         "ankara": 5.5,
-        "istanbul": 12.2
+        "istanbul": 12.2,
+        "antalya": 13.7,
+        "erzurum": -2.3,
+        "van": 4.6
       }
     },
     {
@@ -683,7 +960,10 @@
       "temperaturesC": {
         "izmir": 13.7,
         "ankara": 4.5,
-        "istanbul": 11.5
+        "istanbul": 11.5,
+        "antalya": 15.6,
+        "erzurum": -0.8,
+        "van": 2.3
       }
     },
     {
@@ -691,7 +971,10 @@
       "temperaturesC": {
         "izmir": 13.9,
         "ankara": 3.6,
-        "istanbul": 11
+        "istanbul": 11,
+        "antalya": 13,
+        "erzurum": -0.8,
+        "van": 2.9
       }
     },
     {
@@ -699,7 +982,10 @@
       "temperaturesC": {
         "izmir": 14.5,
         "ankara": 6.7,
-        "istanbul": 10.5
+        "istanbul": 10.5,
+        "antalya": 16.6,
+        "erzurum": 1.5,
+        "van": 3.3
       }
     },
     {
@@ -707,7 +993,10 @@
       "temperaturesC": {
         "izmir": 12.4,
         "ankara": 7.4,
-        "istanbul": 13.3
+        "istanbul": 13.3,
+        "antalya": 16.4,
+        "erzurum": 1.5,
+        "van": 2.4
       }
     },
     {
@@ -715,7 +1004,10 @@
       "temperaturesC": {
         "izmir": 14.8,
         "ankara": 4.7,
-        "istanbul": 12.7
+        "istanbul": 12.7,
+        "antalya": 15,
+        "erzurum": 1.3,
+        "van": 4
       }
     },
     {
@@ -723,7 +1015,10 @@
       "temperaturesC": {
         "izmir": 13.6,
         "ankara": 7.7,
-        "istanbul": 11.7
+        "istanbul": 11.7,
+        "antalya": 16,
+        "erzurum": 0.1,
+        "van": 2.5
       }
     },
     {
@@ -731,7 +1026,10 @@
       "temperaturesC": {
         "izmir": 15,
         "ankara": 6.5,
-        "istanbul": 13.4
+        "istanbul": 13.4,
+        "antalya": 15.1,
+        "erzurum": 2.4,
+        "van": 4.7
       }
     },
     {
@@ -739,7 +1037,10 @@
       "temperaturesC": {
         "izmir": 14.2,
         "ankara": 4.8,
-        "istanbul": 13
+        "istanbul": 13,
+        "antalya": 17.1,
+        "erzurum": 0.7,
+        "van": 5
       }
     },
     {
@@ -747,7 +1048,10 @@
       "temperaturesC": {
         "izmir": 15.6,
         "ankara": 8.6,
-        "istanbul": 12.8
+        "istanbul": 12.8,
+        "antalya": 15.9,
+        "erzurum": 0.5,
+        "van": 3.9
       }
     },
     {
@@ -755,7 +1059,10 @@
       "temperaturesC": {
         "izmir": 16,
         "ankara": 8.3,
-        "istanbul": 12.1
+        "istanbul": 12.1,
+        "antalya": 16,
+        "erzurum": 3,
+        "van": 4.9
       }
     },
     {
@@ -763,7 +1070,10 @@
       "temperaturesC": {
         "izmir": 14.6,
         "ankara": 7,
-        "istanbul": 11.4
+        "istanbul": 11.4,
+        "antalya": 18.2,
+        "erzurum": 1.5,
+        "van": 4.1
       }
     },
     {
@@ -771,7 +1081,10 @@
       "temperaturesC": {
         "izmir": 14.5,
         "ankara": 7.5,
-        "istanbul": 13.7
+        "istanbul": 13.7,
+        "antalya": 18.1,
+        "erzurum": 3.8,
+        "van": 6.7
       }
     },
     {
@@ -779,7 +1092,10 @@
       "temperaturesC": {
         "izmir": 14.4,
         "ankara": 7.4,
-        "istanbul": 11.1
+        "istanbul": 11.1,
+        "antalya": 15.5,
+        "erzurum": 2.3,
+        "van": 7.3
       }
     },
     {
@@ -787,7 +1103,10 @@
       "temperaturesC": {
         "izmir": 13.7,
         "ankara": 7.9,
-        "istanbul": 14
+        "istanbul": 14,
+        "antalya": 15.2,
+        "erzurum": 4.3,
+        "van": 4.2
       }
     },
     {
@@ -795,7 +1114,10 @@
       "temperaturesC": {
         "izmir": 14.7,
         "ankara": 7,
-        "istanbul": 13.8
+        "istanbul": 13.8,
+        "antalya": 17.9,
+        "erzurum": 4.7,
+        "van": 6.3
       }
     },
     {
@@ -803,7 +1125,10 @@
       "temperaturesC": {
         "izmir": 17.2,
         "ankara": 8.7,
-        "istanbul": 13.3
+        "istanbul": 13.3,
+        "antalya": 18.1,
+        "erzurum": 1.4,
+        "van": 7.2
       }
     },
     {
@@ -811,7 +1136,10 @@
       "temperaturesC": {
         "izmir": 15.2,
         "ankara": 8.8,
-        "istanbul": 12.3
+        "istanbul": 12.3,
+        "antalya": 17.7,
+        "erzurum": 2.8,
+        "van": 8.5
       }
     },
     {
@@ -819,7 +1147,10 @@
       "temperaturesC": {
         "izmir": 15.9,
         "ankara": 9.7,
-        "istanbul": 13.7
+        "istanbul": 13.7,
+        "antalya": 16.5,
+        "erzurum": 2.2,
+        "van": 5.9
       }
     },
     {
@@ -827,7 +1158,10 @@
       "temperaturesC": {
         "izmir": 14.7,
         "ankara": 7.1,
-        "istanbul": 15
+        "istanbul": 15,
+        "antalya": 17.6,
+        "erzurum": 5.8,
+        "van": 8.4
       }
     },
     {
@@ -835,7 +1169,10 @@
       "temperaturesC": {
         "izmir": 18.6,
         "ankara": 8.8,
-        "istanbul": 12.6
+        "istanbul": 12.6,
+        "antalya": 16.5,
+        "erzurum": 5.6,
+        "van": 5.5
       }
     },
     {
@@ -843,7 +1180,10 @@
       "temperaturesC": {
         "izmir": 16.9,
         "ankara": 9.9,
-        "istanbul": 13.1
+        "istanbul": 13.1,
+        "antalya": 17.2,
+        "erzurum": 4.1,
+        "van": 7.4
       }
     },
     {
@@ -851,7 +1191,10 @@
       "temperaturesC": {
         "izmir": 19,
         "ankara": 10.3,
-        "istanbul": 13.7
+        "istanbul": 13.7,
+        "antalya": 18.8,
+        "erzurum": 3.1,
+        "van": 7.7
       }
     },
     {
@@ -859,7 +1202,10 @@
       "temperaturesC": {
         "izmir": 15.6,
         "ankara": 11,
-        "istanbul": 16
+        "istanbul": 16,
+        "antalya": 17.2,
+        "erzurum": 5.4,
+        "van": 6.7
       }
     },
     {
@@ -867,7 +1213,10 @@
       "temperaturesC": {
         "izmir": 17.8,
         "ankara": 11.5,
-        "istanbul": 16.2
+        "istanbul": 16.2,
+        "antalya": 19.4,
+        "erzurum": 4.2,
+        "van": 7
       }
     },
     {
@@ -875,7 +1224,10 @@
       "temperaturesC": {
         "izmir": 16.5,
         "ankara": 12.3,
-        "istanbul": 15.4
+        "istanbul": 15.4,
+        "antalya": 19.3,
+        "erzurum": 3.9,
+        "van": 9.4
       }
     },
     {
@@ -883,7 +1235,10 @@
       "temperaturesC": {
         "izmir": 16.1,
         "ankara": 12.3,
-        "istanbul": 16.3
+        "istanbul": 16.3,
+        "antalya": 17.4,
+        "erzurum": 5,
+        "van": 8.9
       }
     },
     {
@@ -891,7 +1246,10 @@
       "temperaturesC": {
         "izmir": 16.5,
         "ankara": 10.2,
-        "istanbul": 14.7
+        "istanbul": 14.7,
+        "antalya": 18.6,
+        "erzurum": 3.8,
+        "van": 7.3
       }
     },
     {
@@ -899,7 +1257,10 @@
       "temperaturesC": {
         "izmir": 17,
         "ankara": 13,
-        "istanbul": 15
+        "istanbul": 15,
+        "antalya": 20.9,
+        "erzurum": 7.9,
+        "van": 9.9
       }
     },
     {
@@ -907,7 +1268,10 @@
       "temperaturesC": {
         "izmir": 17,
         "ankara": 11,
-        "istanbul": 14.5
+        "istanbul": 14.5,
+        "antalya": 20,
+        "erzurum": 6.9,
+        "van": 7.8
       }
     },
     {
@@ -915,7 +1279,10 @@
       "temperaturesC": {
         "izmir": 18.3,
         "ankara": 11.3,
-        "istanbul": 13.5
+        "istanbul": 13.5,
+        "antalya": 18.1,
+        "erzurum": 7.4,
+        "van": 10.3
       }
     },
     {
@@ -923,7 +1290,10 @@
       "temperaturesC": {
         "izmir": 16.7,
         "ankara": 12.2,
-        "istanbul": 16.3
+        "istanbul": 16.3,
+        "antalya": 19.5,
+        "erzurum": 5.7,
+        "van": 8.1
       }
     },
     {
@@ -931,7 +1301,10 @@
       "temperaturesC": {
         "izmir": 20.6,
         "ankara": 12.3,
-        "istanbul": 14.5
+        "istanbul": 14.5,
+        "antalya": 18,
+        "erzurum": 5.4,
+        "van": 10.9
       }
     },
     {
@@ -939,7 +1312,10 @@
       "temperaturesC": {
         "izmir": 20.7,
         "ankara": 11.1,
-        "istanbul": 15.3
+        "istanbul": 15.3,
+        "antalya": 21.2,
+        "erzurum": 8.7,
+        "van": 10.4
       }
     },
     {
@@ -947,7 +1323,10 @@
       "temperaturesC": {
         "izmir": 19.2,
         "ankara": 12.8,
-        "istanbul": 15.3
+        "istanbul": 15.3,
+        "antalya": 18.3,
+        "erzurum": 6.2,
+        "van": 9.6
       }
     },
     {
@@ -955,7 +1334,10 @@
       "temperaturesC": {
         "izmir": 20.2,
         "ankara": 13.5,
-        "istanbul": 14.8
+        "istanbul": 14.8,
+        "antalya": 22.2,
+        "erzurum": 7.9,
+        "van": 9.1
       }
     },
     {
@@ -963,7 +1345,10 @@
       "temperaturesC": {
         "izmir": 20.8,
         "ankara": 12.3,
-        "istanbul": 16
+        "istanbul": 16,
+        "antalya": 19.7,
+        "erzurum": 7.3,
+        "van": 10.4
       }
     },
     {
@@ -971,7 +1356,10 @@
       "temperaturesC": {
         "izmir": 19.3,
         "ankara": 12.5,
-        "istanbul": 14.7
+        "istanbul": 14.7,
+        "antalya": 22.5,
+        "erzurum": 7,
+        "van": 11.1
       }
     },
     {
@@ -979,7 +1367,10 @@
       "temperaturesC": {
         "izmir": 20.4,
         "ankara": 12,
-        "istanbul": 18.1
+        "istanbul": 18.1,
+        "antalya": 22.3,
+        "erzurum": 8.5,
+        "van": 13.1
       }
     },
     {
@@ -987,7 +1378,10 @@
       "temperaturesC": {
         "izmir": 21.5,
         "ankara": 15.4,
-        "istanbul": 16.4
+        "istanbul": 16.4,
+        "antalya": 19,
+        "erzurum": 10.3,
+        "van": 11.5
       }
     },
     {
@@ -995,7 +1389,10 @@
       "temperaturesC": {
         "izmir": 18.4,
         "ankara": 12.6,
-        "istanbul": 16.3
+        "istanbul": 16.3,
+        "antalya": 22,
+        "erzurum": 8.3,
+        "van": 13.7
       }
     },
     {
@@ -1003,7 +1400,10 @@
       "temperaturesC": {
         "izmir": 22.1,
         "ankara": 14,
-        "istanbul": 17.1
+        "istanbul": 17.1,
+        "antalya": 21.2,
+        "erzurum": 11,
+        "van": 13.7
       }
     },
     {
@@ -1011,7 +1411,10 @@
       "temperaturesC": {
         "izmir": 20.5,
         "ankara": 15.4,
-        "istanbul": 19
+        "istanbul": 19,
+        "antalya": 21.6,
+        "erzurum": 8.6,
+        "van": 12.6
       }
     },
     {
@@ -1019,7 +1422,10 @@
       "temperaturesC": {
         "izmir": 19.2,
         "ankara": 15.7,
-        "istanbul": 15.8
+        "istanbul": 15.8,
+        "antalya": 19.9,
+        "erzurum": 10.9,
+        "van": 13.7
       }
     },
     {
@@ -1027,7 +1433,10 @@
       "temperaturesC": {
         "izmir": 21.5,
         "ankara": 15.8,
-        "istanbul": 16
+        "istanbul": 16,
+        "antalya": 21,
+        "erzurum": 9.5,
+        "van": 14.5
       }
     },
     {
@@ -1035,7 +1444,10 @@
       "temperaturesC": {
         "izmir": 21.8,
         "ankara": 13,
-        "istanbul": 17.3
+        "istanbul": 17.3,
+        "antalya": 22.7,
+        "erzurum": 11.9,
+        "van": 14.4
       }
     },
     {
@@ -1043,7 +1455,10 @@
       "temperaturesC": {
         "izmir": 21,
         "ankara": 16.7,
-        "istanbul": 16.5
+        "istanbul": 16.5,
+        "antalya": 20.3,
+        "erzurum": 12.3,
+        "van": 14.2
       }
     },
     {
@@ -1051,7 +1466,10 @@
       "temperaturesC": {
         "izmir": 21.4,
         "ankara": 15.4,
-        "istanbul": 18.6
+        "istanbul": 18.6,
+        "antalya": 23.2,
+        "erzurum": 10.6,
+        "van": 12.4
       }
     },
     {
@@ -1059,7 +1477,10 @@
       "temperaturesC": {
         "izmir": 23.3,
         "ankara": 15.2,
-        "istanbul": 20
+        "istanbul": 20,
+        "antalya": 21.9,
+        "erzurum": 10.9,
+        "van": 12.1
       }
     },
     {
@@ -1067,7 +1488,10 @@
       "temperaturesC": {
         "izmir": 23,
         "ankara": 16.8,
-        "istanbul": 16.3
+        "istanbul": 16.3,
+        "antalya": 21.4,
+        "erzurum": 9.9,
+        "van": 14.8
       }
     },
     {
@@ -1075,7 +1499,10 @@
       "temperaturesC": {
         "izmir": 21,
         "ankara": 14.1,
-        "istanbul": 18.3
+        "istanbul": 18.3,
+        "antalya": 22.4,
+        "erzurum": 11.4,
+        "van": 15.2
       }
     },
     {
@@ -1083,7 +1510,10 @@
       "temperaturesC": {
         "izmir": 23.3,
         "ankara": 15.2,
-        "istanbul": 17.7
+        "istanbul": 17.7,
+        "antalya": 22.7,
+        "erzurum": 9.9,
+        "van": 12.2
       }
     },
     {
@@ -1091,7 +1521,10 @@
       "temperaturesC": {
         "izmir": 21.5,
         "ankara": 17.7,
-        "istanbul": 16.8
+        "istanbul": 16.8,
+        "antalya": 22.6,
+        "erzurum": 11.9,
+        "van": 12.3
       }
     },
     {
@@ -1099,7 +1532,10 @@
       "temperaturesC": {
         "izmir": 20.3,
         "ankara": 17.2,
-        "istanbul": 18.9
+        "istanbul": 18.9,
+        "antalya": 22.3,
+        "erzurum": 12.7,
+        "van": 15
       }
     },
     {
@@ -1107,7 +1543,10 @@
       "temperaturesC": {
         "izmir": 21.3,
         "ankara": 14.7,
-        "istanbul": 17.9
+        "istanbul": 17.9,
+        "antalya": 22.8,
+        "erzurum": 13.5,
+        "van": 15.8
       }
     },
     {
@@ -1115,7 +1554,10 @@
       "temperaturesC": {
         "izmir": 23,
         "ankara": 15.1,
-        "istanbul": 18
+        "istanbul": 18,
+        "antalya": 25.3,
+        "erzurum": 13.5,
+        "van": 13.8
       }
     },
     {
@@ -1123,7 +1565,10 @@
       "temperaturesC": {
         "izmir": 22.9,
         "ankara": 16.1,
-        "istanbul": 20.7
+        "istanbul": 20.7,
+        "antalya": 24.1,
+        "erzurum": 12.5,
+        "van": 13.4
       }
     },
     {
@@ -1131,7 +1576,10 @@
       "temperaturesC": {
         "izmir": 22.5,
         "ankara": 17.9,
-        "istanbul": 17.4
+        "istanbul": 17.4,
+        "antalya": 23.3,
+        "erzurum": 11.8,
+        "van": 16.1
       }
     },
     {
@@ -1139,7 +1587,10 @@
       "temperaturesC": {
         "izmir": 23.1,
         "ankara": 17.9,
-        "istanbul": 17.9
+        "istanbul": 17.9,
+        "antalya": 22.3,
+        "erzurum": 14.1,
+        "van": 14.1
       }
     },
     {
@@ -1147,7 +1598,10 @@
       "temperaturesC": {
         "izmir": 23.8,
         "ankara": 18.3,
-        "istanbul": 19.4
+        "istanbul": 19.4,
+        "antalya": 22.4,
+        "erzurum": 14.8,
+        "van": 16
       }
     },
     {
@@ -1155,7 +1609,10 @@
       "temperaturesC": {
         "izmir": 21.4,
         "ankara": 16.7,
-        "istanbul": 20.3
+        "istanbul": 20.3,
+        "antalya": 25.6,
+        "erzurum": 14.9,
+        "van": 17.3
       }
     },
     {
@@ -1163,7 +1620,10 @@
       "temperaturesC": {
         "izmir": 24.5,
         "ankara": 19.3,
-        "istanbul": 20
+        "istanbul": 20,
+        "antalya": 25.9,
+        "erzurum": 15.3,
+        "van": 14.7
       }
     },
     {
@@ -1171,7 +1631,10 @@
       "temperaturesC": {
         "izmir": 24,
         "ankara": 20.1,
-        "istanbul": 19.5
+        "istanbul": 19.5,
+        "antalya": 23.5,
+        "erzurum": 13.4,
+        "van": 17.5
       }
     },
     {
@@ -1179,7 +1642,10 @@
       "temperaturesC": {
         "izmir": 23,
         "ankara": 17,
-        "istanbul": 21.2
+        "istanbul": 21.2,
+        "antalya": 23.1,
+        "erzurum": 12.1,
+        "van": 14.5
       }
     },
     {
@@ -1187,7 +1653,10 @@
       "temperaturesC": {
         "izmir": 22.8,
         "ankara": 20.2,
-        "istanbul": 20.6
+        "istanbul": 20.6,
+        "antalya": 23.6,
+        "erzurum": 15.1,
+        "van": 15
       }
     },
     {
@@ -1195,7 +1664,10 @@
       "temperaturesC": {
         "izmir": 25.1,
         "ankara": 20.6,
-        "istanbul": 20.3
+        "istanbul": 20.3,
+        "antalya": 24.2,
+        "erzurum": 13,
+        "van": 16.2
       }
     },
     {
@@ -1203,7 +1675,10 @@
       "temperaturesC": {
         "izmir": 23.9,
         "ankara": 20.8,
-        "istanbul": 20.4
+        "istanbul": 20.4,
+        "antalya": 24.5,
+        "erzurum": 12.9,
+        "van": 17.5
       }
     },
     {
@@ -1211,7 +1686,10 @@
       "temperaturesC": {
         "izmir": 24.6,
         "ankara": 20,
-        "istanbul": 21.9
+        "istanbul": 21.9,
+        "antalya": 25.6,
+        "erzurum": 16.1,
+        "van": 16.2
       }
     },
     {
@@ -1219,7 +1697,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 17.8,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 27.3,
+        "erzurum": 15.8,
+        "van": 18.6
       }
     },
     {
@@ -1227,7 +1708,10 @@
       "temperaturesC": {
         "izmir": 25.2,
         "ankara": 17.9,
-        "istanbul": 21.2
+        "istanbul": 21.2,
+        "antalya": 26.6,
+        "erzurum": 14,
+        "van": 16.5
       }
     },
     {
@@ -1235,7 +1719,10 @@
       "temperaturesC": {
         "izmir": 23.3,
         "ankara": 21.1,
-        "istanbul": 22.9
+        "istanbul": 22.9,
+        "antalya": 27.6,
+        "erzurum": 17.3,
+        "van": 16.3
       }
     },
     {
@@ -1243,7 +1730,10 @@
       "temperaturesC": {
         "izmir": 25,
         "ankara": 19.1,
-        "istanbul": 21.6
+        "istanbul": 21.6,
+        "antalya": 26.5,
+        "erzurum": 16.7,
+        "van": 17.2
       }
     },
     {
@@ -1251,7 +1741,10 @@
       "temperaturesC": {
         "izmir": 25.6,
         "ankara": 21,
-        "istanbul": 19.7
+        "istanbul": 19.7,
+        "antalya": 24.6,
+        "erzurum": 15.6,
+        "van": 18.1
       }
     },
     {
@@ -1259,7 +1752,10 @@
       "temperaturesC": {
         "izmir": 24.5,
         "ankara": 18.7,
-        "istanbul": 21.4
+        "istanbul": 21.4,
+        "antalya": 27.7,
+        "erzurum": 14.8,
+        "van": 18.6
       }
     },
     {
@@ -1267,7 +1763,10 @@
       "temperaturesC": {
         "izmir": 25.4,
         "ankara": 19.8,
-        "istanbul": 21.6
+        "istanbul": 21.6,
+        "antalya": 26.6,
+        "erzurum": 17,
+        "van": 19.4
       }
     },
     {
@@ -1275,7 +1774,10 @@
       "temperaturesC": {
         "izmir": 26.4,
         "ankara": 21.2,
-        "istanbul": 21.5
+        "istanbul": 21.5,
+        "antalya": 25.7,
+        "erzurum": 14.6,
+        "van": 19.4
       }
     },
     {
@@ -1283,7 +1785,10 @@
       "temperaturesC": {
         "izmir": 24,
         "ankara": 20.8,
-        "istanbul": 20
+        "istanbul": 20,
+        "antalya": 27.6,
+        "erzurum": 16.8,
+        "van": 20.4
       }
     },
     {
@@ -1291,7 +1796,10 @@
       "temperaturesC": {
         "izmir": 26.4,
         "ankara": 22.5,
-        "istanbul": 22.7
+        "istanbul": 22.7,
+        "antalya": 28.3,
+        "erzurum": 15,
+        "van": 20.3
       }
     },
     {
@@ -1299,7 +1807,10 @@
       "temperaturesC": {
         "izmir": 26.4,
         "ankara": 20.6,
-        "istanbul": 19.9
+        "istanbul": 19.9,
+        "antalya": 27.2,
+        "erzurum": 18.4,
+        "van": 18
       }
     },
     {
@@ -1307,7 +1818,10 @@
       "temperaturesC": {
         "izmir": 26.7,
         "ankara": 22.2,
-        "istanbul": 20.9
+        "istanbul": 20.9,
+        "antalya": 25.6,
+        "erzurum": 16.1,
+        "van": 17.4
       }
     },
     {
@@ -1315,7 +1829,10 @@
       "temperaturesC": {
         "izmir": 25.8,
         "ankara": 20.1,
-        "istanbul": 20.2
+        "istanbul": 20.2,
+        "antalya": 28,
+        "erzurum": 15.3,
+        "van": 20.6
       }
     },
     {
@@ -1323,7 +1840,10 @@
       "temperaturesC": {
         "izmir": 26,
         "ankara": 22.9,
-        "istanbul": 23.8
+        "istanbul": 23.8,
+        "antalya": 26.8,
+        "erzurum": 18.8,
+        "van": 19
       }
     },
     {
@@ -1331,7 +1851,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 20.8,
-        "istanbul": 24
+        "istanbul": 24,
+        "antalya": 25.6,
+        "erzurum": 18.3,
+        "van": 18.9
       }
     },
     {
@@ -1339,7 +1862,10 @@
       "temperaturesC": {
         "izmir": 25.1,
         "ankara": 22.3,
-        "istanbul": 22.3
+        "istanbul": 22.3,
+        "antalya": 25.8,
+        "erzurum": 18,
+        "van": 18.2
       }
     },
     {
@@ -1347,7 +1873,10 @@
       "temperaturesC": {
         "izmir": 25.6,
         "ankara": 20.7,
-        "istanbul": 20.8
+        "istanbul": 20.8,
+        "antalya": 27.1,
+        "erzurum": 16.6,
+        "van": 18.8
       }
     },
     {
@@ -1355,7 +1884,10 @@
       "temperaturesC": {
         "izmir": 25.7,
         "ankara": 23.4,
-        "istanbul": 22.8
+        "istanbul": 22.8,
+        "antalya": 28.7,
+        "erzurum": 17.9,
+        "van": 20.1
       }
     },
     {
@@ -1363,7 +1895,10 @@
       "temperaturesC": {
         "izmir": 27.2,
         "ankara": 21.9,
-        "istanbul": 22.8
+        "istanbul": 22.8,
+        "antalya": 27.2,
+        "erzurum": 18.4,
+        "van": 21.2
       }
     },
     {
@@ -1371,7 +1906,10 @@
       "temperaturesC": {
         "izmir": 27.4,
         "ankara": 22.5,
-        "istanbul": 21.3
+        "istanbul": 21.3,
+        "antalya": 25.6,
+        "erzurum": 19.1,
+        "van": 18.4
       }
     },
     {
@@ -1379,7 +1917,10 @@
       "temperaturesC": {
         "izmir": 27.3,
         "ankara": 23.7,
-        "istanbul": 22.2
+        "istanbul": 22.2,
+        "antalya": 27.1,
+        "erzurum": 16.1,
+        "van": 21
       }
     },
     {
@@ -1387,7 +1928,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 22.8,
-        "istanbul": 24.3
+        "istanbul": 24.3,
+        "antalya": 26.6,
+        "erzurum": 16.9,
+        "van": 21.4
       }
     },
     {
@@ -1395,7 +1939,10 @@
       "temperaturesC": {
         "izmir": 24.8,
         "ankara": 21.8,
-        "istanbul": 22.4
+        "istanbul": 22.4,
+        "antalya": 27.4,
+        "erzurum": 17.4,
+        "van": 19.9
       }
     },
     {
@@ -1403,7 +1950,10 @@
       "temperaturesC": {
         "izmir": 27.7,
         "ankara": 21.7,
-        "istanbul": 24.7
+        "istanbul": 24.7,
+        "antalya": 29,
+        "erzurum": 17.8,
+        "van": 20.7
       }
     },
     {
@@ -1411,7 +1961,10 @@
       "temperaturesC": {
         "izmir": 28.1,
         "ankara": 24.2,
-        "istanbul": 24.8
+        "istanbul": 24.8,
+        "antalya": 29.2,
+        "erzurum": 17.8,
+        "van": 21
       }
     },
     {
@@ -1419,7 +1972,10 @@
       "temperaturesC": {
         "izmir": 26,
         "ankara": 21.4,
-        "istanbul": 21.3
+        "istanbul": 21.3,
+        "antalya": 26.6,
+        "erzurum": 19.8,
+        "van": 19.7
       }
     },
     {
@@ -1427,7 +1983,10 @@
       "temperaturesC": {
         "izmir": 28.5,
         "ankara": 22.9,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 28.3,
+        "erzurum": 20.7,
+        "van": 19.9
       }
     },
     {
@@ -1435,7 +1994,10 @@
       "temperaturesC": {
         "izmir": 28.4,
         "ankara": 21.9,
-        "istanbul": 21.6
+        "istanbul": 21.6,
+        "antalya": 28,
+        "erzurum": 18.2,
+        "van": 21.5
       }
     },
     {
@@ -1443,7 +2005,10 @@
       "temperaturesC": {
         "izmir": 28.8,
         "ankara": 22.1,
-        "istanbul": 22.4
+        "istanbul": 22.4,
+        "antalya": 29.3,
+        "erzurum": 19.7,
+        "van": 20.7
       }
     },
     {
@@ -1451,7 +2016,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 23.8,
-        "istanbul": 21.6
+        "istanbul": 21.6,
+        "antalya": 27,
+        "erzurum": 20.6,
+        "van": 21.3
       }
     },
     {
@@ -1459,7 +2027,10 @@
       "temperaturesC": {
         "izmir": 25.9,
         "ankara": 21.6,
-        "istanbul": 22.9
+        "istanbul": 22.9,
+        "antalya": 29.6,
+        "erzurum": 20.5,
+        "van": 20.7
       }
     },
     {
@@ -1467,7 +2038,10 @@
       "temperaturesC": {
         "izmir": 26.1,
         "ankara": 22.3,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 29,
+        "erzurum": 18.3,
+        "van": 20.5
       }
     },
     {
@@ -1475,7 +2049,10 @@
       "temperaturesC": {
         "izmir": 26.1,
         "ankara": 23.9,
-        "istanbul": 25.1
+        "istanbul": 25.1,
+        "antalya": 28.8,
+        "erzurum": 19.9,
+        "van": 20.2
       }
     },
     {
@@ -1483,7 +2060,10 @@
       "temperaturesC": {
         "izmir": 26.8,
         "ankara": 21.9,
-        "istanbul": 25.2
+        "istanbul": 25.2,
+        "antalya": 30.4,
+        "erzurum": 17.4,
+        "van": 21.6
       }
     },
     {
@@ -1491,7 +2071,10 @@
       "temperaturesC": {
         "izmir": 25.9,
         "ankara": 22,
-        "istanbul": 22.4
+        "istanbul": 22.4,
+        "antalya": 28.5,
+        "erzurum": 21.4,
+        "van": 23.1
       }
     },
     {
@@ -1499,7 +2082,10 @@
       "temperaturesC": {
         "izmir": 27.4,
         "ankara": 23.5,
-        "istanbul": 23.4
+        "istanbul": 23.4,
+        "antalya": 30,
+        "erzurum": 18.5,
+        "van": 20.4
       }
     },
     {
@@ -1507,7 +2093,10 @@
       "temperaturesC": {
         "izmir": 28.8,
         "ankara": 23.6,
-        "istanbul": 25.7
+        "istanbul": 25.7,
+        "antalya": 27.9,
+        "erzurum": 20.3,
+        "van": 20.8
       }
     },
     {
@@ -1515,7 +2104,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 24.1,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 28.2,
+        "erzurum": 21,
+        "van": 20.8
       }
     },
     {
@@ -1523,7 +2115,10 @@
       "temperaturesC": {
         "izmir": 27.9,
         "ankara": 22.8,
-        "istanbul": 25.5
+        "istanbul": 25.5,
+        "antalya": 29.6,
+        "erzurum": 21.5,
+        "van": 20.2
       }
     },
     {
@@ -1531,7 +2126,10 @@
       "temperaturesC": {
         "izmir": 27.1,
         "ankara": 23.2,
-        "istanbul": 24.8
+        "istanbul": 24.8,
+        "antalya": 28.5,
+        "erzurum": 19.7,
+        "van": 23.3
       }
     },
     {
@@ -1539,7 +2137,10 @@
       "temperaturesC": {
         "izmir": 27.7,
         "ankara": 22,
-        "istanbul": 24.8
+        "istanbul": 24.8,
+        "antalya": 30,
+        "erzurum": 21.3,
+        "van": 22.1
       }
     },
     {
@@ -1547,7 +2148,10 @@
       "temperaturesC": {
         "izmir": 28.9,
         "ankara": 22,
-        "istanbul": 25.6
+        "istanbul": 25.6,
+        "antalya": 29.2,
+        "erzurum": 20.1,
+        "van": 20.1
       }
     },
     {
@@ -1555,7 +2159,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 23.1,
-        "istanbul": 22.5
+        "istanbul": 22.5,
+        "antalya": 30.5,
+        "erzurum": 19.4,
+        "van": 23.1
       }
     },
     {
@@ -1563,7 +2170,10 @@
       "temperaturesC": {
         "izmir": 28.6,
         "ankara": 23.2,
-        "istanbul": 24.9
+        "istanbul": 24.9,
+        "antalya": 29.2,
+        "erzurum": 19.8,
+        "van": 22.2
       }
     },
     {
@@ -1571,7 +2181,10 @@
       "temperaturesC": {
         "izmir": 28.4,
         "ankara": 24.1,
-        "istanbul": 22.5
+        "istanbul": 22.5,
+        "antalya": 27.9,
+        "erzurum": 19.8,
+        "van": 23.3
       }
     },
     {
@@ -1579,7 +2192,10 @@
       "temperaturesC": {
         "izmir": 27.4,
         "ankara": 25.6,
-        "istanbul": 23.5
+        "istanbul": 23.5,
+        "antalya": 29.6,
+        "erzurum": 18.3,
+        "van": 22.8
       }
     },
     {
@@ -1587,7 +2203,10 @@
       "temperaturesC": {
         "izmir": 29.2,
         "ankara": 23.4,
-        "istanbul": 25
+        "istanbul": 25,
+        "antalya": 29.1,
+        "erzurum": 19.3,
+        "van": 20.4
       }
     },
     {
@@ -1595,7 +2214,10 @@
       "temperaturesC": {
         "izmir": 27.3,
         "ankara": 22.3,
-        "istanbul": 23.2
+        "istanbul": 23.2,
+        "antalya": 27,
+        "erzurum": 19.3,
+        "van": 21.8
       }
     },
     {
@@ -1603,7 +2225,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 22.4,
-        "istanbul": 24.4
+        "istanbul": 24.4,
+        "antalya": 28.8,
+        "erzurum": 21.1,
+        "van": 22.2
       }
     },
     {
@@ -1611,7 +2236,10 @@
       "temperaturesC": {
         "izmir": 28.3,
         "ankara": 25.5,
-        "istanbul": 22.2
+        "istanbul": 22.2,
+        "antalya": 27.8,
+        "erzurum": 19.4,
+        "van": 20.5
       }
     },
     {
@@ -1619,7 +2247,10 @@
       "temperaturesC": {
         "izmir": 27.1,
         "ankara": 25.1,
-        "istanbul": 24
+        "istanbul": 24,
+        "antalya": 27.4,
+        "erzurum": 18.5,
+        "van": 21.2
       }
     },
     {
@@ -1627,7 +2258,10 @@
       "temperaturesC": {
         "izmir": 29.3,
         "ankara": 25.4,
-        "istanbul": 25.2
+        "istanbul": 25.2,
+        "antalya": 29.4,
+        "erzurum": 19.3,
+        "van": null
       }
     },
     {
@@ -1635,7 +2269,10 @@
       "temperaturesC": {
         "izmir": 26.4,
         "ankara": 22.2,
-        "istanbul": 23.3
+        "istanbul": 23.3,
+        "antalya": 30.4,
+        "erzurum": 20.5,
+        "van": null
       }
     },
     {
@@ -1643,7 +2280,10 @@
       "temperaturesC": {
         "izmir": 29.5,
         "ankara": 24.5,
-        "istanbul": 23.4
+        "istanbul": 23.4,
+        "antalya": 28.7,
+        "erzurum": 19.2,
+        "van": null
       }
     },
     {
@@ -1651,7 +2291,10 @@
       "temperaturesC": {
         "izmir": 30,
         "ankara": 25.2,
-        "istanbul": 23.9
+        "istanbul": 23.9,
+        "antalya": 28.7,
+        "erzurum": 19,
+        "van": 20.5
       }
     },
     {
@@ -1659,7 +2302,10 @@
       "temperaturesC": {
         "izmir": 27.8,
         "ankara": 24.4,
-        "istanbul": 23
+        "istanbul": 23,
+        "antalya": 30.6,
+        "erzurum": 20.3,
+        "van": 22.7
       }
     },
     {
@@ -1667,7 +2313,10 @@
       "temperaturesC": {
         "izmir": 27.7,
         "ankara": 23.9,
-        "istanbul": 23.8
+        "istanbul": 23.8,
+        "antalya": 29.2,
+        "erzurum": 19.9,
+        "van": 21.1
       }
     },
     {
@@ -1675,7 +2324,10 @@
       "temperaturesC": {
         "izmir": 27.6,
         "ankara": 25.5,
-        "istanbul": 22
+        "istanbul": 22,
+        "antalya": 30.5,
+        "erzurum": 20.2,
+        "van": 22
       }
     },
     {
@@ -1683,7 +2335,10 @@
       "temperaturesC": {
         "izmir": 27.6,
         "ankara": 24.3,
-        "istanbul": 23.8
+        "istanbul": 23.8,
+        "antalya": 30.1,
+        "erzurum": 19,
+        "van": 20.7
       }
     },
     {
@@ -1691,7 +2346,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 22.2,
-        "istanbul": 25.6
+        "istanbul": 25.6,
+        "antalya": 28.7,
+        "erzurum": 19.6,
+        "van": 21.3
       }
     },
     {
@@ -1699,7 +2357,10 @@
       "temperaturesC": {
         "izmir": 29.5,
         "ankara": 23.5,
-        "istanbul": 22
+        "istanbul": 22,
+        "antalya": 30.7,
+        "erzurum": 19.3,
+        "van": 20
       }
     },
     {
@@ -1707,7 +2368,10 @@
       "temperaturesC": {
         "izmir": 29,
         "ankara": 23,
-        "istanbul": 24.2
+        "istanbul": 24.2,
+        "antalya": 27.3,
+        "erzurum": 17.9,
+        "van": 20.6
       }
     },
     {
@@ -1715,7 +2379,10 @@
       "temperaturesC": {
         "izmir": 29.7,
         "ankara": 22.1,
-        "istanbul": 25.3
+        "istanbul": 25.3,
+        "antalya": 27.7,
+        "erzurum": 21.4,
+        "van": 23.3
       }
     },
     {
@@ -1723,7 +2390,10 @@
       "temperaturesC": {
         "izmir": 28.4,
         "ankara": 22.4,
-        "istanbul": 24.7
+        "istanbul": 24.7,
+        "antalya": 30.4,
+        "erzurum": 18.3,
+        "van": 20.3
       }
     },
     {
@@ -1731,7 +2401,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 23.6,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 27.6,
+        "erzurum": 18.4,
+        "van": 20.8
       }
     },
     {
@@ -1739,7 +2412,10 @@
       "temperaturesC": {
         "izmir": 28.1,
         "ankara": 24.1,
-        "istanbul": 24.4
+        "istanbul": 24.4,
+        "antalya": 29.5,
+        "erzurum": 18.8,
+        "van": 23.1
       }
     },
     {
@@ -1747,7 +2423,10 @@
       "temperaturesC": {
         "izmir": 27.2,
         "ankara": 25.2,
-        "istanbul": 21.9
+        "istanbul": 21.9,
+        "antalya": 26.8,
+        "erzurum": 18.2,
+        "van": 21.9
       }
     },
     {
@@ -1755,7 +2434,10 @@
       "temperaturesC": {
         "izmir": 29.2,
         "ankara": 23.7,
-        "istanbul": 22.3
+        "istanbul": 22.3,
+        "antalya": 28.1,
+        "erzurum": 20.1,
+        "van": 22
       }
     },
     {
@@ -1763,7 +2445,10 @@
       "temperaturesC": {
         "izmir": 25.7,
         "ankara": 22.6,
-        "istanbul": 24.2
+        "istanbul": 24.2,
+        "antalya": 29.8,
+        "erzurum": 19.9,
+        "van": 22.7
       }
     },
     {
@@ -1771,7 +2456,10 @@
       "temperaturesC": {
         "izmir": 27.7,
         "ankara": 24.1,
-        "istanbul": 22.9
+        "istanbul": 22.9,
+        "antalya": 27.5,
+        "erzurum": 19.8,
+        "van": 19.7
       }
     },
     {
@@ -1779,7 +2467,10 @@
       "temperaturesC": {
         "izmir": 25.7,
         "ankara": 23.1,
-        "istanbul": 25.2
+        "istanbul": 25.2,
+        "antalya": 26.5,
+        "erzurum": 20.8,
+        "van": 22.7
       }
     },
     {
@@ -1787,7 +2478,10 @@
       "temperaturesC": {
         "izmir": 26.3,
         "ankara": 24.6,
-        "istanbul": 23.6
+        "istanbul": 23.6,
+        "antalya": 28.1,
+        "erzurum": 20.5,
+        "van": 22.5
       }
     },
     {
@@ -1795,7 +2489,10 @@
       "temperaturesC": {
         "izmir": 28.6,
         "ankara": 21.4,
-        "istanbul": 22.3
+        "istanbul": 22.3,
+        "antalya": 28.6,
+        "erzurum": 19,
+        "van": 19.8
       }
     },
     {
@@ -1803,7 +2500,10 @@
       "temperaturesC": {
         "izmir": 26.2,
         "ankara": 22.5,
-        "istanbul": 22.3
+        "istanbul": 22.3,
+        "antalya": 27.8,
+        "erzurum": 19,
+        "van": 19.9
       }
     },
     {
@@ -1811,7 +2511,10 @@
       "temperaturesC": {
         "izmir": 27.3,
         "ankara": 24.7,
-        "istanbul": 24.9
+        "istanbul": 24.9,
+        "antalya": 29.2,
+        "erzurum": 18.9,
+        "van": 20.3
       }
     },
     {
@@ -1819,7 +2522,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 21.7,
-        "istanbul": 24.5
+        "istanbul": 24.5,
+        "antalya": 28.4,
+        "erzurum": 19.2,
+        "van": 22.1
       }
     },
     {
@@ -1827,7 +2533,10 @@
       "temperaturesC": {
         "izmir": 26.6,
         "ankara": 24.6,
-        "istanbul": 22.4
+        "istanbul": 22.4,
+        "antalya": 26.7,
+        "erzurum": 19.3,
+        "van": 19
       }
     },
     {
@@ -1835,7 +2544,10 @@
       "temperaturesC": {
         "izmir": 27.4,
         "ankara": 23.3,
-        "istanbul": 23.7
+        "istanbul": 23.7,
+        "antalya": 26.3,
+        "erzurum": 19.3,
+        "van": 22.7
       }
     },
     {
@@ -1843,7 +2555,10 @@
       "temperaturesC": {
         "izmir": 26,
         "ankara": 21.1,
-        "istanbul": 22.3
+        "istanbul": 22.3,
+        "antalya": 26,
+        "erzurum": 17.7,
+        "van": 19.2
       }
     },
     {
@@ -1851,7 +2566,10 @@
       "temperaturesC": {
         "izmir": 26,
         "ankara": 22.2,
-        "istanbul": 23.7
+        "istanbul": 23.7,
+        "antalya": 28.2,
+        "erzurum": 18.4,
+        "van": 21.5
       }
     },
     {
@@ -1859,7 +2577,10 @@
       "temperaturesC": {
         "izmir": 26.3,
         "ankara": 24.1,
-        "istanbul": 22.5
+        "istanbul": 22.5,
+        "antalya": 29.8,
+        "erzurum": 17.5,
+        "van": 22.1
       }
     },
     {
@@ -1867,7 +2588,10 @@
       "temperaturesC": {
         "izmir": 25,
         "ankara": 20.3,
-        "istanbul": 22.2
+        "istanbul": 22.2,
+        "antalya": 27,
+        "erzurum": 17.8,
+        "van": 20.7
       }
     },
     {
@@ -1875,7 +2599,10 @@
       "temperaturesC": {
         "izmir": 27.3,
         "ankara": 20.3,
-        "istanbul": 23.1
+        "istanbul": 23.1,
+        "antalya": 26.8,
+        "erzurum": 19,
+        "van": 19.5
       }
     },
     {
@@ -1883,7 +2610,10 @@
       "temperaturesC": {
         "izmir": 26.1,
         "ankara": 21.8,
-        "istanbul": 22.2
+        "istanbul": 22.2,
+        "antalya": 28.3,
+        "erzurum": 18.9,
+        "van": 20.8
       }
     },
     {
@@ -1891,7 +2621,10 @@
       "temperaturesC": {
         "izmir": 24.6,
         "ankara": 22.2,
-        "istanbul": 24
+        "istanbul": 24,
+        "antalya": 29,
+        "erzurum": 18.1,
+        "van": 20.9
       }
     },
     {
@@ -1899,7 +2632,10 @@
       "temperaturesC": {
         "izmir": 26.9,
         "ankara": 23.5,
-        "istanbul": 24.2
+        "istanbul": 24.2,
+        "antalya": 29,
+        "erzurum": 19.4,
+        "van": 19.1
       }
     },
     {
@@ -1907,7 +2643,10 @@
       "temperaturesC": {
         "izmir": 24.7,
         "ankara": 21.5,
-        "istanbul": 20.8
+        "istanbul": 20.8,
+        "antalya": 27.4,
+        "erzurum": 16.3,
+        "van": 19.4
       }
     },
     {
@@ -1915,7 +2654,10 @@
       "temperaturesC": {
         "izmir": 27.5,
         "ankara": 19.7,
-        "istanbul": 20.5
+        "istanbul": 20.5,
+        "antalya": 26.3,
+        "erzurum": 16.1,
+        "van": 18.5
       }
     },
     {
@@ -1923,7 +2665,10 @@
       "temperaturesC": {
         "izmir": 24.8,
         "ankara": 21.5,
-        "istanbul": 21.2
+        "istanbul": 21.2,
+        "antalya": 28.1,
+        "erzurum": 16.4,
+        "van": 20.7
       }
     },
     {
@@ -1931,7 +2676,10 @@
       "temperaturesC": {
         "izmir": 24.9,
         "ankara": 22.3,
-        "istanbul": 20.9
+        "istanbul": 20.9,
+        "antalya": 26.6,
+        "erzurum": 15.3,
+        "van": 19.9
       }
     },
     {
@@ -1939,7 +2687,10 @@
       "temperaturesC": {
         "izmir": 25.3,
         "ankara": 20.6,
-        "istanbul": 22.1
+        "istanbul": 22.1,
+        "antalya": 28.3,
+        "erzurum": 18.1,
+        "van": 18.5
       }
     },
     {
@@ -1947,7 +2698,10 @@
       "temperaturesC": {
         "izmir": 24.8,
         "ankara": 19.7,
-        "istanbul": 22.8
+        "istanbul": 22.8,
+        "antalya": 28,
+        "erzurum": 16.3,
+        "van": 19.5
       }
     },
     {
@@ -1955,7 +2709,10 @@
       "temperaturesC": {
         "izmir": 27.5,
         "ankara": 20.9,
-        "istanbul": 22.9
+        "istanbul": 22.9,
+        "antalya": 27.3,
+        "erzurum": 16.3,
+        "van": 18
       }
     },
     {
@@ -1963,7 +2720,10 @@
       "temperaturesC": {
         "izmir": 25.7,
         "ankara": 19.9,
-        "istanbul": 21.1
+        "istanbul": 21.1,
+        "antalya": 27.8,
+        "erzurum": 15.8,
+        "van": 17
       }
     },
     {
@@ -1971,7 +2731,10 @@
       "temperaturesC": {
         "izmir": 23.7,
         "ankara": 21.8,
-        "istanbul": 21.2
+        "istanbul": 21.2,
+        "antalya": 24.8,
+        "erzurum": 16.9,
+        "van": 18
       }
     },
     {
@@ -1979,7 +2742,10 @@
       "temperaturesC": {
         "izmir": 25.8,
         "ankara": 19.8,
-        "istanbul": 21
+        "istanbul": 21,
+        "antalya": 25,
+        "erzurum": 14.5,
+        "van": 17.2
       }
     },
     {
@@ -1987,7 +2753,10 @@
       "temperaturesC": {
         "izmir": 25.9,
         "ankara": 18.8,
-        "istanbul": 21.4
+        "istanbul": 21.4,
+        "antalya": 25.5,
+        "erzurum": 16.6,
+        "van": 19.8
       }
     },
     {
@@ -1995,7 +2764,10 @@
       "temperaturesC": {
         "izmir": 23.8,
         "ankara": 21.3,
-        "istanbul": 21.8
+        "istanbul": 21.8,
+        "antalya": 26.7,
+        "erzurum": 16.9,
+        "van": 19.2
       }
     },
     {
@@ -2003,7 +2775,10 @@
       "temperaturesC": {
         "izmir": 24.1,
         "ankara": 18.1,
-        "istanbul": 19.9
+        "istanbul": 19.9,
+        "antalya": 27.2,
+        "erzurum": 13.8,
+        "van": 17
       }
     },
     {
@@ -2011,7 +2786,10 @@
       "temperaturesC": {
         "izmir": 26.1,
         "ankara": 20.3,
-        "istanbul": 19.7
+        "istanbul": 19.7,
+        "antalya": 27.1,
+        "erzurum": 17.2,
+        "van": 17.7
       }
     },
     {
@@ -2019,7 +2797,10 @@
       "temperaturesC": {
         "izmir": 25.7,
         "ankara": 19.6,
-        "istanbul": 22.4
+        "istanbul": 22.4,
+        "antalya": 26.8,
+        "erzurum": 16.3,
+        "van": 17.7
       }
     },
     {
@@ -2027,7 +2808,10 @@
       "temperaturesC": {
         "izmir": 23.7,
         "ankara": 18.7,
-        "istanbul": 21.7
+        "istanbul": 21.7,
+        "antalya": 23.9,
+        "erzurum": 16,
+        "van": 17.1
       }
     },
     {
@@ -2035,7 +2819,10 @@
       "temperaturesC": {
         "izmir": 24.2,
         "ankara": 18.6,
-        "istanbul": 20.7
+        "istanbul": 20.7,
+        "antalya": 25.4,
+        "erzurum": 14.8,
+        "van": 18.2
       }
     },
     {
@@ -2043,7 +2830,10 @@
       "temperaturesC": {
         "izmir": 24.1,
         "ankara": 20.5,
-        "istanbul": 20.1
+        "istanbul": 20.1,
+        "antalya": 23.6,
+        "erzurum": 14.7,
+        "van": 16.3
       }
     },
     {
@@ -2051,7 +2841,10 @@
       "temperaturesC": {
         "izmir": 25.5,
         "ankara": 19.3,
-        "istanbul": 20
+        "istanbul": 20,
+        "antalya": 24.3,
+        "erzurum": 13.7,
+        "van": 17.1
       }
     },
     {
@@ -2059,7 +2852,10 @@
       "temperaturesC": {
         "izmir": 23.2,
         "ankara": 18.5,
-        "istanbul": 21.1
+        "istanbul": 21.1,
+        "antalya": 23.8,
+        "erzurum": 13.8,
+        "van": 15.2
       }
     },
     {
@@ -2067,7 +2863,10 @@
       "temperaturesC": {
         "izmir": 24.6,
         "ankara": 19.7,
-        "istanbul": 18.8
+        "istanbul": 18.8,
+        "antalya": 26.2,
+        "erzurum": 12.5,
+        "van": 16.2
       }
     },
     {
@@ -2075,7 +2874,10 @@
       "temperaturesC": {
         "izmir": 23.9,
         "ankara": 16.6,
-        "istanbul": 21.2
+        "istanbul": 21.2,
+        "antalya": 26.6,
+        "erzurum": 13.1,
+        "van": 14.6
       }
     },
     {
@@ -2083,7 +2885,10 @@
       "temperaturesC": {
         "izmir": 25.2,
         "ankara": 16.4,
-        "istanbul": 20.1
+        "istanbul": 20.1,
+        "antalya": 25,
+        "erzurum": 13.3,
+        "van": 17.4
       }
     },
     {
@@ -2091,7 +2896,10 @@
       "temperaturesC": {
         "izmir": 23.9,
         "ankara": 16.1,
-        "istanbul": 20.4
+        "istanbul": 20.4,
+        "antalya": 24.1,
+        "erzurum": 12.9,
+        "van": 14.5
       }
     },
     {
@@ -2099,7 +2907,10 @@
       "temperaturesC": {
         "izmir": 24.2,
         "ankara": 18.1,
-        "istanbul": 18.9
+        "istanbul": 18.9,
+        "antalya": 25.2,
+        "erzurum": 13.4,
+        "van": 17.3
       }
     },
     {
@@ -2107,7 +2918,10 @@
       "temperaturesC": {
         "izmir": 22.7,
         "ankara": 18.2,
-        "istanbul": 18.9
+        "istanbul": 18.9,
+        "antalya": 23.8,
+        "erzurum": 12.4,
+        "van": 14.7
       }
     },
     {
@@ -2115,7 +2929,10 @@
       "temperaturesC": {
         "izmir": 23.6,
         "ankara": 18.8,
-        "istanbul": 20.5
+        "istanbul": 20.5,
+        "antalya": 24.6,
+        "erzurum": 11.3,
+        "van": 13.7
       }
     },
     {
@@ -2123,7 +2940,10 @@
       "temperaturesC": {
         "izmir": 23.8,
         "ankara": 16.3,
-        "istanbul": 20.9
+        "istanbul": 20.9,
+        "antalya": 22,
+        "erzurum": 10.8,
+        "van": 15.3
       }
     },
     {
@@ -2131,7 +2951,10 @@
       "temperaturesC": {
         "izmir": 22.2,
         "ankara": 17,
-        "istanbul": 19.4
+        "istanbul": 19.4,
+        "antalya": 22.5,
+        "erzurum": 11.1,
+        "van": 15.9
       }
     },
     {
@@ -2139,7 +2962,10 @@
       "temperaturesC": {
         "izmir": 22.6,
         "ankara": 15.5,
-        "istanbul": 17.2
+        "istanbul": 17.2,
+        "antalya": 24.3,
+        "erzurum": 10.4,
+        "van": 14.6
       }
     },
     {
@@ -2147,7 +2973,10 @@
       "temperaturesC": {
         "izmir": 23.3,
         "ankara": 17.1,
-        "istanbul": 17.2
+        "istanbul": 17.2,
+        "antalya": 24,
+        "erzurum": 13.2,
+        "van": 13
       }
     },
     {
@@ -2155,7 +2984,10 @@
       "temperaturesC": {
         "izmir": 22.3,
         "ankara": 15.4,
-        "istanbul": 18.5
+        "istanbul": 18.5,
+        "antalya": 25.1,
+        "erzurum": 11,
+        "van": 13.8
       }
     },
     {
@@ -2163,7 +2995,10 @@
       "temperaturesC": {
         "izmir": 23.6,
         "ankara": 15.5,
-        "istanbul": 18.4
+        "istanbul": 18.4,
+        "antalya": 23.9,
+        "erzurum": 11.9,
+        "van": 14.2
       }
     },
     {
@@ -2171,7 +3006,10 @@
       "temperaturesC": {
         "izmir": 23.6,
         "ankara": 15.7,
-        "istanbul": 18.8
+        "istanbul": 18.8,
+        "antalya": 23.9,
+        "erzurum": 10.1,
+        "van": 14.4
       }
     },
     {
@@ -2179,7 +3017,10 @@
       "temperaturesC": {
         "izmir": 23.4,
         "ankara": 14.6,
-        "istanbul": 17.3
+        "istanbul": 17.3,
+        "antalya": 23.8,
+        "erzurum": 12.2,
+        "van": 15.1
       }
     },
     {
@@ -2187,7 +3028,10 @@
       "temperaturesC": {
         "izmir": 21.7,
         "ankara": 15.9,
-        "istanbul": 17.5
+        "istanbul": 17.5,
+        "antalya": 22.1,
+        "erzurum": 10,
+        "van": 12.2
       }
     },
     {
@@ -2195,7 +3039,10 @@
       "temperaturesC": {
         "izmir": 22.9,
         "ankara": 14.2,
-        "istanbul": 19
+        "istanbul": 19,
+        "antalya": 21.7,
+        "erzurum": 9.2,
+        "van": 11.8
       }
     },
     {
@@ -2203,7 +3050,10 @@
       "temperaturesC": {
         "izmir": 22.6,
         "ankara": 15.1,
-        "istanbul": 16.5
+        "istanbul": 16.5,
+        "antalya": 20.3,
+        "erzurum": 9.3,
+        "van": 12.9
       }
     },
     {
@@ -2211,7 +3061,10 @@
       "temperaturesC": {
         "izmir": 22.8,
         "ankara": 14.4,
-        "istanbul": 18.8
+        "istanbul": 18.8,
+        "antalya": 21.2,
+        "erzurum": 11,
+        "van": 11.4
       }
     },
     {
@@ -2219,7 +3072,10 @@
       "temperaturesC": {
         "izmir": 22.7,
         "ankara": 16.3,
-        "istanbul": 19.1
+        "istanbul": 19.1,
+        "antalya": 21.7,
+        "erzurum": 8.3,
+        "van": 14.7
       }
     },
     {
@@ -2227,7 +3083,10 @@
       "temperaturesC": {
         "izmir": 22.3,
         "ankara": 13.2,
-        "istanbul": 16.6
+        "istanbul": 16.6,
+        "antalya": 20.4,
+        "erzurum": 10.6,
+        "van": 13
       }
     },
     {
@@ -2235,7 +3094,10 @@
       "temperaturesC": {
         "izmir": 20.2,
         "ankara": 13.3,
-        "istanbul": 16.6
+        "istanbul": 16.6,
+        "antalya": 22.4,
+        "erzurum": 8.7,
+        "van": 11.2
       }
     },
     {
@@ -2243,7 +3105,10 @@
       "temperaturesC": {
         "izmir": 21.7,
         "ankara": 14.6,
-        "istanbul": 17.4
+        "istanbul": 17.4,
+        "antalya": 23,
+        "erzurum": 11.1,
+        "van": 10.5
       }
     },
     {
@@ -2251,7 +3116,10 @@
       "temperaturesC": {
         "izmir": 20.9,
         "ankara": 15.5,
-        "istanbul": 15.3
+        "istanbul": 15.3,
+        "antalya": 19.8,
+        "erzurum": 8.9,
+        "van": 10.3
       }
     },
     {
@@ -2259,7 +3127,10 @@
       "temperaturesC": {
         "izmir": 21.4,
         "ankara": 15,
-        "istanbul": 15.9
+        "istanbul": 15.9,
+        "antalya": 21.3,
+        "erzurum": 10,
+        "van": 10.1
       }
     },
     {
@@ -2267,7 +3138,10 @@
       "temperaturesC": {
         "izmir": 21.5,
         "ankara": 13.4,
-        "istanbul": 18.4
+        "istanbul": 18.4,
+        "antalya": 22.5,
+        "erzurum": 10,
+        "van": 12.3
       }
     },
     {
@@ -2275,7 +3149,10 @@
       "temperaturesC": {
         "izmir": 19.6,
         "ankara": 12.3,
-        "istanbul": 15.6
+        "istanbul": 15.6,
+        "antalya": 18.9,
+        "erzurum": 9.5,
+        "van": 12.1
       }
     },
     {
@@ -2283,7 +3160,10 @@
       "temperaturesC": {
         "izmir": 20,
         "ankara": 12.1,
-        "istanbul": 16.9
+        "istanbul": 16.9,
+        "antalya": 20.1,
+        "erzurum": 6.8,
+        "van": 12.5
       }
     },
     {
@@ -2291,7 +3171,10 @@
       "temperaturesC": {
         "izmir": 18.6,
         "ankara": 11.4,
-        "istanbul": 14.7
+        "istanbul": 14.7,
+        "antalya": 18.6,
+        "erzurum": 8.5,
+        "van": 12.2
       }
     },
     {
@@ -2299,7 +3182,10 @@
       "temperaturesC": {
         "izmir": 18.7,
         "ankara": 11.3,
-        "istanbul": 16.6
+        "istanbul": 16.6,
+        "antalya": 21.2,
+        "erzurum": 8.5,
+        "van": 9.3
       }
     },
     {
@@ -2307,7 +3193,10 @@
       "temperaturesC": {
         "izmir": 18,
         "ankara": 10.8,
-        "istanbul": 17.8
+        "istanbul": 17.8,
+        "antalya": 19.3,
+        "erzurum": 9.2,
+        "van": 10.8
       }
     },
     {
@@ -2315,7 +3204,10 @@
       "temperaturesC": {
         "izmir": 20.8,
         "ankara": 12.8,
-        "istanbul": 16.7
+        "istanbul": 16.7,
+        "antalya": 19.2,
+        "erzurum": 5.8,
+        "van": 11.4
       }
     },
     {
@@ -2323,7 +3215,10 @@
       "temperaturesC": {
         "izmir": 20.2,
         "ankara": 11.6,
-        "istanbul": 15.9
+        "istanbul": 15.9,
+        "antalya": 20.7,
+        "erzurum": 8.1,
+        "van": 11.3
       }
     },
     {
@@ -2331,7 +3226,10 @@
       "temperaturesC": {
         "izmir": 18.2,
         "ankara": 10.7,
-        "istanbul": 14.4
+        "istanbul": 14.4,
+        "antalya": 19.5,
+        "erzurum": 6.4,
+        "van": 10.4
       }
     },
     {
@@ -2339,7 +3237,10 @@
       "temperaturesC": {
         "izmir": 19.8,
         "ankara": 9.8,
-        "istanbul": 15.3
+        "istanbul": 15.3,
+        "antalya": 19.4,
+        "erzurum": 8,
+        "van": 9.9
       }
     },
     {
@@ -2347,7 +3248,10 @@
       "temperaturesC": {
         "izmir": 17.4,
         "ankara": 12.8,
-        "istanbul": 13.7
+        "istanbul": 13.7,
+        "antalya": 18.2,
+        "erzurum": 8.1,
+        "van": 11
       }
     },
     {
@@ -2355,7 +3259,10 @@
       "temperaturesC": {
         "izmir": 16.6,
         "ankara": 12.4,
-        "istanbul": 14.8
+        "istanbul": 14.8,
+        "antalya": 17.1,
+        "erzurum": 7,
+        "van": 8.9
       }
     },
     {
@@ -2363,7 +3270,10 @@
       "temperaturesC": {
         "izmir": 17.4,
         "ankara": 11.6,
-        "istanbul": 13.8
+        "istanbul": 13.8,
+        "antalya": 17.2,
+        "erzurum": 6.8,
+        "van": 10.5
       }
     },
     {
@@ -2371,7 +3281,10 @@
       "temperaturesC": {
         "izmir": 19.4,
         "ankara": 12.1,
-        "istanbul": 13.2
+        "istanbul": 13.2,
+        "antalya": 19.2,
+        "erzurum": 6.5,
+        "van": 8.4
       }
     },
     {
@@ -2379,7 +3292,10 @@
       "temperaturesC": {
         "izmir": 16,
         "ankara": 12.1,
-        "istanbul": 15.4
+        "istanbul": 15.4,
+        "antalya": 18.3,
+        "erzurum": 6.4,
+        "van": 9.1
       }
     },
     {
@@ -2387,7 +3303,10 @@
       "temperaturesC": {
         "izmir": 19.2,
         "ankara": 11.6,
-        "istanbul": 15
+        "istanbul": 15,
+        "antalya": 19.7,
+        "erzurum": 6.2,
+        "van": 6.8
       }
     },
     {
@@ -2395,7 +3314,10 @@
       "temperaturesC": {
         "izmir": 16.9,
         "ankara": 9.4,
-        "istanbul": 13.5
+        "istanbul": 13.5,
+        "antalya": 16.6,
+        "erzurum": 2.9,
+        "van": 9.8
       }
     },
     {
@@ -2403,7 +3325,10 @@
       "temperaturesC": {
         "izmir": 15.6,
         "ankara": 11.5,
-        "istanbul": 15.3
+        "istanbul": 15.3,
+        "antalya": 18.6,
+        "erzurum": 3.9,
+        "van": 8.6
       }
     },
     {
@@ -2411,7 +3336,10 @@
       "temperaturesC": {
         "izmir": 16.6,
         "ankara": 9.3,
-        "istanbul": 12.3
+        "istanbul": 12.3,
+        "antalya": 16.8,
+        "erzurum": 3.7,
+        "van": 6.5
       }
     },
     {
@@ -2419,7 +3347,10 @@
       "temperaturesC": {
         "izmir": 17.3,
         "ankara": 9.5,
-        "istanbul": 14.9
+        "istanbul": 14.9,
+        "antalya": 17.5,
+        "erzurum": 4.9,
+        "van": 5.9
       }
     },
     {
@@ -2427,7 +3358,10 @@
       "temperaturesC": {
         "izmir": 17.5,
         "ankara": 8.8,
-        "istanbul": 13.8
+        "istanbul": 13.8,
+        "antalya": 19,
+        "erzurum": 2.5,
+        "van": 6.8
       }
     },
     {
@@ -2435,7 +3369,10 @@
       "temperaturesC": {
         "izmir": 17.6,
         "ankara": 9.5,
-        "istanbul": 13.9
+        "istanbul": 13.9,
+        "antalya": 16.1,
+        "erzurum": 3.2,
+        "van": 7
       }
     },
     {
@@ -2443,7 +3380,10 @@
       "temperaturesC": {
         "izmir": 15,
         "ankara": 8.3,
-        "istanbul": 13.7
+        "istanbul": 13.7,
+        "antalya": 16.8,
+        "erzurum": 1.6,
+        "van": 5.3
       }
     },
     {
@@ -2451,7 +3391,10 @@
       "temperaturesC": {
         "izmir": 17.7,
         "ankara": 8.6,
-        "istanbul": 12.5
+        "istanbul": 12.5,
+        "antalya": 17.3,
+        "erzurum": 3.6,
+        "van": 4.8
       }
     },
     {
@@ -2459,7 +3402,10 @@
       "temperaturesC": {
         "izmir": 14.1,
         "ankara": 9.6,
-        "istanbul": 14.5
+        "istanbul": 14.5,
+        "antalya": 17.3,
+        "erzurum": 1.8,
+        "van": 6
       }
     },
     {
@@ -2467,7 +3413,10 @@
       "temperaturesC": {
         "izmir": 13.8,
         "ankara": 6.4,
-        "istanbul": 14.3
+        "istanbul": 14.3,
+        "antalya": 16.8,
+        "erzurum": 1.7,
+        "van": 5.4
       }
     },
     {
@@ -2475,7 +3424,10 @@
       "temperaturesC": {
         "izmir": 17.2,
         "ankara": 9,
-        "istanbul": 13.7
+        "istanbul": null,
+        "antalya": 17.1,
+        "erzurum": 2.2,
+        "van": 7.6
       }
     },
     {
@@ -2483,7 +3435,10 @@
       "temperaturesC": {
         "izmir": 13.4,
         "ankara": 6,
-        "istanbul": 10.8
+        "istanbul": null,
+        "antalya": 16.4,
+        "erzurum": 1.5,
+        "van": 7.2
       }
     },
     {
@@ -2491,7 +3446,10 @@
       "temperaturesC": {
         "izmir": 15.7,
         "ankara": 7,
-        "istanbul": 13.9
+        "istanbul": 13.9,
+        "antalya": 17.3,
+        "erzurum": 1.3,
+        "van": 6.5
       }
     },
     {
@@ -2499,7 +3457,10 @@
       "temperaturesC": {
         "izmir": 15.6,
         "ankara": 6.2,
-        "istanbul": 11
+        "istanbul": 11,
+        "antalya": 15.8,
+        "erzurum": 1,
+        "van": 5.7
       }
     },
     {
@@ -2507,7 +3468,10 @@
       "temperaturesC": {
         "izmir": 14.9,
         "ankara": 7.5,
-        "istanbul": 13.8
+        "istanbul": 13.8,
+        "antalya": 17.7,
+        "erzurum": 2.5,
+        "van": 5.4
       }
     },
     {
@@ -2515,7 +3479,10 @@
       "temperaturesC": {
         "izmir": 13.7,
         "ankara": 7.6,
-        "istanbul": 11.3
+        "istanbul": 11.3,
+        "antalya": 17.4,
+        "erzurum": 1.3,
+        "van": 5.1
       }
     },
     {
@@ -2523,7 +3490,10 @@
       "temperaturesC": {
         "izmir": 15.4,
         "ankara": 5.3,
-        "istanbul": 10.8
+        "istanbul": 10.8,
+        "antalya": 16.3,
+        "erzurum": -0.9,
+        "van": 5
       }
     },
     {
@@ -2531,7 +3501,10 @@
       "temperaturesC": {
         "izmir": 15.2,
         "ankara": 7.1,
-        "istanbul": 10.2
+        "istanbul": 10.2,
+        "antalya": 14.9,
+        "erzurum": 1.9,
+        "van": 5.3
       }
     },
     {
@@ -2539,7 +3512,10 @@
       "temperaturesC": {
         "izmir": 15.6,
         "ankara": 5.8,
-        "istanbul": 10.8
+        "istanbul": 10.8,
+        "antalya": 16.9,
+        "erzurum": 0.8,
+        "van": 2.5
       }
     },
     {
@@ -2547,7 +3523,10 @@
       "temperaturesC": {
         "izmir": 12.2,
         "ankara": 7.4,
-        "istanbul": 11.5
+        "istanbul": 11.5,
+        "antalya": 16.7,
+        "erzurum": 1.9,
+        "van": 2.1
       }
     },
     {
@@ -2555,7 +3534,10 @@
       "temperaturesC": {
         "izmir": 13.1,
         "ankara": 7.1,
-        "istanbul": 11.8
+        "istanbul": 11.8,
+        "antalya": 15.4,
+        "erzurum": 1.3,
+        "van": 3.5
       }
     },
     {
@@ -2563,7 +3545,10 @@
       "temperaturesC": {
         "izmir": 15.5,
         "ankara": 4,
-        "istanbul": 11.1
+        "istanbul": 11.1,
+        "antalya": 14.1,
+        "erzurum": -0.6,
+        "van": 3
       }
     },
     {
@@ -2571,7 +3556,10 @@
       "temperaturesC": {
         "izmir": 12.2,
         "ankara": 3.6,
-        "istanbul": 12.5
+        "istanbul": 12.5,
+        "antalya": 14.1,
+        "erzurum": 0.1,
+        "van": 2.1
       }
     },
     {
@@ -2579,7 +3567,10 @@
       "temperaturesC": {
         "izmir": 14.5,
         "ankara": 5,
-        "istanbul": 12.4
+        "istanbul": 12.4,
+        "antalya": 14.4,
+        "erzurum": 1,
+        "van": 3.9
       }
     },
     {
@@ -2587,7 +3578,10 @@
       "temperaturesC": {
         "izmir": 13.3,
         "ankara": 6.8,
-        "istanbul": 9.3
+        "istanbul": 9.3,
+        "antalya": 16.1,
+        "erzurum": -1,
+        "van": 4.6
       }
     },
     {
@@ -2595,7 +3589,10 @@
       "temperaturesC": {
         "izmir": 12.6,
         "ankara": 4.1,
-        "istanbul": 11.9
+        "istanbul": 11.9,
+        "antalya": 14.6,
+        "erzurum": 1,
+        "van": 4.2
       }
     },
     {
@@ -2603,7 +3600,10 @@
       "temperaturesC": {
         "izmir": 13.1,
         "ankara": 3.1,
-        "istanbul": 12.2
+        "istanbul": 12.2,
+        "antalya": 14.4,
+        "erzurum": -3.1,
+        "van": 0.8
       }
     },
     {
@@ -2611,7 +3611,10 @@
       "temperaturesC": {
         "izmir": 14.6,
         "ankara": 3.2,
-        "istanbul": 11.1
+        "istanbul": 11.1,
+        "antalya": 12.7,
+        "erzurum": -2.4,
+        "van": 0.7
       }
     },
     {
@@ -2619,7 +3622,10 @@
       "temperaturesC": {
         "izmir": 14.2,
         "ankara": 2.2,
-        "istanbul": 10.1
+        "istanbul": 10.1,
+        "antalya": 13.4,
+        "erzurum": -2.4,
+        "van": 3
       }
     },
     {
@@ -2627,7 +3633,10 @@
       "temperaturesC": {
         "izmir": 14.2,
         "ankara": 5.8,
-        "istanbul": 10.6
+        "istanbul": 10.6,
+        "antalya": 12,
+        "erzurum": -0.4,
+        "van": 1.1
       }
     },
     {
@@ -2635,7 +3644,10 @@
       "temperaturesC": {
         "izmir": 11.8,
         "ankara": 2.4,
-        "istanbul": 10.6
+        "istanbul": 10.6,
+        "antalya": 14.2,
+        "erzurum": -3.4,
+        "van": 1.9
       }
     },
     {
@@ -2643,7 +3655,10 @@
       "temperaturesC": {
         "izmir": 12.2,
         "ankara": 4.4,
-        "istanbul": 10.9
+        "istanbul": 10.9,
+        "antalya": 13.2,
+        "erzurum": -1.7,
+        "van": 2.1
       }
     },
     {
@@ -2651,7 +3666,10 @@
       "temperaturesC": {
         "izmir": 10.4,
         "ankara": 4.8,
-        "istanbul": 11
+        "istanbul": 11,
+        "antalya": 14.8,
+        "erzurum": -0.4,
+        "van": 2.7
       }
     },
     {
@@ -2659,7 +3677,10 @@
       "temperaturesC": {
         "izmir": 13.1,
         "ankara": 4.9,
-        "istanbul": 8.8
+        "istanbul": 8.8,
+        "antalya": 13.3,
+        "erzurum": -4,
+        "van": 0
       }
     },
     {
@@ -2667,7 +3688,10 @@
       "temperaturesC": {
         "izmir": 11.1,
         "ankara": 1.3,
-        "istanbul": 9.5
+        "istanbul": 9.5,
+        "antalya": 13,
+        "erzurum": -3.5,
+        "van": 2.1
       }
     },
     {
@@ -2675,7 +3699,10 @@
       "temperaturesC": {
         "izmir": 10.2,
         "ankara": 3.4,
-        "istanbul": 10.4
+        "istanbul": 10.4,
+        "antalya": 12.5,
+        "erzurum": -4.4,
+        "van": 2.6
       }
     },
     {
@@ -2683,7 +3710,10 @@
       "temperaturesC": {
         "izmir": 12.1,
         "ankara": 3.5,
-        "istanbul": 10.1
+        "istanbul": 10.1,
+        "antalya": 12.8,
+        "erzurum": -2,
+        "van": 2
       }
     },
     {
@@ -2691,7 +3721,10 @@
       "temperaturesC": {
         "izmir": 11.4,
         "ankara": 0.7,
-        "istanbul": 10.2
+        "istanbul": 10.2,
+        "antalya": 11.6,
+        "erzurum": -2.6,
+        "van": 2.3
       }
     },
     {
@@ -2699,7 +3732,10 @@
       "temperaturesC": {
         "izmir": 10.6,
         "ankara": 2.5,
-        "istanbul": 10.2
+        "istanbul": 10.2,
+        "antalya": 11.2,
+        "erzurum": -3.3,
+        "van": 1.3
       }
     },
     {
@@ -2707,7 +3743,10 @@
       "temperaturesC": {
         "izmir": 9.8,
         "ankara": 1,
-        "istanbul": 10.3
+        "istanbul": 10.3,
+        "antalya": 11.7,
+        "erzurum": -1.9,
+        "van": -0.4
       }
     },
     {
@@ -2715,7 +3754,10 @@
       "temperaturesC": {
         "izmir": 9.7,
         "ankara": 1.7,
-        "istanbul": 10.3
+        "istanbul": 10.3,
+        "antalya": 11.3,
+        "erzurum": -4.7,
+        "van": 0.7
       }
     },
     {
@@ -2723,7 +3765,10 @@
       "temperaturesC": {
         "izmir": 11.7,
         "ankara": 1.1,
-        "istanbul": 9.2
+        "istanbul": 9.2,
+        "antalya": 12.9,
+        "erzurum": -5.2,
+        "van": -0.7
       }
     },
     {
@@ -2731,7 +3776,10 @@
       "temperaturesC": {
         "izmir": 9.5,
         "ankara": -0.2,
-        "istanbul": 9.7
+        "istanbul": 9.7,
+        "antalya": 12.2,
+        "erzurum": -3.9,
+        "van": 0.3
       }
     },
     {
@@ -2739,7 +3787,10 @@
       "temperaturesC": {
         "izmir": 11.2,
         "ankara": 1,
-        "istanbul": 9
+        "istanbul": 9,
+        "antalya": 12.7,
+        "erzurum": -5.1,
+        "van": -1.4
       }
     },
     {
@@ -2747,7 +3798,10 @@
       "temperaturesC": {
         "izmir": 10.9,
         "ankara": 1.3,
-        "istanbul": 8.9
+        "istanbul": 8.9,
+        "antalya": 13.4,
+        "erzurum": -6.2,
+        "van": -1.3
       }
     },
     {
@@ -2755,7 +3809,10 @@
       "temperaturesC": {
         "izmir": 11.7,
         "ankara": -0.4,
-        "istanbul": 7.2
+        "istanbul": 7.2,
+        "antalya": 9.5,
+        "erzurum": -4,
+        "van": 0.7
       }
     },
     {
@@ -2763,7 +3820,10 @@
       "temperaturesC": {
         "izmir": 9.2,
         "ankara": 0.2,
-        "istanbul": 10
+        "istanbul": 10,
+        "antalya": 10.3,
+        "erzurum": -3.1,
+        "van": -1
       }
     },
     {
@@ -2771,7 +3831,10 @@
       "temperaturesC": {
         "izmir": 8.9,
         "ankara": 1,
-        "istanbul": 8.7
+        "istanbul": 8.7,
+        "antalya": 12.4,
+        "erzurum": -3,
+        "van": -2.5
       }
     },
     {
@@ -2779,7 +3842,10 @@
       "temperaturesC": {
         "izmir": 8.6,
         "ankara": 1.2,
-        "istanbul": 8.2
+        "istanbul": 8.2,
+        "antalya": 10.2,
+        "erzurum": -7,
+        "van": -2.3
       }
     },
     {
@@ -2787,7 +3853,10 @@
       "temperaturesC": {
         "izmir": 9.1,
         "ankara": 2.1,
-        "istanbul": 6.6
+        "istanbul": 6.6,
+        "antalya": 12.6,
+        "erzurum": -6.4,
+        "van": -2.9
       }
     },
     {
@@ -2795,7 +3864,10 @@
       "temperaturesC": {
         "izmir": 9.9,
         "ankara": 0.4,
-        "istanbul": 5.8
+        "istanbul": 5.8,
+        "antalya": 12.6,
+        "erzurum": -4.3,
+        "van": 0.4
       }
     },
     {
@@ -2803,7 +3875,10 @@
       "temperaturesC": {
         "izmir": 9.9,
         "ankara": -1.5,
-        "istanbul": 6.9
+        "istanbul": 6.9,
+        "antalya": 11.7,
+        "erzurum": -5.5,
+        "van": -1.4
       }
     },
     {
@@ -2811,7 +3886,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": 1.6,
-        "istanbul": 8.4
+        "istanbul": 8.4,
+        "antalya": 12.4,
+        "erzurum": -5,
+        "van": 0.1
       }
     },
     {
@@ -2819,7 +3897,10 @@
       "temperaturesC": {
         "izmir": 10.2,
         "ankara": 1.8,
-        "istanbul": 6.9
+        "istanbul": 6.9,
+        "antalya": 10.5,
+        "erzurum": -6.5,
+        "van": -0.1
       }
     },
     {
@@ -2827,7 +3908,10 @@
       "temperaturesC": {
         "izmir": 8.4,
         "ankara": -0.1,
-        "istanbul": 8
+        "istanbul": 8,
+        "antalya": 8.5,
+        "erzurum": -6.9,
+        "van": -2.1
       }
     },
     {
@@ -2835,7 +3919,10 @@
       "temperaturesC": {
         "izmir": 9.2,
         "ankara": -1.4,
-        "istanbul": 6.5
+        "istanbul": 6.5,
+        "antalya": 12,
+        "erzurum": -5.9,
+        "van": -0.7
       }
     },
     {
@@ -2843,7 +3930,10 @@
       "temperaturesC": {
         "izmir": 7.4,
         "ankara": -2,
-        "istanbul": 5.4
+        "istanbul": 5.4,
+        "antalya": 8.8,
+        "erzurum": -4.6,
+        "van": -3.1
       }
     },
     {
@@ -2851,7 +3941,10 @@
       "temperaturesC": {
         "izmir": 8.5,
         "ankara": -1.5,
-        "istanbul": 6.2
+        "istanbul": 6.2,
+        "antalya": 8.4,
+        "erzurum": -7.7,
+        "van": -3.1
       }
     },
     {
@@ -2859,7 +3952,10 @@
       "temperaturesC": {
         "izmir": 9,
         "ankara": -1.5,
-        "istanbul": 5.6
+        "istanbul": 5.6,
+        "antalya": 9.7,
+        "erzurum": -4.8,
+        "van": -0.7
       }
     },
     {
@@ -2867,7 +3963,10 @@
       "temperaturesC": {
         "izmir": 7.7,
         "ankara": -0.9,
-        "istanbul": 6.8
+        "istanbul": 6.8,
+        "antalya": 9.9,
+        "erzurum": -5.1,
+        "van": -3.3
       }
     },
     {
@@ -2875,7 +3974,10 @@
       "temperaturesC": {
         "izmir": 9.8,
         "ankara": -0.9,
-        "istanbul": 8.5
+        "istanbul": 8.5,
+        "antalya": 11.9,
+        "erzurum": -6.5,
+        "van": -2.7
       }
     },
     {
@@ -2883,7 +3985,10 @@
       "temperaturesC": {
         "izmir": 10.5,
         "ankara": 0.6,
-        "istanbul": 5.4
+        "istanbul": 5.4,
+        "antalya": 11.2,
+        "erzurum": -7.7,
+        "van": -2.8
       }
     },
     {
@@ -2891,7 +3996,10 @@
       "temperaturesC": {
         "izmir": 8.1,
         "ankara": -1.8,
-        "istanbul": 6.5
+        "istanbul": 6.5,
+        "antalya": 10.8,
+        "erzurum": -5.6,
+        "van": -1.3
       }
     },
     {
@@ -2899,7 +4007,10 @@
       "temperaturesC": {
         "izmir": 9.4,
         "ankara": -1.2,
-        "istanbul": 8.3
+        "istanbul": 8.3,
+        "antalya": 9.6,
+        "erzurum": -6.8,
+        "van": -1.4
       }
     },
     {
@@ -2907,7 +4018,10 @@
       "temperaturesC": {
         "izmir": 9.4,
         "ankara": -1.3,
-        "istanbul": 7.1
+        "istanbul": 7.1,
+        "antalya": 11.3,
+        "erzurum": -6.4,
+        "van": -3.8
       }
     },
     {
@@ -2915,7 +4029,10 @@
       "temperaturesC": {
         "izmir": 7,
         "ankara": -2.5,
-        "istanbul": 8.4
+        "istanbul": 8.4,
+        "antalya": 9.9,
+        "erzurum": -8.3,
+        "van": -2
       }
     },
     {
@@ -2923,7 +4040,10 @@
       "temperaturesC": {
         "izmir": 7,
         "ankara": -1.8,
-        "istanbul": 7.5
+        "istanbul": 7.5,
+        "antalya": 10.5,
+        "erzurum": -5.5,
+        "van": -3.5
       }
     },
     {
@@ -2931,7 +4051,10 @@
       "temperaturesC": {
         "izmir": 7.4,
         "ankara": -0.2,
-        "istanbul": 5.5
+        "istanbul": 5.5,
+        "antalya": 10.8,
+        "erzurum": -9.1,
+        "van": -3.9
       }
     },
     {
@@ -2939,7 +4062,10 @@
       "temperaturesC": {
         "izmir": 10.2,
         "ankara": 0,
-        "istanbul": 7.3
+        "istanbul": 7.3,
+        "antalya": 8.2,
+        "erzurum": -6.2,
+        "van": -2.9
       }
     }
   ]

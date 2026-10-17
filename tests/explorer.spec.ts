@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 import AxeBuilder from '@axe-core/playwright'
 import data from '../src/data/temperatures-2025.json' with { type: 'json' }
 
@@ -47,10 +48,14 @@ test('starts empty, prevents duplicate cities, and resets all form state', async
 test('renders every city pair and preserves the full-data temperature scale', async ({ page }) => {
   await selectPair(page)
   const domain = await page.getByTestId('temperature-chart').getAttribute('data-temperature-domain')
+  expect(domain).toBe('-10,35')
   for (const [first, second, names] of [
     ['izmir', 'ankara', 'İzmir and Ankara'],
     ['izmir', 'istanbul', 'İzmir and İstanbul'],
     ['ankara', 'istanbul', 'Ankara and İstanbul'],
+    ['antalya', 'erzurum', 'Antalya and Erzurum'],
+    ['van', 'antalya', 'Van and Antalya'],
+    ['erzurum', 'van', 'Erzurum and Van'],
   ]) {
     await page.getByLabel('City 1', { exact: true }).selectOption(first)
     await page.getByLabel('City 2', { exact: true }).selectOption(second)
@@ -117,7 +122,7 @@ test('uses inclusive boundaries and displays the exact bundled values in the tab
 test('provides a shared keyboard readout for both cities with correct values', async ({ page }) => {
   await selectPair(page)
   await applyRange(page, '2025-01-01', '2025-01-03')
-  const chart = page.getByRole('application')
+  const chart = page.getByTestId('temperature-chart').getByRole('application')
   await chart.focus()
   await chart.press('ArrowRight')
   const tooltip = page.getByTestId('comparison-tooltip')
@@ -146,7 +151,7 @@ test('supports pointer or touch inspection and renders direct endpoint labels', 
 test('offers a keyboard route through controls and the daily-values disclosure', async ({ page, isMobile }) => {
   test.skip(isMobile, 'Desktop keyboard route; the mobile project covers touch and chart focus directly.')
   await page.keyboard.press('Tab')
-  await expect(page.getByRole('link', { name: 'Skip to explorer' })).toBeFocused()
+  await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused()
   await page.keyboard.press('Enter')
   await page.keyboard.press('Tab')
   await expect(page.getByLabel('City 1', { exact: true })).toBeFocused()
@@ -172,7 +177,9 @@ test('has no detected WCAG A/AA violations across initial, valid, error, and exp
   await applyRange(page, '2025-07-01', '2025-06-01')
   await scan()
   await applyRange(page, '2025-06-01', '2025-06-07')
-  await page.locator('summary').click()
+  await page.locator('summary').first().click()
+  await scan()
+  await page.getByRole('radio', { name: '14-day' }).check()
   await scan()
 })
 
@@ -214,4 +221,63 @@ test('loads without JavaScript errors or requests to external services', async (
   await applyRange(page, '2025-12-31', '2025-12-31')
   expect(errors).toEqual([])
   expect(external).toEqual([])
+})
+
+test('applies quick ranges immediately while manual edits still wait for Apply dates', async ({ page }) => {
+  await selectPair(page)
+  await page.getByRole('button', { name: 'Summer', exact: true }).click()
+  await expect(page.locator('#applied-summary')).toContainText('1 Jun 2025 – 31 Aug 2025')
+  await expect(page.locator('#applied-summary')).toContainText('92 days')
+  await expect(page.getByText('Date changes not applied')).toHaveCount(0)
+  await expect(page.getByRole('button', { name: 'Summer', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await page.getByLabel('Start date').fill('2025-07-01')
+  await expect(page.getByText('Date changes not applied')).toBeVisible()
+  await page.getByRole('button', { name: 'Winter', exact: true }).click()
+  await expect(page.getByText('Date changes not applied')).toHaveCount(0)
+  await expect(page.locator('#applied-summary')).toContainText('59 days')
+})
+
+test('swaps the two selected cities', async ({ page }) => {
+  await selectPair(page, 'izmir', 'ankara')
+  await page.getByRole('button', { name: 'Swap cities' }).click()
+  await expect(page.getByLabel('City 1', { exact: true })).toHaveValue('ankara')
+  await expect(page.getByLabel('City 2', { exact: true })).toHaveValue('izmir')
+  await expect(page.locator('#applied-summary')).toContainText('Ankara and İzmir')
+})
+
+test('overlays trailing rolling means that pause at gaps', async ({ page }) => {
+  await page.getByLabel('City 1', { exact: true }).selectOption('erzurum')
+  await page.getByLabel('City 2', { exact: true }).selectOption('van')
+  await expect(page.getByTestId('temperature-chart')).toBeVisible()
+  await expect(page.locator('.recharts-line')).toHaveCount(2)
+  await page.getByRole('radio', { name: '7-day' }).check()
+  await expect(page.locator('.recharts-line')).toHaveCount(4)
+  await expect(page.locator('.series-key')).toContainText('7-day mean')
+  await expect(page.getByText('thinner lines show trailing 7-day means', { exact: false })).toBeVisible()
+})
+
+test('toggles the synchronized difference chart', async ({ page }) => {
+  await selectPair(page)
+  await expect(page.getByTestId('difference-chart')).toBeVisible()
+  await page.getByTestId('difference-toggle').uncheck()
+  await expect(page.getByTestId('difference-chart')).toHaveCount(0)
+  await page.getByTestId('difference-toggle').check()
+  await expect(page.getByTestId('difference-chart')).toBeVisible()
+})
+
+test('downloads the filtered comparison as CSV with gaps as empty fields', async ({ page }) => {
+  await page.getByLabel('City 1', { exact: true }).selectOption('istanbul')
+  await page.getByLabel('City 2', { exact: true }).selectOption('izmir')
+  await applyRange(page, '2025-11-01', '2025-11-05')
+  const downloadPromise = page.waitForEvent('download')
+  await page.getByTestId('csv-export').click()
+  const download = await downloadPromise
+  expect(download.suggestedFilename()).toBe('temperatures-istanbul-izmir-2025-11-01-to-2025-11-05.csv')
+  const lines = readFileSync(await download.path(), 'utf8').replace(/^\uFEFF/, '').trimEnd().split(/\r\n/)
+  expect(lines).toHaveLength(6)
+  expect(lines[0]).toBe('Date,İstanbul,İzmir')
+  const gapDay = data.days.find((day) => day.date === '2025-11-03')!
+  const firstDay = data.days.find((day) => day.date === '2025-11-01')!
+  expect(lines[3]).toBe(`2025-11-03,,${gapDay.temperaturesC.izmir.toFixed(1)}`)
+  expect(lines[1]).toBe(`2025-11-01,${firstDay.temperaturesC.istanbul!.toFixed(1)},${firstDay.temperaturesC.izmir!.toFixed(1)}`)
 })

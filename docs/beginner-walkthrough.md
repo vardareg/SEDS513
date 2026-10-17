@@ -1,18 +1,20 @@
 # How this project was built: a beginner's walkthrough
 
-This document explains what I implemented, the main commands I ran, and how you can work with the project. The initial implementation and its recorded checks were completed on **17 October 2026**.
+This document explains what I implemented, the main commands I ran, and how you can work with the project. The initial implementation and its recorded checks were completed on **17 October 2026**; the same day, an upgrade added more cities, more pages, and a dark theme, and every check was run again.
 
 The command history below covers the important setup, development, and verification steps. It summarizes repeated commands and temporary debugging scripts rather than reproducing every terminal output.
 
 ## 1. What we built
 
-The Scientific Time-Series Explorer is a small website for the SEDS 513 HCI course. It lets a student:
+The Scientific Time-Series Explorer is a small website for the SEDS 513 HCI course. It has four pages, reached from the links in the header. On the main **Compare** page a student can:
 
-1. Choose two different cities from İzmir, Ankara, and İstanbul.
-2. Choose a start date and an end date within 2025.
-3. Select **Apply dates** and compare both cities on one chart.
+1. Choose two different cities from İzmir, Ankara, İstanbul, Antalya, Erzurum, and Van. A **Swap cities** button exchanges the two choices.
+2. Choose a start date and an end date within 2025, then select **Apply dates** — or click a quick range such as **Summer** to apply immediately.
+3. Compare both cities on one chart, add a rolling-average overlay, read a synchronized difference chart, or download the visible days as a CSV file.
 4. Inspect individual dates or open **View daily values** to read a table.
 5. Select **Reset all** to start again.
+
+The other pages are **Analytics** (yearly statistics, monthly means, daily distributions, a calendar heatmap, and city correlations for all six cities), **Cities** (a profile for each city with a **Compare** button that fills in the comparison for you), and **About** (how the synthetic data is made).
 
 The city fields start empty. Selecting both cities displays the comparison. Changing a city updates it immediately, while editing dates requires **Apply dates**.
 
@@ -27,6 +29,7 @@ All application logic runs in the browser. We did not add an application backend
 | **Node.js** | Runs development tools and the data generator on your computer. The project uses Node.js 24 or newer. |
 | **npm** | Installs JavaScript packages and runs the commands defined in `package.json`. A package is reusable code distributed for other projects to use. |
 | **React** | Builds the interface from components: functions that describe pieces of the screen. |
+| **React Router** | Provides the pages: it matches the address in the URL bar (`/`, `/analytics`, `/cities`, `/about`) to a page component. |
 | **TypeScript** | Checks the kinds of values our code uses, such as city names, date strings, and temperature numbers. |
 | **Vite** | Starts the local development server and creates the browser-ready production build. |
 | **Tailwind CSS v4** | Supplies styling utilities and supports the shared design tokens. A token is a named design value, such as the main text color. |
@@ -157,15 +160,20 @@ Some installation commands used the prefix `npm_config_cache=/tmp/seds513-npm-ca
 
 | File | What to look for |
 | --- | --- |
-| [`../src/App.tsx`](../src/App.tsx) | The main screen, city selections, applied dates, and reset behavior. |
-| [`../src/components/CityPairControls.tsx`](../src/components/CityPairControls.tsx) | The two city dropdowns and disabled duplicate options. |
-| [`../src/components/DateRangeForm.tsx`](../src/components/DateRangeForm.tsx) | Draft dates, errors, the Apply dates action, and focus handling. |
-| [`../src/components/ComparisonPanel.tsx`](../src/components/ComparisonPanel.tsx) | Choosing between guidance and the comparison; the applied summary. |
-| [`../src/components/TemperatureChart.tsx`](../src/components/TemperatureChart.tsx) | Recharts configuration, series patterns, endpoint labels, and tooltip. |
-| [`../src/components/ComparisonTable.tsx`](../src/components/ComparisonTable.tsx) | The expandable table of daily values. |
+| [`../src/App.tsx`](../src/App.tsx) | The shell: the router, the four lazy-loaded pages, and the shared providers. |
+| [`../src/components/AppShell.tsx`](../src/components/AppShell.tsx) | The header, navigation links, theme toggle, synthetic-data notice, and footer shared by every page. |
+| [`../src/pages/ComparePage.tsx`](../src/pages/ComparePage.tsx) | The main screen: city selections, applied dates, and reset behavior. |
+| [`../src/components/CityPairControls.tsx`](../src/components/CityPairControls.tsx) | The two city dropdowns, disabled duplicate options, and the swap button. |
+| [`../src/components/DateRangeForm.tsx`](../src/components/DateRangeForm.tsx) | Draft dates, errors, the Apply dates action, quick ranges, and focus handling. |
+| [`../src/components/ComparisonPanel.tsx`](../src/components/ComparisonPanel.tsx) | Choosing between guidance and the comparison; the applied summary, difference toggle, and CSV button. |
+| [`../src/components/TemperatureChart.tsx`](../src/components/TemperatureChart.tsx) | Recharts configuration, series patterns, rolling overlay, endpoint labels, and tooltip. |
+| [`../src/components/DifferenceChart.tsx`](../src/components/DifferenceChart.tsx) | The synchronized daily-difference bars below the main chart. |
+| [`../src/components/analytics/`](../src/components/analytics/) | The Analytics page pieces: statistics table, monthly chart, distributions, calendar heatmap, correlation matrix. |
+| [`../src/components/cities/`](../src/components/cities/) | The city profiles and their mini sparkline charts. |
 | [`../src/lib/dates.ts`](../src/lib/dates.ts) | Calendar-date validation, date formatting, and date boundaries. |
 | [`../src/lib/comparison.ts`](../src/lib/comparison.ts) | Filtering, checking a city pair, and preparing values for the chart. |
-| [`../src/index.css`](../src/index.css) | Shared colors, layout rules, spacing, responsive adjustments, and focus styles. |
+| [`../src/lib/stats.ts`](../src/lib/stats.ts) | Mean, median, spread, extremes, and histogram bins, all skipping missing values. |
+| [`../src/index.css`](../src/index.css) | Shared colors (light and dark themes), layout rules, spacing, responsive adjustments, and focus styles. |
 
 The folder name `ui/` contains the small shadcn building blocks. The files directly inside `components/` combine those building blocks into this project's features.
 
@@ -191,14 +199,14 @@ Browser reports and screenshots are generated in `playwright-report/` and `test-
 
 ## 6. How the application keeps track of selections
 
-React **state** is a component's memory between screen updates. We used React's built-in state tools; no separate global state library was needed.
+React **state** is a component's memory between screen updates. We used React's built-in state tools plus one small **context**; no separate global state library was needed. A context is a shared pocket of state that several components can read without passing it down through every layer.
 
-`App` remembers:
+The compare context remembers:
 
 - The two city slots, initially `[null, null]`. Here, `null` means “no city selected.”
 - The applied start and end dates, initially the whole year.
 
-`DateRangeForm` separately remembers the dates currently being edited. Those are the **draft dates**.
+Because the context lives above the pages, going to Analytics and back does not lose your selections. `DateRangeForm` separately remembers the dates currently being edited. Those are the **draft dates**.
 
 For example:
 
@@ -210,6 +218,8 @@ After Apply dates: the chart and table show June
 ```
 
 This separation lets someone finish editing both dates before changing the comparison. The pending message and applied-range summary explain which dates are active.
+
+One more piece of state lives in the address bar. When you press **Compare** on the Cities page, the site moves to `/?from=erzurum&to=antalya`. The Compare page reads those **URL parameters** once on arrival, fills in the two cities, and then clears them from the address so a later refresh keeps whatever you have chosen since. The theme toggle works similarly: the light/dark choice is saved in the browser's `localStorage` and reapplied before the page first paints, so there is no flash of the wrong theme.
 
 The data moves through the application like this:
 
@@ -223,20 +233,20 @@ Use the two selected cities
 Show the same filtered rows in the chart and table
 ```
 
-We calculate the filtered rows and day count from existing state instead of storing separate copies that could get out of sync. Shared TypeScript types in `src/data/types.ts` describe the expected shapes of cities, dates, and temperature records.
+We calculate the filtered rows and day count from existing state instead of storing separate copies that could get out of sync. The Analytics page does not filter: it always uses the whole bundled year. Shared TypeScript types in `src/data/types.ts` describe the expected shapes of cities, dates, and temperature records.
 
 ## 7. How the synthetic data works
 
 The bundled data is in `src/data/temperatures-2025.json`:
 
 - **365 daily records**, from 1 January to 31 December 2025.
-- Three city values per record, giving **1,095 temperatures**.
+- Six city values per record, giving **2,190 temperatures**.
 - Temperatures recorded to one decimal place in degrees Celsius.
-- Metadata describing the generator and its fixed seed, `5132025`.
+- Metadata describing the generator, its fixed seed `5132025`, the teaching parameters for each city, and the list of documented gaps.
 
 A **seed** is the starting value for a repeatable pseudorandom-number generator. Using the same procedure and seed gives the same results every time.
 
-The generator combines a seasonal curve with small daily variation. Its parameters are teaching choices; they were not fitted to real weather. The generation logic lives in `src/data/generate.ts`, and `scripts/generate-data.mjs` writes its output to the JSON file.
+The generator combines a seasonal curve with small daily variation. Its parameters are teaching choices; they were not fitted to real weather. The generation logic lives in `src/data/generate.ts`, and `scripts/generate-data.mjs` writes its output to the JSON file. Generator version 2.0.0 added Antalya, Erzurum, and Van; the original three cities produce exactly the same values as before because the generator draws them in the old order first and continues the same random stream afterwards.
 
 During implementation I ran:
 
@@ -262,9 +272,9 @@ Three details protect the comparison:
 
 1. **Inclusive filtering:** a range from 31 January to 1 February includes both dates, so it contains two days.
 2. **UTC date handling:** formatting and chart timestamps use UTC, a shared time reference, so opening the app in another timezone does not move a date to the previous day.
-3. **Missing values stay missing:** `null` means a missing temperature; `0` means an actual simulated value of 0 °C. Missing values display as “Unavailable” and break the line. The bundled dataset is complete; a separate test fixture contains missing values.
+3. **Missing values stay missing:** `null` means a missing temperature; `0` means an actual simulated value of 0 °C. Missing values display as “Unavailable,” break the chart line, pause rolling averages, export as empty CSV fields, and appear as hatched cells in the heatmap. The dataset contains eight documented missing days (three in Erzurum, three in Van, two in İstanbul) so this behavior is always visible; they are listed in the metadata and on the About page.
 
-The Celsius scale is calculated from the entire dataset and stays fixed when the student changes a city or date range. This avoids making temperature differences look larger simply because the axis changed.
+The Celsius scale is calculated from the entire dataset and stays fixed when the student changes a city or date range. This avoids making temperature differences look larger simply because the axis changed. The full-data scale is −10 to 35 °C.
 
 ## 8. How you can run the existing project
 
@@ -343,15 +353,18 @@ You can also run `npm run typecheck` when you want TypeScript checks without pro
 
 Playwright starts a local Vite server on port 4173 automatically. In local development, it can reuse a server already running there. Avoid using that port for a different application while testing.
 
-The final recorded results of the initial implementation were:
+The final recorded results of the initial implementation were superseded the same day by the upgrade verification below; the original run recorded 19 unit tests and 23 browser checks under the same conditions.
 
-- **19 unit tests passed.**
-- **23 browser checks passed; 1 was intentionally skipped.** The skipped case duplicated the desktop keyboard route in the mobile profile. Mobile chart keyboard inspection and touch inspection were tested separately.
-- **8 automated accessibility scans found no violations** in the states checked.
-- The build, lint, and dataset verification passed.
-- Screenshots were reviewed at 320px, 768px, and 1440px widths.
+The upgrade (six cities, four pages, dark theme) re-ran every check on **17 October 2026**:
 
-These are the recorded implementation results, not newly rerun tests for this documentation change. Details and limitations are in [`validation.md`](validation.md).
+- **49 unit tests passed** across 8 files.
+- **81 browser checks passed; 1 was intentionally skipped.** The skipped case duplicated the desktop keyboard route in the mobile profile, as before.
+- **Automated accessibility scans found no violations** across the covered states on every page in light mode and the Compare and Analytics pages in dark mode.
+- The build, lint, and dataset verification passed (`data:check` now reports 365 dates, 2,190 temperatures, 8 documented gaps).
+- A CSV download was verified end to end, including the documented gap days as empty fields.
+- Screenshots were reviewed at 320px, 768px, and 1440px in both themes.
+
+These are recorded implementation results, not evidence about students. Details and limitations are in [`validation.md`](validation.md).
 
 ## 10. Problems found during development
 
@@ -364,6 +377,9 @@ Testing caught problems that were fixed before the initial implementation was fi
 | A two-day range could ask the chart to display the same tick twice. | Remove duplicate tick positions before rendering the axis. A tick is a labeled position along an axis. |
 | The first build put too much JavaScript into one downloaded file. | Load the chart code when a valid city pair is selected. This is called lazy loading. |
 | A mobile test tried to tap a chart that was below the visible screen. | Scroll the chart into view before tapping. This was a test-setup problem. |
+| The rolling-average control hid its radio inputs, so clicks landed on the label instead of the input. | Let the invisible input cover the whole button-shaped area. |
+| A one-day difference chart asked for two ticks at the same timestamp, producing a React warning about duplicate keys. | Deduplicate the tick list and widen a one-day domain, matching the main chart. |
+| Excel showed broken Turkish characters in the downloaded CSV. | Start the file with a UTF-8 byte-order mark. |
 
 These were engineering findings. They are not observations from students using the application.
 
@@ -380,9 +396,9 @@ No participant usability sessions have been conducted. [`usability-study.md`](us
 To get familiar with the code:
 
 1. Start the application with `npm run dev`.
-2. Open `src/App.tsx` and find the short instruction under the page title.
+2. Open `src/pages/ComparePage.tsx` and find the short instruction under the page title in `src/components/AppShell.tsx`.
 3. Change that instruction, save the file, and observe the browser update.
-4. Open `src/index.css` and find `--primary`, the named color used for the primary action.
+4. Open `src/index.css` and find `--primary`, the named color used for the primary action. There is one block for the light theme and one `html.dark` block for the dark theme; change a value in both and try the toggle in the header.
 5. After making an intentional change, run `npm run build` and `npm run lint`.
 6. For changes to selection controls, dates, or chart interaction, also run the relevant unit and browser tests.
 
