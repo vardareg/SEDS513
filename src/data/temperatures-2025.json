@@ -1,0 +1,2946 @@
+{
+  "metadata": {
+    "year": 2025,
+    "seed": 5132025,
+    "generatorVersion": "1.0.0",
+    "measurement": "Simulated daily mean temperature",
+    "unit": "°C",
+    "method": "Annual cosine cycle peaking around day 200, plus seeded independent daily variation bounded by ±2 °C; rounded to 0.1 °C.",
+    "parameters": {
+      "izmir": {
+        "baseline": 18,
+        "amplitude": 10
+      },
+      "ankara": {
+        "baseline": 11,
+        "amplitude": 13
+      },
+      "istanbul": {
+        "baseline": 15,
+        "amplitude": 9
+      }
+    }
+  },
+  "days": [
+    {
+      "date": "2025-01-01",
+      "temperaturesC": {
+        "izmir": 9.5,
+        "ankara": -2.4,
+        "istanbul": 6.6
+      }
+    },
+    {
+      "date": "2025-01-02",
+      "temperaturesC": {
+        "izmir": 9.3,
+        "ankara": -1.8,
+        "istanbul": 8.3
+      }
+    },
+    {
+      "date": "2025-01-03",
+      "temperaturesC": {
+        "izmir": 8.3,
+        "ankara": -2.2,
+        "istanbul": 7.6
+      }
+    },
+    {
+      "date": "2025-01-04",
+      "temperaturesC": {
+        "izmir": 6.6,
+        "ankara": -2.8,
+        "istanbul": 6.4
+      }
+    },
+    {
+      "date": "2025-01-05",
+      "temperaturesC": {
+        "izmir": 9.4,
+        "ankara": -2.6,
+        "istanbul": 7.9
+      }
+    },
+    {
+      "date": "2025-01-06",
+      "temperaturesC": {
+        "izmir": 8.1,
+        "ankara": -3.6,
+        "istanbul": 5.6
+      }
+    },
+    {
+      "date": "2025-01-07",
+      "temperaturesC": {
+        "izmir": 6.9,
+        "ankara": -2,
+        "istanbul": 5.2
+      }
+    },
+    {
+      "date": "2025-01-08",
+      "temperaturesC": {
+        "izmir": 8.6,
+        "ankara": -1.9,
+        "istanbul": 4.2
+      }
+    },
+    {
+      "date": "2025-01-09",
+      "temperaturesC": {
+        "izmir": 6.7,
+        "ankara": -2.5,
+        "istanbul": 5.9
+      }
+    },
+    {
+      "date": "2025-01-10",
+      "temperaturesC": {
+        "izmir": 6.7,
+        "ankara": -2.4,
+        "istanbul": 5.2
+      }
+    },
+    {
+      "date": "2025-01-11",
+      "temperaturesC": {
+        "izmir": 6.5,
+        "ankara": -3,
+        "istanbul": 7.6
+      }
+    },
+    {
+      "date": "2025-01-12",
+      "temperaturesC": {
+        "izmir": 6.1,
+        "ankara": 0,
+        "istanbul": 5.4
+      }
+    },
+    {
+      "date": "2025-01-13",
+      "temperaturesC": {
+        "izmir": 8.5,
+        "ankara": -3.9,
+        "istanbul": 5.2
+      }
+    },
+    {
+      "date": "2025-01-14",
+      "temperaturesC": {
+        "izmir": 8.2,
+        "ankara": -3.6,
+        "istanbul": 6
+      }
+    },
+    {
+      "date": "2025-01-15",
+      "temperaturesC": {
+        "izmir": 7.6,
+        "ankara": -3.6,
+        "istanbul": 6.2
+      }
+    },
+    {
+      "date": "2025-01-16",
+      "temperaturesC": {
+        "izmir": 6.4,
+        "ankara": -0.8,
+        "istanbul": 4.2
+      }
+    },
+    {
+      "date": "2025-01-17",
+      "temperaturesC": {
+        "izmir": 6.8,
+        "ankara": -1.4,
+        "istanbul": 4.7
+      }
+    },
+    {
+      "date": "2025-01-18",
+      "temperaturesC": {
+        "izmir": 6.7,
+        "ankara": -0.7,
+        "istanbul": 6.6
+      }
+    },
+    {
+      "date": "2025-01-19",
+      "temperaturesC": {
+        "izmir": 9.4,
+        "ankara": -1.1,
+        "istanbul": 7.4
+      }
+    },
+    {
+      "date": "2025-01-20",
+      "temperaturesC": {
+        "izmir": 9.3,
+        "ankara": -1.1,
+        "istanbul": 5.4
+      }
+    },
+    {
+      "date": "2025-01-21",
+      "temperaturesC": {
+        "izmir": 8.5,
+        "ankara": -3.8,
+        "istanbul": 7.3
+      }
+    },
+    {
+      "date": "2025-01-22",
+      "temperaturesC": {
+        "izmir": 6.8,
+        "ankara": -3.2,
+        "istanbul": 4.1
+      }
+    },
+    {
+      "date": "2025-01-23",
+      "temperaturesC": {
+        "izmir": 8.2,
+        "ankara": -3.1,
+        "istanbul": 7.4
+      }
+    },
+    {
+      "date": "2025-01-24",
+      "temperaturesC": {
+        "izmir": 8,
+        "ankara": -2.5,
+        "istanbul": 4.4
+      }
+    },
+    {
+      "date": "2025-01-25",
+      "temperaturesC": {
+        "izmir": 6.9,
+        "ankara": -3.5,
+        "istanbul": 7.7
+      }
+    },
+    {
+      "date": "2025-01-26",
+      "temperaturesC": {
+        "izmir": 10,
+        "ankara": -1.5,
+        "istanbul": 4.1
+      }
+    },
+    {
+      "date": "2025-01-27",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 0,
+        "istanbul": 4.4
+      }
+    },
+    {
+      "date": "2025-01-28",
+      "temperaturesC": {
+        "izmir": 6.3,
+        "ankara": -2.7,
+        "istanbul": 6.4
+      }
+    },
+    {
+      "date": "2025-01-29",
+      "temperaturesC": {
+        "izmir": 6.2,
+        "ankara": -0.6,
+        "istanbul": 6.3
+      }
+    },
+    {
+      "date": "2025-01-30",
+      "temperaturesC": {
+        "izmir": 6.2,
+        "ankara": -3.2,
+        "istanbul": 5.4
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "temperaturesC": {
+        "izmir": 7.6,
+        "ankara": -0.1,
+        "istanbul": 8
+      }
+    },
+    {
+      "date": "2025-02-01",
+      "temperaturesC": {
+        "izmir": 9.2,
+        "ankara": 0.3,
+        "istanbul": 6.7
+      }
+    },
+    {
+      "date": "2025-02-02",
+      "temperaturesC": {
+        "izmir": 7.8,
+        "ankara": -1.7,
+        "istanbul": 7.4
+      }
+    },
+    {
+      "date": "2025-02-03",
+      "temperaturesC": {
+        "izmir": 8.3,
+        "ankara": -1.6,
+        "istanbul": 4.5
+      }
+    },
+    {
+      "date": "2025-02-04",
+      "temperaturesC": {
+        "izmir": 7.5,
+        "ankara": -2.2,
+        "istanbul": 4.5
+      }
+    },
+    {
+      "date": "2025-02-05",
+      "temperaturesC": {
+        "izmir": 9.1,
+        "ankara": -0.6,
+        "istanbul": 7.4
+      }
+    },
+    {
+      "date": "2025-02-06",
+      "temperaturesC": {
+        "izmir": 7.5,
+        "ankara": -1,
+        "istanbul": 7
+      }
+    },
+    {
+      "date": "2025-02-07",
+      "temperaturesC": {
+        "izmir": 7.5,
+        "ankara": 0.3,
+        "istanbul": 6.9
+      }
+    },
+    {
+      "date": "2025-02-08",
+      "temperaturesC": {
+        "izmir": 8,
+        "ankara": -1.5,
+        "istanbul": 6.8
+      }
+    },
+    {
+      "date": "2025-02-09",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 0.1,
+        "istanbul": 4.8
+      }
+    },
+    {
+      "date": "2025-02-10",
+      "temperaturesC": {
+        "izmir": 10,
+        "ankara": -2.2,
+        "istanbul": 7.2
+      }
+    },
+    {
+      "date": "2025-02-11",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 0,
+        "istanbul": 4.9
+      }
+    },
+    {
+      "date": "2025-02-12",
+      "temperaturesC": {
+        "izmir": 8.1,
+        "ankara": 0.7,
+        "istanbul": 6.5
+      }
+    },
+    {
+      "date": "2025-02-13",
+      "temperaturesC": {
+        "izmir": 10,
+        "ankara": -1.2,
+        "istanbul": 6.8
+      }
+    },
+    {
+      "date": "2025-02-14",
+      "temperaturesC": {
+        "izmir": 9,
+        "ankara": -1.8,
+        "istanbul": 6.1
+      }
+    },
+    {
+      "date": "2025-02-15",
+      "temperaturesC": {
+        "izmir": 8.6,
+        "ankara": -0.8,
+        "istanbul": 8.4
+      }
+    },
+    {
+      "date": "2025-02-16",
+      "temperaturesC": {
+        "izmir": 7.7,
+        "ankara": -1.7,
+        "istanbul": 8.6
+      }
+    },
+    {
+      "date": "2025-02-17",
+      "temperaturesC": {
+        "izmir": 7.5,
+        "ankara": 0,
+        "istanbul": 7
+      }
+    },
+    {
+      "date": "2025-02-18",
+      "temperaturesC": {
+        "izmir": 9.6,
+        "ankara": -2.2,
+        "istanbul": 7.5
+      }
+    },
+    {
+      "date": "2025-02-19",
+      "temperaturesC": {
+        "izmir": 8.3,
+        "ankara": -0.6,
+        "istanbul": 7
+      }
+    },
+    {
+      "date": "2025-02-20",
+      "temperaturesC": {
+        "izmir": 10.9,
+        "ankara": 1,
+        "istanbul": 8.9
+      }
+    },
+    {
+      "date": "2025-02-21",
+      "temperaturesC": {
+        "izmir": 9.3,
+        "ankara": -1.7,
+        "istanbul": 7.2
+      }
+    },
+    {
+      "date": "2025-02-22",
+      "temperaturesC": {
+        "izmir": 11.7,
+        "ankara": -1.7,
+        "istanbul": 9
+      }
+    },
+    {
+      "date": "2025-02-23",
+      "temperaturesC": {
+        "izmir": 8.6,
+        "ankara": 0.4,
+        "istanbul": 7.6
+      }
+    },
+    {
+      "date": "2025-02-24",
+      "temperaturesC": {
+        "izmir": 10.1,
+        "ankara": 1.4,
+        "istanbul": 8.9
+      }
+    },
+    {
+      "date": "2025-02-25",
+      "temperaturesC": {
+        "izmir": 11.4,
+        "ankara": 2.5,
+        "istanbul": 8.8
+      }
+    },
+    {
+      "date": "2025-02-26",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 2.1,
+        "istanbul": 8.1
+      }
+    },
+    {
+      "date": "2025-02-27",
+      "temperaturesC": {
+        "izmir": 11,
+        "ankara": 0.5,
+        "istanbul": 6.5
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 0,
+        "istanbul": 9.7
+      }
+    },
+    {
+      "date": "2025-03-01",
+      "temperaturesC": {
+        "izmir": 10.3,
+        "ankara": 0.2,
+        "istanbul": 6.6
+      }
+    },
+    {
+      "date": "2025-03-02",
+      "temperaturesC": {
+        "izmir": 8.6,
+        "ankara": 3.2,
+        "istanbul": 7.4
+      }
+    },
+    {
+      "date": "2025-03-03",
+      "temperaturesC": {
+        "izmir": 12.5,
+        "ankara": 2.3,
+        "istanbul": 7.1
+      }
+    },
+    {
+      "date": "2025-03-04",
+      "temperaturesC": {
+        "izmir": 11.3,
+        "ankara": 1.8,
+        "istanbul": 6.6
+      }
+    },
+    {
+      "date": "2025-03-05",
+      "temperaturesC": {
+        "izmir": 9.9,
+        "ankara": 3.2,
+        "istanbul": 10.5
+      }
+    },
+    {
+      "date": "2025-03-06",
+      "temperaturesC": {
+        "izmir": 11.3,
+        "ankara": 0.8,
+        "istanbul": 8
+      }
+    },
+    {
+      "date": "2025-03-07",
+      "temperaturesC": {
+        "izmir": 9.5,
+        "ankara": 0.6,
+        "istanbul": 10.5
+      }
+    },
+    {
+      "date": "2025-03-08",
+      "temperaturesC": {
+        "izmir": 12.7,
+        "ankara": 3.8,
+        "istanbul": 9.3
+      }
+    },
+    {
+      "date": "2025-03-09",
+      "temperaturesC": {
+        "izmir": 9.7,
+        "ankara": 1.3,
+        "istanbul": 9.8
+      }
+    },
+    {
+      "date": "2025-03-10",
+      "temperaturesC": {
+        "izmir": 10.4,
+        "ankara": 4.1,
+        "istanbul": 8.1
+      }
+    },
+    {
+      "date": "2025-03-11",
+      "temperaturesC": {
+        "izmir": 12.7,
+        "ankara": 1.8,
+        "istanbul": 9.9
+      }
+    },
+    {
+      "date": "2025-03-12",
+      "temperaturesC": {
+        "izmir": 13.3,
+        "ankara": 3.3,
+        "istanbul": 7.8
+      }
+    },
+    {
+      "date": "2025-03-13",
+      "temperaturesC": {
+        "izmir": 13.4,
+        "ankara": 2.7,
+        "istanbul": 7.7
+      }
+    },
+    {
+      "date": "2025-03-14",
+      "temperaturesC": {
+        "izmir": 12.2,
+        "ankara": 2.2,
+        "istanbul": 9.8
+      }
+    },
+    {
+      "date": "2025-03-15",
+      "temperaturesC": {
+        "izmir": 12.3,
+        "ankara": 5.3,
+        "istanbul": 7.8
+      }
+    },
+    {
+      "date": "2025-03-16",
+      "temperaturesC": {
+        "izmir": 11.6,
+        "ankara": 2.2,
+        "istanbul": 9
+      }
+    },
+    {
+      "date": "2025-03-17",
+      "temperaturesC": {
+        "izmir": 11.1,
+        "ankara": 3.1,
+        "istanbul": 11.7
+      }
+    },
+    {
+      "date": "2025-03-18",
+      "temperaturesC": {
+        "izmir": 11,
+        "ankara": 2.7,
+        "istanbul": 10.4
+      }
+    },
+    {
+      "date": "2025-03-19",
+      "temperaturesC": {
+        "izmir": 11.7,
+        "ankara": 5.5,
+        "istanbul": 8.3
+      }
+    },
+    {
+      "date": "2025-03-20",
+      "temperaturesC": {
+        "izmir": 12.1,
+        "ankara": 4.8,
+        "istanbul": 8.8
+      }
+    },
+    {
+      "date": "2025-03-21",
+      "temperaturesC": {
+        "izmir": 12.7,
+        "ankara": 5.4,
+        "istanbul": 11.3
+      }
+    },
+    {
+      "date": "2025-03-22",
+      "temperaturesC": {
+        "izmir": 13.2,
+        "ankara": 6.7,
+        "istanbul": 9.6
+      }
+    },
+    {
+      "date": "2025-03-23",
+      "temperaturesC": {
+        "izmir": 12.6,
+        "ankara": 5.5,
+        "istanbul": 12.2
+      }
+    },
+    {
+      "date": "2025-03-24",
+      "temperaturesC": {
+        "izmir": 13.7,
+        "ankara": 4.5,
+        "istanbul": 11.5
+      }
+    },
+    {
+      "date": "2025-03-25",
+      "temperaturesC": {
+        "izmir": 13.9,
+        "ankara": 3.6,
+        "istanbul": 11
+      }
+    },
+    {
+      "date": "2025-03-26",
+      "temperaturesC": {
+        "izmir": 14.5,
+        "ankara": 6.7,
+        "istanbul": 10.5
+      }
+    },
+    {
+      "date": "2025-03-27",
+      "temperaturesC": {
+        "izmir": 12.4,
+        "ankara": 7.4,
+        "istanbul": 13.3
+      }
+    },
+    {
+      "date": "2025-03-28",
+      "temperaturesC": {
+        "izmir": 14.8,
+        "ankara": 4.7,
+        "istanbul": 12.7
+      }
+    },
+    {
+      "date": "2025-03-29",
+      "temperaturesC": {
+        "izmir": 13.6,
+        "ankara": 7.7,
+        "istanbul": 11.7
+      }
+    },
+    {
+      "date": "2025-03-30",
+      "temperaturesC": {
+        "izmir": 15,
+        "ankara": 6.5,
+        "istanbul": 13.4
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "temperaturesC": {
+        "izmir": 14.2,
+        "ankara": 4.8,
+        "istanbul": 13
+      }
+    },
+    {
+      "date": "2025-04-01",
+      "temperaturesC": {
+        "izmir": 15.6,
+        "ankara": 8.6,
+        "istanbul": 12.8
+      }
+    },
+    {
+      "date": "2025-04-02",
+      "temperaturesC": {
+        "izmir": 16,
+        "ankara": 8.3,
+        "istanbul": 12.1
+      }
+    },
+    {
+      "date": "2025-04-03",
+      "temperaturesC": {
+        "izmir": 14.6,
+        "ankara": 7,
+        "istanbul": 11.4
+      }
+    },
+    {
+      "date": "2025-04-04",
+      "temperaturesC": {
+        "izmir": 14.5,
+        "ankara": 7.5,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-04-05",
+      "temperaturesC": {
+        "izmir": 14.4,
+        "ankara": 7.4,
+        "istanbul": 11.1
+      }
+    },
+    {
+      "date": "2025-04-06",
+      "temperaturesC": {
+        "izmir": 13.7,
+        "ankara": 7.9,
+        "istanbul": 14
+      }
+    },
+    {
+      "date": "2025-04-07",
+      "temperaturesC": {
+        "izmir": 14.7,
+        "ankara": 7,
+        "istanbul": 13.8
+      }
+    },
+    {
+      "date": "2025-04-08",
+      "temperaturesC": {
+        "izmir": 17.2,
+        "ankara": 8.7,
+        "istanbul": 13.3
+      }
+    },
+    {
+      "date": "2025-04-09",
+      "temperaturesC": {
+        "izmir": 15.2,
+        "ankara": 8.8,
+        "istanbul": 12.3
+      }
+    },
+    {
+      "date": "2025-04-10",
+      "temperaturesC": {
+        "izmir": 15.9,
+        "ankara": 9.7,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-04-11",
+      "temperaturesC": {
+        "izmir": 14.7,
+        "ankara": 7.1,
+        "istanbul": 15
+      }
+    },
+    {
+      "date": "2025-04-12",
+      "temperaturesC": {
+        "izmir": 18.6,
+        "ankara": 8.8,
+        "istanbul": 12.6
+      }
+    },
+    {
+      "date": "2025-04-13",
+      "temperaturesC": {
+        "izmir": 16.9,
+        "ankara": 9.9,
+        "istanbul": 13.1
+      }
+    },
+    {
+      "date": "2025-04-14",
+      "temperaturesC": {
+        "izmir": 19,
+        "ankara": 10.3,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-04-15",
+      "temperaturesC": {
+        "izmir": 15.6,
+        "ankara": 11,
+        "istanbul": 16
+      }
+    },
+    {
+      "date": "2025-04-16",
+      "temperaturesC": {
+        "izmir": 17.8,
+        "ankara": 11.5,
+        "istanbul": 16.2
+      }
+    },
+    {
+      "date": "2025-04-17",
+      "temperaturesC": {
+        "izmir": 16.5,
+        "ankara": 12.3,
+        "istanbul": 15.4
+      }
+    },
+    {
+      "date": "2025-04-18",
+      "temperaturesC": {
+        "izmir": 16.1,
+        "ankara": 12.3,
+        "istanbul": 16.3
+      }
+    },
+    {
+      "date": "2025-04-19",
+      "temperaturesC": {
+        "izmir": 16.5,
+        "ankara": 10.2,
+        "istanbul": 14.7
+      }
+    },
+    {
+      "date": "2025-04-20",
+      "temperaturesC": {
+        "izmir": 17,
+        "ankara": 13,
+        "istanbul": 15
+      }
+    },
+    {
+      "date": "2025-04-21",
+      "temperaturesC": {
+        "izmir": 17,
+        "ankara": 11,
+        "istanbul": 14.5
+      }
+    },
+    {
+      "date": "2025-04-22",
+      "temperaturesC": {
+        "izmir": 18.3,
+        "ankara": 11.3,
+        "istanbul": 13.5
+      }
+    },
+    {
+      "date": "2025-04-23",
+      "temperaturesC": {
+        "izmir": 16.7,
+        "ankara": 12.2,
+        "istanbul": 16.3
+      }
+    },
+    {
+      "date": "2025-04-24",
+      "temperaturesC": {
+        "izmir": 20.6,
+        "ankara": 12.3,
+        "istanbul": 14.5
+      }
+    },
+    {
+      "date": "2025-04-25",
+      "temperaturesC": {
+        "izmir": 20.7,
+        "ankara": 11.1,
+        "istanbul": 15.3
+      }
+    },
+    {
+      "date": "2025-04-26",
+      "temperaturesC": {
+        "izmir": 19.2,
+        "ankara": 12.8,
+        "istanbul": 15.3
+      }
+    },
+    {
+      "date": "2025-04-27",
+      "temperaturesC": {
+        "izmir": 20.2,
+        "ankara": 13.5,
+        "istanbul": 14.8
+      }
+    },
+    {
+      "date": "2025-04-28",
+      "temperaturesC": {
+        "izmir": 20.8,
+        "ankara": 12.3,
+        "istanbul": 16
+      }
+    },
+    {
+      "date": "2025-04-29",
+      "temperaturesC": {
+        "izmir": 19.3,
+        "ankara": 12.5,
+        "istanbul": 14.7
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "temperaturesC": {
+        "izmir": 20.4,
+        "ankara": 12,
+        "istanbul": 18.1
+      }
+    },
+    {
+      "date": "2025-05-01",
+      "temperaturesC": {
+        "izmir": 21.5,
+        "ankara": 15.4,
+        "istanbul": 16.4
+      }
+    },
+    {
+      "date": "2025-05-02",
+      "temperaturesC": {
+        "izmir": 18.4,
+        "ankara": 12.6,
+        "istanbul": 16.3
+      }
+    },
+    {
+      "date": "2025-05-03",
+      "temperaturesC": {
+        "izmir": 22.1,
+        "ankara": 14,
+        "istanbul": 17.1
+      }
+    },
+    {
+      "date": "2025-05-04",
+      "temperaturesC": {
+        "izmir": 20.5,
+        "ankara": 15.4,
+        "istanbul": 19
+      }
+    },
+    {
+      "date": "2025-05-05",
+      "temperaturesC": {
+        "izmir": 19.2,
+        "ankara": 15.7,
+        "istanbul": 15.8
+      }
+    },
+    {
+      "date": "2025-05-06",
+      "temperaturesC": {
+        "izmir": 21.5,
+        "ankara": 15.8,
+        "istanbul": 16
+      }
+    },
+    {
+      "date": "2025-05-07",
+      "temperaturesC": {
+        "izmir": 21.8,
+        "ankara": 13,
+        "istanbul": 17.3
+      }
+    },
+    {
+      "date": "2025-05-08",
+      "temperaturesC": {
+        "izmir": 21,
+        "ankara": 16.7,
+        "istanbul": 16.5
+      }
+    },
+    {
+      "date": "2025-05-09",
+      "temperaturesC": {
+        "izmir": 21.4,
+        "ankara": 15.4,
+        "istanbul": 18.6
+      }
+    },
+    {
+      "date": "2025-05-10",
+      "temperaturesC": {
+        "izmir": 23.3,
+        "ankara": 15.2,
+        "istanbul": 20
+      }
+    },
+    {
+      "date": "2025-05-11",
+      "temperaturesC": {
+        "izmir": 23,
+        "ankara": 16.8,
+        "istanbul": 16.3
+      }
+    },
+    {
+      "date": "2025-05-12",
+      "temperaturesC": {
+        "izmir": 21,
+        "ankara": 14.1,
+        "istanbul": 18.3
+      }
+    },
+    {
+      "date": "2025-05-13",
+      "temperaturesC": {
+        "izmir": 23.3,
+        "ankara": 15.2,
+        "istanbul": 17.7
+      }
+    },
+    {
+      "date": "2025-05-14",
+      "temperaturesC": {
+        "izmir": 21.5,
+        "ankara": 17.7,
+        "istanbul": 16.8
+      }
+    },
+    {
+      "date": "2025-05-15",
+      "temperaturesC": {
+        "izmir": 20.3,
+        "ankara": 17.2,
+        "istanbul": 18.9
+      }
+    },
+    {
+      "date": "2025-05-16",
+      "temperaturesC": {
+        "izmir": 21.3,
+        "ankara": 14.7,
+        "istanbul": 17.9
+      }
+    },
+    {
+      "date": "2025-05-17",
+      "temperaturesC": {
+        "izmir": 23,
+        "ankara": 15.1,
+        "istanbul": 18
+      }
+    },
+    {
+      "date": "2025-05-18",
+      "temperaturesC": {
+        "izmir": 22.9,
+        "ankara": 16.1,
+        "istanbul": 20.7
+      }
+    },
+    {
+      "date": "2025-05-19",
+      "temperaturesC": {
+        "izmir": 22.5,
+        "ankara": 17.9,
+        "istanbul": 17.4
+      }
+    },
+    {
+      "date": "2025-05-20",
+      "temperaturesC": {
+        "izmir": 23.1,
+        "ankara": 17.9,
+        "istanbul": 17.9
+      }
+    },
+    {
+      "date": "2025-05-21",
+      "temperaturesC": {
+        "izmir": 23.8,
+        "ankara": 18.3,
+        "istanbul": 19.4
+      }
+    },
+    {
+      "date": "2025-05-22",
+      "temperaturesC": {
+        "izmir": 21.4,
+        "ankara": 16.7,
+        "istanbul": 20.3
+      }
+    },
+    {
+      "date": "2025-05-23",
+      "temperaturesC": {
+        "izmir": 24.5,
+        "ankara": 19.3,
+        "istanbul": 20
+      }
+    },
+    {
+      "date": "2025-05-24",
+      "temperaturesC": {
+        "izmir": 24,
+        "ankara": 20.1,
+        "istanbul": 19.5
+      }
+    },
+    {
+      "date": "2025-05-25",
+      "temperaturesC": {
+        "izmir": 23,
+        "ankara": 17,
+        "istanbul": 21.2
+      }
+    },
+    {
+      "date": "2025-05-26",
+      "temperaturesC": {
+        "izmir": 22.8,
+        "ankara": 20.2,
+        "istanbul": 20.6
+      }
+    },
+    {
+      "date": "2025-05-27",
+      "temperaturesC": {
+        "izmir": 25.1,
+        "ankara": 20.6,
+        "istanbul": 20.3
+      }
+    },
+    {
+      "date": "2025-05-28",
+      "temperaturesC": {
+        "izmir": 23.9,
+        "ankara": 20.8,
+        "istanbul": 20.4
+      }
+    },
+    {
+      "date": "2025-05-29",
+      "temperaturesC": {
+        "izmir": 24.6,
+        "ankara": 20,
+        "istanbul": 21.9
+      }
+    },
+    {
+      "date": "2025-05-30",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 17.8,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "temperaturesC": {
+        "izmir": 25.2,
+        "ankara": 17.9,
+        "istanbul": 21.2
+      }
+    },
+    {
+      "date": "2025-06-01",
+      "temperaturesC": {
+        "izmir": 23.3,
+        "ankara": 21.1,
+        "istanbul": 22.9
+      }
+    },
+    {
+      "date": "2025-06-02",
+      "temperaturesC": {
+        "izmir": 25,
+        "ankara": 19.1,
+        "istanbul": 21.6
+      }
+    },
+    {
+      "date": "2025-06-03",
+      "temperaturesC": {
+        "izmir": 25.6,
+        "ankara": 21,
+        "istanbul": 19.7
+      }
+    },
+    {
+      "date": "2025-06-04",
+      "temperaturesC": {
+        "izmir": 24.5,
+        "ankara": 18.7,
+        "istanbul": 21.4
+      }
+    },
+    {
+      "date": "2025-06-05",
+      "temperaturesC": {
+        "izmir": 25.4,
+        "ankara": 19.8,
+        "istanbul": 21.6
+      }
+    },
+    {
+      "date": "2025-06-06",
+      "temperaturesC": {
+        "izmir": 26.4,
+        "ankara": 21.2,
+        "istanbul": 21.5
+      }
+    },
+    {
+      "date": "2025-06-07",
+      "temperaturesC": {
+        "izmir": 24,
+        "ankara": 20.8,
+        "istanbul": 20
+      }
+    },
+    {
+      "date": "2025-06-08",
+      "temperaturesC": {
+        "izmir": 26.4,
+        "ankara": 22.5,
+        "istanbul": 22.7
+      }
+    },
+    {
+      "date": "2025-06-09",
+      "temperaturesC": {
+        "izmir": 26.4,
+        "ankara": 20.6,
+        "istanbul": 19.9
+      }
+    },
+    {
+      "date": "2025-06-10",
+      "temperaturesC": {
+        "izmir": 26.7,
+        "ankara": 22.2,
+        "istanbul": 20.9
+      }
+    },
+    {
+      "date": "2025-06-11",
+      "temperaturesC": {
+        "izmir": 25.8,
+        "ankara": 20.1,
+        "istanbul": 20.2
+      }
+    },
+    {
+      "date": "2025-06-12",
+      "temperaturesC": {
+        "izmir": 26,
+        "ankara": 22.9,
+        "istanbul": 23.8
+      }
+    },
+    {
+      "date": "2025-06-13",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 20.8,
+        "istanbul": 24
+      }
+    },
+    {
+      "date": "2025-06-14",
+      "temperaturesC": {
+        "izmir": 25.1,
+        "ankara": 22.3,
+        "istanbul": 22.3
+      }
+    },
+    {
+      "date": "2025-06-15",
+      "temperaturesC": {
+        "izmir": 25.6,
+        "ankara": 20.7,
+        "istanbul": 20.8
+      }
+    },
+    {
+      "date": "2025-06-16",
+      "temperaturesC": {
+        "izmir": 25.7,
+        "ankara": 23.4,
+        "istanbul": 22.8
+      }
+    },
+    {
+      "date": "2025-06-17",
+      "temperaturesC": {
+        "izmir": 27.2,
+        "ankara": 21.9,
+        "istanbul": 22.8
+      }
+    },
+    {
+      "date": "2025-06-18",
+      "temperaturesC": {
+        "izmir": 27.4,
+        "ankara": 22.5,
+        "istanbul": 21.3
+      }
+    },
+    {
+      "date": "2025-06-19",
+      "temperaturesC": {
+        "izmir": 27.3,
+        "ankara": 23.7,
+        "istanbul": 22.2
+      }
+    },
+    {
+      "date": "2025-06-20",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 22.8,
+        "istanbul": 24.3
+      }
+    },
+    {
+      "date": "2025-06-21",
+      "temperaturesC": {
+        "izmir": 24.8,
+        "ankara": 21.8,
+        "istanbul": 22.4
+      }
+    },
+    {
+      "date": "2025-06-22",
+      "temperaturesC": {
+        "izmir": 27.7,
+        "ankara": 21.7,
+        "istanbul": 24.7
+      }
+    },
+    {
+      "date": "2025-06-23",
+      "temperaturesC": {
+        "izmir": 28.1,
+        "ankara": 24.2,
+        "istanbul": 24.8
+      }
+    },
+    {
+      "date": "2025-06-24",
+      "temperaturesC": {
+        "izmir": 26,
+        "ankara": 21.4,
+        "istanbul": 21.3
+      }
+    },
+    {
+      "date": "2025-06-25",
+      "temperaturesC": {
+        "izmir": 28.5,
+        "ankara": 22.9,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-06-26",
+      "temperaturesC": {
+        "izmir": 28.4,
+        "ankara": 21.9,
+        "istanbul": 21.6
+      }
+    },
+    {
+      "date": "2025-06-27",
+      "temperaturesC": {
+        "izmir": 28.8,
+        "ankara": 22.1,
+        "istanbul": 22.4
+      }
+    },
+    {
+      "date": "2025-06-28",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 23.8,
+        "istanbul": 21.6
+      }
+    },
+    {
+      "date": "2025-06-29",
+      "temperaturesC": {
+        "izmir": 25.9,
+        "ankara": 21.6,
+        "istanbul": 22.9
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "temperaturesC": {
+        "izmir": 26.1,
+        "ankara": 22.3,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-07-01",
+      "temperaturesC": {
+        "izmir": 26.1,
+        "ankara": 23.9,
+        "istanbul": 25.1
+      }
+    },
+    {
+      "date": "2025-07-02",
+      "temperaturesC": {
+        "izmir": 26.8,
+        "ankara": 21.9,
+        "istanbul": 25.2
+      }
+    },
+    {
+      "date": "2025-07-03",
+      "temperaturesC": {
+        "izmir": 25.9,
+        "ankara": 22,
+        "istanbul": 22.4
+      }
+    },
+    {
+      "date": "2025-07-04",
+      "temperaturesC": {
+        "izmir": 27.4,
+        "ankara": 23.5,
+        "istanbul": 23.4
+      }
+    },
+    {
+      "date": "2025-07-05",
+      "temperaturesC": {
+        "izmir": 28.8,
+        "ankara": 23.6,
+        "istanbul": 25.7
+      }
+    },
+    {
+      "date": "2025-07-06",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 24.1,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-07-07",
+      "temperaturesC": {
+        "izmir": 27.9,
+        "ankara": 22.8,
+        "istanbul": 25.5
+      }
+    },
+    {
+      "date": "2025-07-08",
+      "temperaturesC": {
+        "izmir": 27.1,
+        "ankara": 23.2,
+        "istanbul": 24.8
+      }
+    },
+    {
+      "date": "2025-07-09",
+      "temperaturesC": {
+        "izmir": 27.7,
+        "ankara": 22,
+        "istanbul": 24.8
+      }
+    },
+    {
+      "date": "2025-07-10",
+      "temperaturesC": {
+        "izmir": 28.9,
+        "ankara": 22,
+        "istanbul": 25.6
+      }
+    },
+    {
+      "date": "2025-07-11",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 23.1,
+        "istanbul": 22.5
+      }
+    },
+    {
+      "date": "2025-07-12",
+      "temperaturesC": {
+        "izmir": 28.6,
+        "ankara": 23.2,
+        "istanbul": 24.9
+      }
+    },
+    {
+      "date": "2025-07-13",
+      "temperaturesC": {
+        "izmir": 28.4,
+        "ankara": 24.1,
+        "istanbul": 22.5
+      }
+    },
+    {
+      "date": "2025-07-14",
+      "temperaturesC": {
+        "izmir": 27.4,
+        "ankara": 25.6,
+        "istanbul": 23.5
+      }
+    },
+    {
+      "date": "2025-07-15",
+      "temperaturesC": {
+        "izmir": 29.2,
+        "ankara": 23.4,
+        "istanbul": 25
+      }
+    },
+    {
+      "date": "2025-07-16",
+      "temperaturesC": {
+        "izmir": 27.3,
+        "ankara": 22.3,
+        "istanbul": 23.2
+      }
+    },
+    {
+      "date": "2025-07-17",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 22.4,
+        "istanbul": 24.4
+      }
+    },
+    {
+      "date": "2025-07-18",
+      "temperaturesC": {
+        "izmir": 28.3,
+        "ankara": 25.5,
+        "istanbul": 22.2
+      }
+    },
+    {
+      "date": "2025-07-19",
+      "temperaturesC": {
+        "izmir": 27.1,
+        "ankara": 25.1,
+        "istanbul": 24
+      }
+    },
+    {
+      "date": "2025-07-20",
+      "temperaturesC": {
+        "izmir": 29.3,
+        "ankara": 25.4,
+        "istanbul": 25.2
+      }
+    },
+    {
+      "date": "2025-07-21",
+      "temperaturesC": {
+        "izmir": 26.4,
+        "ankara": 22.2,
+        "istanbul": 23.3
+      }
+    },
+    {
+      "date": "2025-07-22",
+      "temperaturesC": {
+        "izmir": 29.5,
+        "ankara": 24.5,
+        "istanbul": 23.4
+      }
+    },
+    {
+      "date": "2025-07-23",
+      "temperaturesC": {
+        "izmir": 30,
+        "ankara": 25.2,
+        "istanbul": 23.9
+      }
+    },
+    {
+      "date": "2025-07-24",
+      "temperaturesC": {
+        "izmir": 27.8,
+        "ankara": 24.4,
+        "istanbul": 23
+      }
+    },
+    {
+      "date": "2025-07-25",
+      "temperaturesC": {
+        "izmir": 27.7,
+        "ankara": 23.9,
+        "istanbul": 23.8
+      }
+    },
+    {
+      "date": "2025-07-26",
+      "temperaturesC": {
+        "izmir": 27.6,
+        "ankara": 25.5,
+        "istanbul": 22
+      }
+    },
+    {
+      "date": "2025-07-27",
+      "temperaturesC": {
+        "izmir": 27.6,
+        "ankara": 24.3,
+        "istanbul": 23.8
+      }
+    },
+    {
+      "date": "2025-07-28",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 22.2,
+        "istanbul": 25.6
+      }
+    },
+    {
+      "date": "2025-07-29",
+      "temperaturesC": {
+        "izmir": 29.5,
+        "ankara": 23.5,
+        "istanbul": 22
+      }
+    },
+    {
+      "date": "2025-07-30",
+      "temperaturesC": {
+        "izmir": 29,
+        "ankara": 23,
+        "istanbul": 24.2
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "temperaturesC": {
+        "izmir": 29.7,
+        "ankara": 22.1,
+        "istanbul": 25.3
+      }
+    },
+    {
+      "date": "2025-08-01",
+      "temperaturesC": {
+        "izmir": 28.4,
+        "ankara": 22.4,
+        "istanbul": 24.7
+      }
+    },
+    {
+      "date": "2025-08-02",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 23.6,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-08-03",
+      "temperaturesC": {
+        "izmir": 28.1,
+        "ankara": 24.1,
+        "istanbul": 24.4
+      }
+    },
+    {
+      "date": "2025-08-04",
+      "temperaturesC": {
+        "izmir": 27.2,
+        "ankara": 25.2,
+        "istanbul": 21.9
+      }
+    },
+    {
+      "date": "2025-08-05",
+      "temperaturesC": {
+        "izmir": 29.2,
+        "ankara": 23.7,
+        "istanbul": 22.3
+      }
+    },
+    {
+      "date": "2025-08-06",
+      "temperaturesC": {
+        "izmir": 25.7,
+        "ankara": 22.6,
+        "istanbul": 24.2
+      }
+    },
+    {
+      "date": "2025-08-07",
+      "temperaturesC": {
+        "izmir": 27.7,
+        "ankara": 24.1,
+        "istanbul": 22.9
+      }
+    },
+    {
+      "date": "2025-08-08",
+      "temperaturesC": {
+        "izmir": 25.7,
+        "ankara": 23.1,
+        "istanbul": 25.2
+      }
+    },
+    {
+      "date": "2025-08-09",
+      "temperaturesC": {
+        "izmir": 26.3,
+        "ankara": 24.6,
+        "istanbul": 23.6
+      }
+    },
+    {
+      "date": "2025-08-10",
+      "temperaturesC": {
+        "izmir": 28.6,
+        "ankara": 21.4,
+        "istanbul": 22.3
+      }
+    },
+    {
+      "date": "2025-08-11",
+      "temperaturesC": {
+        "izmir": 26.2,
+        "ankara": 22.5,
+        "istanbul": 22.3
+      }
+    },
+    {
+      "date": "2025-08-12",
+      "temperaturesC": {
+        "izmir": 27.3,
+        "ankara": 24.7,
+        "istanbul": 24.9
+      }
+    },
+    {
+      "date": "2025-08-13",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 21.7,
+        "istanbul": 24.5
+      }
+    },
+    {
+      "date": "2025-08-14",
+      "temperaturesC": {
+        "izmir": 26.6,
+        "ankara": 24.6,
+        "istanbul": 22.4
+      }
+    },
+    {
+      "date": "2025-08-15",
+      "temperaturesC": {
+        "izmir": 27.4,
+        "ankara": 23.3,
+        "istanbul": 23.7
+      }
+    },
+    {
+      "date": "2025-08-16",
+      "temperaturesC": {
+        "izmir": 26,
+        "ankara": 21.1,
+        "istanbul": 22.3
+      }
+    },
+    {
+      "date": "2025-08-17",
+      "temperaturesC": {
+        "izmir": 26,
+        "ankara": 22.2,
+        "istanbul": 23.7
+      }
+    },
+    {
+      "date": "2025-08-18",
+      "temperaturesC": {
+        "izmir": 26.3,
+        "ankara": 24.1,
+        "istanbul": 22.5
+      }
+    },
+    {
+      "date": "2025-08-19",
+      "temperaturesC": {
+        "izmir": 25,
+        "ankara": 20.3,
+        "istanbul": 22.2
+      }
+    },
+    {
+      "date": "2025-08-20",
+      "temperaturesC": {
+        "izmir": 27.3,
+        "ankara": 20.3,
+        "istanbul": 23.1
+      }
+    },
+    {
+      "date": "2025-08-21",
+      "temperaturesC": {
+        "izmir": 26.1,
+        "ankara": 21.8,
+        "istanbul": 22.2
+      }
+    },
+    {
+      "date": "2025-08-22",
+      "temperaturesC": {
+        "izmir": 24.6,
+        "ankara": 22.2,
+        "istanbul": 24
+      }
+    },
+    {
+      "date": "2025-08-23",
+      "temperaturesC": {
+        "izmir": 26.9,
+        "ankara": 23.5,
+        "istanbul": 24.2
+      }
+    },
+    {
+      "date": "2025-08-24",
+      "temperaturesC": {
+        "izmir": 24.7,
+        "ankara": 21.5,
+        "istanbul": 20.8
+      }
+    },
+    {
+      "date": "2025-08-25",
+      "temperaturesC": {
+        "izmir": 27.5,
+        "ankara": 19.7,
+        "istanbul": 20.5
+      }
+    },
+    {
+      "date": "2025-08-26",
+      "temperaturesC": {
+        "izmir": 24.8,
+        "ankara": 21.5,
+        "istanbul": 21.2
+      }
+    },
+    {
+      "date": "2025-08-27",
+      "temperaturesC": {
+        "izmir": 24.9,
+        "ankara": 22.3,
+        "istanbul": 20.9
+      }
+    },
+    {
+      "date": "2025-08-28",
+      "temperaturesC": {
+        "izmir": 25.3,
+        "ankara": 20.6,
+        "istanbul": 22.1
+      }
+    },
+    {
+      "date": "2025-08-29",
+      "temperaturesC": {
+        "izmir": 24.8,
+        "ankara": 19.7,
+        "istanbul": 22.8
+      }
+    },
+    {
+      "date": "2025-08-30",
+      "temperaturesC": {
+        "izmir": 27.5,
+        "ankara": 20.9,
+        "istanbul": 22.9
+      }
+    },
+    {
+      "date": "2025-08-31",
+      "temperaturesC": {
+        "izmir": 25.7,
+        "ankara": 19.9,
+        "istanbul": 21.1
+      }
+    },
+    {
+      "date": "2025-09-01",
+      "temperaturesC": {
+        "izmir": 23.7,
+        "ankara": 21.8,
+        "istanbul": 21.2
+      }
+    },
+    {
+      "date": "2025-09-02",
+      "temperaturesC": {
+        "izmir": 25.8,
+        "ankara": 19.8,
+        "istanbul": 21
+      }
+    },
+    {
+      "date": "2025-09-03",
+      "temperaturesC": {
+        "izmir": 25.9,
+        "ankara": 18.8,
+        "istanbul": 21.4
+      }
+    },
+    {
+      "date": "2025-09-04",
+      "temperaturesC": {
+        "izmir": 23.8,
+        "ankara": 21.3,
+        "istanbul": 21.8
+      }
+    },
+    {
+      "date": "2025-09-05",
+      "temperaturesC": {
+        "izmir": 24.1,
+        "ankara": 18.1,
+        "istanbul": 19.9
+      }
+    },
+    {
+      "date": "2025-09-06",
+      "temperaturesC": {
+        "izmir": 26.1,
+        "ankara": 20.3,
+        "istanbul": 19.7
+      }
+    },
+    {
+      "date": "2025-09-07",
+      "temperaturesC": {
+        "izmir": 25.7,
+        "ankara": 19.6,
+        "istanbul": 22.4
+      }
+    },
+    {
+      "date": "2025-09-08",
+      "temperaturesC": {
+        "izmir": 23.7,
+        "ankara": 18.7,
+        "istanbul": 21.7
+      }
+    },
+    {
+      "date": "2025-09-09",
+      "temperaturesC": {
+        "izmir": 24.2,
+        "ankara": 18.6,
+        "istanbul": 20.7
+      }
+    },
+    {
+      "date": "2025-09-10",
+      "temperaturesC": {
+        "izmir": 24.1,
+        "ankara": 20.5,
+        "istanbul": 20.1
+      }
+    },
+    {
+      "date": "2025-09-11",
+      "temperaturesC": {
+        "izmir": 25.5,
+        "ankara": 19.3,
+        "istanbul": 20
+      }
+    },
+    {
+      "date": "2025-09-12",
+      "temperaturesC": {
+        "izmir": 23.2,
+        "ankara": 18.5,
+        "istanbul": 21.1
+      }
+    },
+    {
+      "date": "2025-09-13",
+      "temperaturesC": {
+        "izmir": 24.6,
+        "ankara": 19.7,
+        "istanbul": 18.8
+      }
+    },
+    {
+      "date": "2025-09-14",
+      "temperaturesC": {
+        "izmir": 23.9,
+        "ankara": 16.6,
+        "istanbul": 21.2
+      }
+    },
+    {
+      "date": "2025-09-15",
+      "temperaturesC": {
+        "izmir": 25.2,
+        "ankara": 16.4,
+        "istanbul": 20.1
+      }
+    },
+    {
+      "date": "2025-09-16",
+      "temperaturesC": {
+        "izmir": 23.9,
+        "ankara": 16.1,
+        "istanbul": 20.4
+      }
+    },
+    {
+      "date": "2025-09-17",
+      "temperaturesC": {
+        "izmir": 24.2,
+        "ankara": 18.1,
+        "istanbul": 18.9
+      }
+    },
+    {
+      "date": "2025-09-18",
+      "temperaturesC": {
+        "izmir": 22.7,
+        "ankara": 18.2,
+        "istanbul": 18.9
+      }
+    },
+    {
+      "date": "2025-09-19",
+      "temperaturesC": {
+        "izmir": 23.6,
+        "ankara": 18.8,
+        "istanbul": 20.5
+      }
+    },
+    {
+      "date": "2025-09-20",
+      "temperaturesC": {
+        "izmir": 23.8,
+        "ankara": 16.3,
+        "istanbul": 20.9
+      }
+    },
+    {
+      "date": "2025-09-21",
+      "temperaturesC": {
+        "izmir": 22.2,
+        "ankara": 17,
+        "istanbul": 19.4
+      }
+    },
+    {
+      "date": "2025-09-22",
+      "temperaturesC": {
+        "izmir": 22.6,
+        "ankara": 15.5,
+        "istanbul": 17.2
+      }
+    },
+    {
+      "date": "2025-09-23",
+      "temperaturesC": {
+        "izmir": 23.3,
+        "ankara": 17.1,
+        "istanbul": 17.2
+      }
+    },
+    {
+      "date": "2025-09-24",
+      "temperaturesC": {
+        "izmir": 22.3,
+        "ankara": 15.4,
+        "istanbul": 18.5
+      }
+    },
+    {
+      "date": "2025-09-25",
+      "temperaturesC": {
+        "izmir": 23.6,
+        "ankara": 15.5,
+        "istanbul": 18.4
+      }
+    },
+    {
+      "date": "2025-09-26",
+      "temperaturesC": {
+        "izmir": 23.6,
+        "ankara": 15.7,
+        "istanbul": 18.8
+      }
+    },
+    {
+      "date": "2025-09-27",
+      "temperaturesC": {
+        "izmir": 23.4,
+        "ankara": 14.6,
+        "istanbul": 17.3
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "temperaturesC": {
+        "izmir": 21.7,
+        "ankara": 15.9,
+        "istanbul": 17.5
+      }
+    },
+    {
+      "date": "2025-09-29",
+      "temperaturesC": {
+        "izmir": 22.9,
+        "ankara": 14.2,
+        "istanbul": 19
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "temperaturesC": {
+        "izmir": 22.6,
+        "ankara": 15.1,
+        "istanbul": 16.5
+      }
+    },
+    {
+      "date": "2025-10-01",
+      "temperaturesC": {
+        "izmir": 22.8,
+        "ankara": 14.4,
+        "istanbul": 18.8
+      }
+    },
+    {
+      "date": "2025-10-02",
+      "temperaturesC": {
+        "izmir": 22.7,
+        "ankara": 16.3,
+        "istanbul": 19.1
+      }
+    },
+    {
+      "date": "2025-10-03",
+      "temperaturesC": {
+        "izmir": 22.3,
+        "ankara": 13.2,
+        "istanbul": 16.6
+      }
+    },
+    {
+      "date": "2025-10-04",
+      "temperaturesC": {
+        "izmir": 20.2,
+        "ankara": 13.3,
+        "istanbul": 16.6
+      }
+    },
+    {
+      "date": "2025-10-05",
+      "temperaturesC": {
+        "izmir": 21.7,
+        "ankara": 14.6,
+        "istanbul": 17.4
+      }
+    },
+    {
+      "date": "2025-10-06",
+      "temperaturesC": {
+        "izmir": 20.9,
+        "ankara": 15.5,
+        "istanbul": 15.3
+      }
+    },
+    {
+      "date": "2025-10-07",
+      "temperaturesC": {
+        "izmir": 21.4,
+        "ankara": 15,
+        "istanbul": 15.9
+      }
+    },
+    {
+      "date": "2025-10-08",
+      "temperaturesC": {
+        "izmir": 21.5,
+        "ankara": 13.4,
+        "istanbul": 18.4
+      }
+    },
+    {
+      "date": "2025-10-09",
+      "temperaturesC": {
+        "izmir": 19.6,
+        "ankara": 12.3,
+        "istanbul": 15.6
+      }
+    },
+    {
+      "date": "2025-10-10",
+      "temperaturesC": {
+        "izmir": 20,
+        "ankara": 12.1,
+        "istanbul": 16.9
+      }
+    },
+    {
+      "date": "2025-10-11",
+      "temperaturesC": {
+        "izmir": 18.6,
+        "ankara": 11.4,
+        "istanbul": 14.7
+      }
+    },
+    {
+      "date": "2025-10-12",
+      "temperaturesC": {
+        "izmir": 18.7,
+        "ankara": 11.3,
+        "istanbul": 16.6
+      }
+    },
+    {
+      "date": "2025-10-13",
+      "temperaturesC": {
+        "izmir": 18,
+        "ankara": 10.8,
+        "istanbul": 17.8
+      }
+    },
+    {
+      "date": "2025-10-14",
+      "temperaturesC": {
+        "izmir": 20.8,
+        "ankara": 12.8,
+        "istanbul": 16.7
+      }
+    },
+    {
+      "date": "2025-10-15",
+      "temperaturesC": {
+        "izmir": 20.2,
+        "ankara": 11.6,
+        "istanbul": 15.9
+      }
+    },
+    {
+      "date": "2025-10-16",
+      "temperaturesC": {
+        "izmir": 18.2,
+        "ankara": 10.7,
+        "istanbul": 14.4
+      }
+    },
+    {
+      "date": "2025-10-17",
+      "temperaturesC": {
+        "izmir": 19.8,
+        "ankara": 9.8,
+        "istanbul": 15.3
+      }
+    },
+    {
+      "date": "2025-10-18",
+      "temperaturesC": {
+        "izmir": 17.4,
+        "ankara": 12.8,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-10-19",
+      "temperaturesC": {
+        "izmir": 16.6,
+        "ankara": 12.4,
+        "istanbul": 14.8
+      }
+    },
+    {
+      "date": "2025-10-20",
+      "temperaturesC": {
+        "izmir": 17.4,
+        "ankara": 11.6,
+        "istanbul": 13.8
+      }
+    },
+    {
+      "date": "2025-10-21",
+      "temperaturesC": {
+        "izmir": 19.4,
+        "ankara": 12.1,
+        "istanbul": 13.2
+      }
+    },
+    {
+      "date": "2025-10-22",
+      "temperaturesC": {
+        "izmir": 16,
+        "ankara": 12.1,
+        "istanbul": 15.4
+      }
+    },
+    {
+      "date": "2025-10-23",
+      "temperaturesC": {
+        "izmir": 19.2,
+        "ankara": 11.6,
+        "istanbul": 15
+      }
+    },
+    {
+      "date": "2025-10-24",
+      "temperaturesC": {
+        "izmir": 16.9,
+        "ankara": 9.4,
+        "istanbul": 13.5
+      }
+    },
+    {
+      "date": "2025-10-25",
+      "temperaturesC": {
+        "izmir": 15.6,
+        "ankara": 11.5,
+        "istanbul": 15.3
+      }
+    },
+    {
+      "date": "2025-10-26",
+      "temperaturesC": {
+        "izmir": 16.6,
+        "ankara": 9.3,
+        "istanbul": 12.3
+      }
+    },
+    {
+      "date": "2025-10-27",
+      "temperaturesC": {
+        "izmir": 17.3,
+        "ankara": 9.5,
+        "istanbul": 14.9
+      }
+    },
+    {
+      "date": "2025-10-28",
+      "temperaturesC": {
+        "izmir": 17.5,
+        "ankara": 8.8,
+        "istanbul": 13.8
+      }
+    },
+    {
+      "date": "2025-10-29",
+      "temperaturesC": {
+        "izmir": 17.6,
+        "ankara": 9.5,
+        "istanbul": 13.9
+      }
+    },
+    {
+      "date": "2025-10-30",
+      "temperaturesC": {
+        "izmir": 15,
+        "ankara": 8.3,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "temperaturesC": {
+        "izmir": 17.7,
+        "ankara": 8.6,
+        "istanbul": 12.5
+      }
+    },
+    {
+      "date": "2025-11-01",
+      "temperaturesC": {
+        "izmir": 14.1,
+        "ankara": 9.6,
+        "istanbul": 14.5
+      }
+    },
+    {
+      "date": "2025-11-02",
+      "temperaturesC": {
+        "izmir": 13.8,
+        "ankara": 6.4,
+        "istanbul": 14.3
+      }
+    },
+    {
+      "date": "2025-11-03",
+      "temperaturesC": {
+        "izmir": 17.2,
+        "ankara": 9,
+        "istanbul": 13.7
+      }
+    },
+    {
+      "date": "2025-11-04",
+      "temperaturesC": {
+        "izmir": 13.4,
+        "ankara": 6,
+        "istanbul": 10.8
+      }
+    },
+    {
+      "date": "2025-11-05",
+      "temperaturesC": {
+        "izmir": 15.7,
+        "ankara": 7,
+        "istanbul": 13.9
+      }
+    },
+    {
+      "date": "2025-11-06",
+      "temperaturesC": {
+        "izmir": 15.6,
+        "ankara": 6.2,
+        "istanbul": 11
+      }
+    },
+    {
+      "date": "2025-11-07",
+      "temperaturesC": {
+        "izmir": 14.9,
+        "ankara": 7.5,
+        "istanbul": 13.8
+      }
+    },
+    {
+      "date": "2025-11-08",
+      "temperaturesC": {
+        "izmir": 13.7,
+        "ankara": 7.6,
+        "istanbul": 11.3
+      }
+    },
+    {
+      "date": "2025-11-09",
+      "temperaturesC": {
+        "izmir": 15.4,
+        "ankara": 5.3,
+        "istanbul": 10.8
+      }
+    },
+    {
+      "date": "2025-11-10",
+      "temperaturesC": {
+        "izmir": 15.2,
+        "ankara": 7.1,
+        "istanbul": 10.2
+      }
+    },
+    {
+      "date": "2025-11-11",
+      "temperaturesC": {
+        "izmir": 15.6,
+        "ankara": 5.8,
+        "istanbul": 10.8
+      }
+    },
+    {
+      "date": "2025-11-12",
+      "temperaturesC": {
+        "izmir": 12.2,
+        "ankara": 7.4,
+        "istanbul": 11.5
+      }
+    },
+    {
+      "date": "2025-11-13",
+      "temperaturesC": {
+        "izmir": 13.1,
+        "ankara": 7.1,
+        "istanbul": 11.8
+      }
+    },
+    {
+      "date": "2025-11-14",
+      "temperaturesC": {
+        "izmir": 15.5,
+        "ankara": 4,
+        "istanbul": 11.1
+      }
+    },
+    {
+      "date": "2025-11-15",
+      "temperaturesC": {
+        "izmir": 12.2,
+        "ankara": 3.6,
+        "istanbul": 12.5
+      }
+    },
+    {
+      "date": "2025-11-16",
+      "temperaturesC": {
+        "izmir": 14.5,
+        "ankara": 5,
+        "istanbul": 12.4
+      }
+    },
+    {
+      "date": "2025-11-17",
+      "temperaturesC": {
+        "izmir": 13.3,
+        "ankara": 6.8,
+        "istanbul": 9.3
+      }
+    },
+    {
+      "date": "2025-11-18",
+      "temperaturesC": {
+        "izmir": 12.6,
+        "ankara": 4.1,
+        "istanbul": 11.9
+      }
+    },
+    {
+      "date": "2025-11-19",
+      "temperaturesC": {
+        "izmir": 13.1,
+        "ankara": 3.1,
+        "istanbul": 12.2
+      }
+    },
+    {
+      "date": "2025-11-20",
+      "temperaturesC": {
+        "izmir": 14.6,
+        "ankara": 3.2,
+        "istanbul": 11.1
+      }
+    },
+    {
+      "date": "2025-11-21",
+      "temperaturesC": {
+        "izmir": 14.2,
+        "ankara": 2.2,
+        "istanbul": 10.1
+      }
+    },
+    {
+      "date": "2025-11-22",
+      "temperaturesC": {
+        "izmir": 14.2,
+        "ankara": 5.8,
+        "istanbul": 10.6
+      }
+    },
+    {
+      "date": "2025-11-23",
+      "temperaturesC": {
+        "izmir": 11.8,
+        "ankara": 2.4,
+        "istanbul": 10.6
+      }
+    },
+    {
+      "date": "2025-11-24",
+      "temperaturesC": {
+        "izmir": 12.2,
+        "ankara": 4.4,
+        "istanbul": 10.9
+      }
+    },
+    {
+      "date": "2025-11-25",
+      "temperaturesC": {
+        "izmir": 10.4,
+        "ankara": 4.8,
+        "istanbul": 11
+      }
+    },
+    {
+      "date": "2025-11-26",
+      "temperaturesC": {
+        "izmir": 13.1,
+        "ankara": 4.9,
+        "istanbul": 8.8
+      }
+    },
+    {
+      "date": "2025-11-27",
+      "temperaturesC": {
+        "izmir": 11.1,
+        "ankara": 1.3,
+        "istanbul": 9.5
+      }
+    },
+    {
+      "date": "2025-11-28",
+      "temperaturesC": {
+        "izmir": 10.2,
+        "ankara": 3.4,
+        "istanbul": 10.4
+      }
+    },
+    {
+      "date": "2025-11-29",
+      "temperaturesC": {
+        "izmir": 12.1,
+        "ankara": 3.5,
+        "istanbul": 10.1
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "temperaturesC": {
+        "izmir": 11.4,
+        "ankara": 0.7,
+        "istanbul": 10.2
+      }
+    },
+    {
+      "date": "2025-12-01",
+      "temperaturesC": {
+        "izmir": 10.6,
+        "ankara": 2.5,
+        "istanbul": 10.2
+      }
+    },
+    {
+      "date": "2025-12-02",
+      "temperaturesC": {
+        "izmir": 9.8,
+        "ankara": 1,
+        "istanbul": 10.3
+      }
+    },
+    {
+      "date": "2025-12-03",
+      "temperaturesC": {
+        "izmir": 9.7,
+        "ankara": 1.7,
+        "istanbul": 10.3
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "temperaturesC": {
+        "izmir": 11.7,
+        "ankara": 1.1,
+        "istanbul": 9.2
+      }
+    },
+    {
+      "date": "2025-12-05",
+      "temperaturesC": {
+        "izmir": 9.5,
+        "ankara": -0.2,
+        "istanbul": 9.7
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "temperaturesC": {
+        "izmir": 11.2,
+        "ankara": 1,
+        "istanbul": 9
+      }
+    },
+    {
+      "date": "2025-12-07",
+      "temperaturesC": {
+        "izmir": 10.9,
+        "ankara": 1.3,
+        "istanbul": 8.9
+      }
+    },
+    {
+      "date": "2025-12-08",
+      "temperaturesC": {
+        "izmir": 11.7,
+        "ankara": -0.4,
+        "istanbul": 7.2
+      }
+    },
+    {
+      "date": "2025-12-09",
+      "temperaturesC": {
+        "izmir": 9.2,
+        "ankara": 0.2,
+        "istanbul": 10
+      }
+    },
+    {
+      "date": "2025-12-10",
+      "temperaturesC": {
+        "izmir": 8.9,
+        "ankara": 1,
+        "istanbul": 8.7
+      }
+    },
+    {
+      "date": "2025-12-11",
+      "temperaturesC": {
+        "izmir": 8.6,
+        "ankara": 1.2,
+        "istanbul": 8.2
+      }
+    },
+    {
+      "date": "2025-12-12",
+      "temperaturesC": {
+        "izmir": 9.1,
+        "ankara": 2.1,
+        "istanbul": 6.6
+      }
+    },
+    {
+      "date": "2025-12-13",
+      "temperaturesC": {
+        "izmir": 9.9,
+        "ankara": 0.4,
+        "istanbul": 5.8
+      }
+    },
+    {
+      "date": "2025-12-14",
+      "temperaturesC": {
+        "izmir": 9.9,
+        "ankara": -1.5,
+        "istanbul": 6.9
+      }
+    },
+    {
+      "date": "2025-12-15",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": 1.6,
+        "istanbul": 8.4
+      }
+    },
+    {
+      "date": "2025-12-16",
+      "temperaturesC": {
+        "izmir": 10.2,
+        "ankara": 1.8,
+        "istanbul": 6.9
+      }
+    },
+    {
+      "date": "2025-12-17",
+      "temperaturesC": {
+        "izmir": 8.4,
+        "ankara": -0.1,
+        "istanbul": 8
+      }
+    },
+    {
+      "date": "2025-12-18",
+      "temperaturesC": {
+        "izmir": 9.2,
+        "ankara": -1.4,
+        "istanbul": 6.5
+      }
+    },
+    {
+      "date": "2025-12-19",
+      "temperaturesC": {
+        "izmir": 7.4,
+        "ankara": -2,
+        "istanbul": 5.4
+      }
+    },
+    {
+      "date": "2025-12-20",
+      "temperaturesC": {
+        "izmir": 8.5,
+        "ankara": -1.5,
+        "istanbul": 6.2
+      }
+    },
+    {
+      "date": "2025-12-21",
+      "temperaturesC": {
+        "izmir": 9,
+        "ankara": -1.5,
+        "istanbul": 5.6
+      }
+    },
+    {
+      "date": "2025-12-22",
+      "temperaturesC": {
+        "izmir": 7.7,
+        "ankara": -0.9,
+        "istanbul": 6.8
+      }
+    },
+    {
+      "date": "2025-12-23",
+      "temperaturesC": {
+        "izmir": 9.8,
+        "ankara": -0.9,
+        "istanbul": 8.5
+      }
+    },
+    {
+      "date": "2025-12-24",
+      "temperaturesC": {
+        "izmir": 10.5,
+        "ankara": 0.6,
+        "istanbul": 5.4
+      }
+    },
+    {
+      "date": "2025-12-25",
+      "temperaturesC": {
+        "izmir": 8.1,
+        "ankara": -1.8,
+        "istanbul": 6.5
+      }
+    },
+    {
+      "date": "2025-12-26",
+      "temperaturesC": {
+        "izmir": 9.4,
+        "ankara": -1.2,
+        "istanbul": 8.3
+      }
+    },
+    {
+      "date": "2025-12-27",
+      "temperaturesC": {
+        "izmir": 9.4,
+        "ankara": -1.3,
+        "istanbul": 7.1
+      }
+    },
+    {
+      "date": "2025-12-28",
+      "temperaturesC": {
+        "izmir": 7,
+        "ankara": -2.5,
+        "istanbul": 8.4
+      }
+    },
+    {
+      "date": "2025-12-29",
+      "temperaturesC": {
+        "izmir": 7,
+        "ankara": -1.8,
+        "istanbul": 7.5
+      }
+    },
+    {
+      "date": "2025-12-30",
+      "temperaturesC": {
+        "izmir": 7.4,
+        "ankara": -0.2,
+        "istanbul": 5.5
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "temperaturesC": {
+        "izmir": 10.2,
+        "ankara": 0,
+        "istanbul": 7.3
+      }
+    }
+  ]
+}
