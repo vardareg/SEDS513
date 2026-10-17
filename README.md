@@ -4,6 +4,8 @@ A frontend-only SEDS 513 (Principles of Human–Computer Interaction) teaching p
 
 **All temperatures are synthetic. They are not meteorological observations or estimates of actual climate.**
 
+New to the project? Read the [beginner walkthrough](docs/beginner-walkthrough.md) for an explanation of what was built, the commands used, and how the files work together.
+
 ## Run locally
 
 Use Node.js 24 or newer and npm. Node 24 also runs the TypeScript data generator directly.
